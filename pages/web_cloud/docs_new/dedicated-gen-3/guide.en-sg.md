@@ -1,11 +1,17 @@
 ---
-title: {{% names/dedicated-gen-3 %}}
+title: 
 slug: dedicated-gen-3
 section: Dedicated-Gen-3
 hidden: true
 ---
 
-**Last updated 4th November 2023**
+**Last updated 6th November 2023**
+
+
+
+## Objective  
+
+**Last updated 6th November 2023**
 
 
 
@@ -32,10 +38,12 @@ of [the following benefits](https://platform.sh/blog/the-ultimate-generation-of-
 
 - **Tremendous performance with a high availability of 99.99% SLA.**<BR>
 
+
   By default, a three-host cluster is associated with your default (production) environment.
   Upon request, you can have another one associated with your staging environment.
 
 - **Greater self serviceability and control over your dedicated resources.**<BR>
+
 
   You don't need to submit a support ticket to add, configure,
   or remove your [apps](../create-apps/_index.md), [services](../add-services/_index.md) and [routes](../define-routes/_index.md).
@@ -47,12 +55,15 @@ of [the following benefits](https://platform.sh/blog/the-ultimate-generation-of-
 
 - **Multi-app support.**<BR>
 
+
   {{% names/dedicated-gen-3 %}} is flexible and supports modern architectures, such as headless e-commerce.
 
 - **Data synchronization from {{% names/dedicated-gen-3 %}} to Grid** through a single click from the Console.
 
 
+
 - **Better compliance.**<BR>
+
 
   Your apps and configurations are fully independent from the machines they run on.
   This allows Web PaaS to perform non-disruptive system upgrades to ensure you're always secure and compliant.

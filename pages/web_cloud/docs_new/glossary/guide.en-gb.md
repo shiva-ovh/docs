@@ -5,7 +5,13 @@ section: Glossary
 hidden: true
 ---
 
-**Last updated 4th November 2023**
+**Last updated 6th November 2023**
+
+
+
+## Objective  
+
+**Last updated 6th November 2023**
 
 
 ## Active environment
@@ -27,9 +33,12 @@ The new environment includes all of the parent environment's:
 
 - Code
 
+
 - Running services and their configuration (only copies, not the data)
 
+
 - Data that's stored on disk (databases, uploaded files, and so on)
+
 
 
 This means that when you branch an environment, you also branch the complete infrastructure.
@@ -38,10 +47,13 @@ When you branch an environment, three things happen:
 
 - A new branch is created in Git.
 
+
 - Your apps are rebuilt on the new branch, if necessary.
+
 
   (This is skipped if the same code with the same [variables](../development/variables/_index.md) has been built for any environment.)
 - The new branch is deployed.
+
 
 
 To create a new branch from an existing environment:
@@ -106,9 +118,12 @@ and you can set up any other branch as a testing environment.
 
 - Your **production environment** is your live site.
 
+
 - A **development environment** is an isolated environment where you can safely develop new features without affecting production.
 
+
 - A **staging environment** has a similar configuration to your production environment (but usually with less resources for cost optimization).
+
 
   It is useful to perform user acceptance testing in a production-like setting.
 
@@ -162,10 +177,13 @@ When you merge an environment, three things happen:
 
 - Any code changes are merged via Git to the parent branch.
 
+
 - Your apps rebuilt on the parent branch, if necessary.
+
 
   (This is skipped if the same code with the same [variables](../development/variables/_index.md) has been built for any environment.)
 - The parent branch is deployed.
+
 
 
 ## PaaS
