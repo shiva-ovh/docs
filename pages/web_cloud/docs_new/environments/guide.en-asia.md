@@ -5,13 +5,7 @@ section: Environments
 hidden: true
 ---
 
-**Last updated 6th November 2023**
-
-
-
-## Objective  
-
-**Last updated 6th November 2023**
+**Last updated 4th November 2023**
 
 
 
@@ -38,9 +32,7 @@ You can create new environments in one of two ways:
 -   Push a local branch through Git or a [source integration](../integrations/source/_index.md).
 
 
-
 -   [Branch](../glossary#branch) existing environments using the [CLI](administration-cli)
-
 
     or the [Console](../administration/web/_index.md).
 
@@ -71,11 +63,9 @@ Your environments can have one of two statuses:
 
 -   [Active](../glossary#active-environment):
 
-
     A deployed environment with services and data.
 
 -   [Inactive](../glossary#inactive-environment):
-
 
     An environment that isn't deployed and has no services or data, only code.
 
@@ -116,20 +106,16 @@ You may want to take one of the following approaches when creating your workflow
 
 -   **Agile**: A child environment per sprint.
 
-
     Each story in the sprint can have its own environment as a child of the sprint environment.
 
 -   **Developer-centric**: One QA environment and a few preview environments
-
 
     (*per developer*, *per task*, or similar).
 
 -   **Testing**: An operational test environment, a user test environment, and a few unit test environments.
 
 
-
 -   **Hotfix**: One environment for each bug, security issue, or hotfix that needs deployment.
-
 
 
 #### Example workflow
@@ -229,13 +215,10 @@ if you are in one of the following situations:
 
 - You are using the default environment of your Development plan to build an app/demo
 
-
   and sharing the URL with users for feedback
 - Business staff testing your development branch don't have permission to resume it
 
-
 - You are using your staging environment to run integration or penetration tests
-
 
 
 <--->
