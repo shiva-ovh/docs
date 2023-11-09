@@ -12,7 +12,7 @@ section: Environments
 
 Once you have [backups of your environment](../.././.-backup), you can restore data from a previous point.
 
-To restore an environment, you need an [Admin role for that environment type](../environments/environments-administration/users).
+To restore an environment, you need an [Admin role for that environment type](../environments-administration/users).
 
 ## 1. List available backups
 

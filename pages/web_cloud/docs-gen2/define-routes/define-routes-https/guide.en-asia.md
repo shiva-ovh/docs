@@ -34,7 +34,7 @@ If you encounter issues with the TLS certificates provided by Web PaaS,
 check that [TLS encryption is up-and-running](../domains/troubleshoot.md#verify-ssltls-encryption).
 
 If you don't want to use the TLS certificates provided by Web PaaS,
-configure your own [third-party TLS certificates](../define-routes/define-routes-domains/steps/tls).
+configure your own [third-party TLS certificates](../define-routes-domains/steps/tls).
 
 ### Let's Encrypt limitations
 
@@ -44,7 +44,7 @@ the following limitations apply.
 {{% lets_encrypt_limitations %}}
 
 If you need more hostnames, you can obtain additional certificates
-or a wildcard certificate from a [third-party issuer](../define-routes/define-routes-domains/steps/tls).
+or a wildcard certificate from a [third-party issuer](../define-routes-domains/steps/tls).
 Alternatively, consider splitting your project up into multiple Web PaaS projects.
 
 ### Certificate renewals
@@ -88,7 +88,7 @@ All traffic to your domain is then sent to your app.
 The `www` subdomain redirects to the [default domain](../define-routes/_index.md#default).
 This also includes redirecting requests from HTTP to HTTPS.
 
-For more information, see how to [define routes](../define-routes/define-routes-define-routes).
+For more information, see how to [define routes](../define-routes-define-routes).
 
 ## Optional: Configure TLS connections
 

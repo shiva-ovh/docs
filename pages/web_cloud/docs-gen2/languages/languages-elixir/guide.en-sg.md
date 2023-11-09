@@ -87,9 +87,9 @@ applications:
 
 ## Built-in variables
 
-Web PaaS exposes relationships and other configuration as [environment variables](../languages/languages-development/variables).
+Web PaaS exposes relationships and other configuration as [environment variables](../languages-development/variables).
 Most notably, it allows a program to determine at runtime what HTTP port it should listen on
-and what the credentials are to access [other services](../languages/languages-add-services).
+and what the credentials are to access [other services](../languages-add-services).
 
 To get the `PORT` environment variable (the port on which your web application is supposed to listen) you would:
 

@@ -15,7 +15,7 @@ section: Steps
 <--->
 {{% /version/specific %}}
 
-[Preview environments](/glossary.md#preview-environment) in your project can't use the custom domain [set up on your production environment](../domains/domains-steps).<br/>
+[Preview environments](/glossary.md#preview-environment) in your project can't use the custom domain [set up on your production environment](../domains-steps).<br/>
 By default and for each preview environment,
 Web PaaS automatically replaces the custom production domain
 with an automatically generated URL.
@@ -71,7 +71,7 @@ You need:
 > 
 > 
 
-  If you use a [Managed Fastly](../domains/domains-cdn/managed-fastly) CDN,
+  If you use a [Managed Fastly](../domains-cdn/managed-fastly) CDN,
   it needs to be configured to operate with custom domains for preview environments.
   For more information, [contact Support](https://console.platform.sh/-/users/~/tickets/open).
 {{% /version/specific %}}

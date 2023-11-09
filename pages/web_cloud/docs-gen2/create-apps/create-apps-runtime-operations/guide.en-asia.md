@@ -12,7 +12,7 @@ section: Create-Apps
 
 Runtime operations allow you to trigger one-off commands or scripts on your project.
 Similar to [crons](../create-apps/app-reference.md#crons), they run in the app container but not on a specific schedule.
-You can [define runtime operations](#define-a-runtime-operation) in your [app configuration](../create-apps/create-apps-create-apps/app-reference)
+You can [define runtime operations](#define-a-runtime-operation) in your [app configuration](../create-apps-create-apps/app-reference)
 and [trigger them](#run-a-runtime-operation) at any time through the Web PaaS CLI.
 
 For example, if you have a static website,
@@ -126,8 +126,8 @@ run the following command:
 
 {{< version/specific >}}
 During every Web PaaS deployment, a standard [`build` step](/learn/overview/build-deploy.md#the-build) is run.
-When you use a static site generator like [Gatsby](../create-apps/create-apps-guides/gatsby)
-or [Next.js](../create-apps/create-apps-guides/nextjs) with [a headless backend](../create-apps/create-apps-guides/gatsby/headless),
+When you use a static site generator like [Gatsby](../create-apps-guides/gatsby)
+or [Next.js](../create-apps-guides/nextjs) with [a headless backend](../create-apps-guides/gatsby/headless),
 you need to run a second `build` step to get your app ready for production.
 
 <--->
@@ -159,7 +159,7 @@ but want to avoid going through the whole Web PaaS [build and deploy processes](
 > What _is_ necessary is that the build destination for your frontend **is  writable at runtime**
 > (meaning, you must [define a mount](../create-apps/app-reference.md#mounts) for it).
 > If you don’t want to include a build within a mount (especially if your data source **isn’t** on Web PaaS),
-> you can use [source operations](../create-apps/create-apps-create-apps/source-operations) to achieve a similar effect,
+> you can use [source operations](../create-apps-create-apps/source-operations) to achieve a similar effect,
 > but through generating a new commit.
 > 
 > 

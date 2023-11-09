@@ -19,13 +19,13 @@ You can click the **Deploy on Web PaaS** button to launch a new project using a 
 
 ## C#/.NET Core
 
-View the [C#/.NET Core documentation](../development/development-languages/dotnet).
+View the [C#/.NET Core documentation](../development-languages/dotnet).
 
 
 
 ## Go
 
-View the [Go documentation](../development/development-languages/go).
+View the [Go documentation](../development-languages/go).
 
 
 ### Beego 
@@ -75,19 +75,19 @@ View the [Go documentation](../development/development-languages/go).
 
 ## Java
 
-View the [Java documentation](../development/development-languages/java).
+View the [Java documentation](../development-languages/java).
 
 
 
 ## Lisp
 
-View the [Lisp documentation](../development/development-languages/lisp).
+View the [Lisp documentation](../development-languages/lisp).
 
 
 
 ## Node.js
 
-View the [Node.js documentation](../development/development-languages/nodejs).
+View the [Node.js documentation](../development-languages/nodejs).
 
 
 ### Directus 
@@ -196,7 +196,7 @@ View the [Node.js documentation](../development/development-languages/nodejs).
 
 ## PHP
 
-View the [PHP documentation](../development/development-languages/php).
+View the [PHP documentation](../development-languages/php).
 
 
 ### Drupal 10 
@@ -361,7 +361,7 @@ View the [PHP documentation](../development/development-languages/php).
 
 ## Python
 
-View the [Python documentation](../development/development-languages/python).
+View the [Python documentation](../development-languages/python).
 
 
 ### Django 3 
@@ -453,6 +453,6 @@ View the [Python documentation](../development/development-languages/python).
 
 ## Ruby
 
-View the [Ruby documentation](../development/development-languages/ruby).
+View the [Ruby documentation](../development-languages/ruby).
 
 

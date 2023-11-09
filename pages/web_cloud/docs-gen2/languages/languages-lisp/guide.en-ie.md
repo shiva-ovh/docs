@@ -173,7 +173,7 @@ applications:
 
 ## Built-in variables
 
-Web PaaS exposes relationships and other configuration as [environment variables](../languages/languages-development/variables).
+Web PaaS exposes relationships and other configuration as [environment variables](../languages-development/variables).
 To get the `PORT` environment variable (the port on which your web application is supposed to listen):
 
 ```lisp

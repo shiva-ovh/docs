@@ -27,7 +27,7 @@ The redeploy takes place after any scheduled activities (either *Running* or *Pe
 > Despite the name, redeployment doesn't rerun the `deploy` hook, only the `post_deploy` hook.
 > Both your `build` and `deploy` hooks are tied to individual commits in code.
 > They're reused until another commit is pushed to the environment.
-> See [more about hooks](../development/development-create-apps/hooks) and their reuse.
+> See [more about hooks](../development-create-apps/hooks) and their reuse.
 > 
 > To rerun the `build` and `deploy` hooks, [manually trigger a build](#manually-trigger-builds).
 > 
@@ -77,11 +77,11 @@ The next build for each environment is likely to take longer as the cache rebuil
 ## Access denied or permission denied
 
 In most cases, issues accessing a project are caused by missing permissions for a given user.
-For more information see how to [manage user permissions](../development/development-administration/users).
+For more information see how to [manage user permissions](../development-administration/users).
 
 If you are using the CLI, make sure that [you are authenticated](../administration/cli/_index.md#2-authenticate).
 
-If you are using SSH, see how to [troubleshoot SSH access](../development/development-development/ssh/troubleshoot-ssh).
+If you are using SSH, see how to [troubleshoot SSH access](../development-development/ssh/troubleshoot-ssh).
 
 ## HTTP responses 502 Bad Gateway or 503 Service Unavailable
 
@@ -102,15 +102,15 @@ Typical causes and potential solutions include:
 
   - You may want to [check if bots are overwhelming your site](https://community.platform.sh/t/diagnosing-and-resolving-issues-with-excessive-bot-access/792).
   {{% version/only "1" %}}
-  - Alternatively, you may need to [increase your plan size](../development/development-administration/pricing).
+  - Alternatively, you may need to [increase your plan size](../development-administration/pricing).
   {{% /version/only %}}
 - Certain code paths in your application are too slow and timing out.
 
   - Check your code is running smoothly.
   
-  - Consider adding an [observability solution](../development/development-increase-observability/integrate-observability) to get a better view of your application.
+  - Consider adding an [observability solution](../development-increase-observability/integrate-observability) to get a better view of your application.
   <--->
-  - Consider using the [observability solution](../development/development-increase-observability/application-metrics) included in your project to get a better view of your application.
+  - Consider using the [observability solution](../development-increase-observability/application-metrics) included in your project to get a better view of your application.
   {{% /version/specific %}}
 - A PHP process is crashing because of a segmentation fault.
 
@@ -175,7 +175,7 @@ curl -XPOST 'https://example.com/graphql' --header 'Content-Type: multipart/form
 
 ## Databases
 
-For MySQL specific errors, see how to [troubleshoot MySQL](../development/development-add-services/mysql/troubleshoot).
+For MySQL specific errors, see how to [troubleshoot MySQL](../development-add-services/mysql/troubleshoot).
 
 ### Permission error creating a database
 
@@ -185,7 +185,7 @@ and can be found in the `path` key of the `PLATFORM_RELATIONSHIPS` [environment 
 
 ## Storage
 
-If you're having trouble with storage, see how to [troubleshoot mounts](../development/development-create-apps/troubleshoot-mounts) and [disks](../development/development-create-apps/troubleshoot-disks).
+If you're having trouble with storage, see how to [troubleshoot mounts](../development-create-apps/troubleshoot-mounts) and [disks](../development-create-apps/troubleshoot-disks).
 
 ### Can't write to file system
 
@@ -260,7 +260,7 @@ Investigate [each log](../increase-observability/logs/access-logs.md#container-l
 
 ### Build and deploy hooks
 
-[`build` and `deploy` hooks](../development/development-create-apps/hooks) can cause long build times.
+[`build` and `deploy` hooks](../development-create-apps/hooks) can cause long build times.
 If they run into issues, they can cause the build to fail or hang indefinitely.
 
 `build` hooks can be tested in your local environment.
@@ -291,7 +291,7 @@ The most common issue isn't allowing the right cookies as part of the router cac
 Some cookies, such as session cookies, need to be allowed.
 Others, such as marketing and analytics cookies, usually shouldn't be part of the cache key.
 
-See more about [router cache](../development/development-define-routes/cache)
+See more about [router cache](../development-define-routes/cache)
 and [cookie entry](../define-routes/cache.md#cookies).
 
 Because the router cache follows cache headers from your app,

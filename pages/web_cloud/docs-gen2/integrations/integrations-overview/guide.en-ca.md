@@ -18,7 +18,7 @@ You can continue to use those tools for your development workflow, and have Web 
 
 <!-- Web PaaS -->
 You can also add native integrations with performance monitoring tools.
-Web PaaS recommends [Blackfire](../integrations/integrations-increase-observability/integrate-observability//blackfire),
+Web PaaS recommends [Blackfire](../integrations-increase-observability/integrate-observability//blackfire),
 which is part of the standard Web PaaS Observability Suite.
 Note that only a project administrator (someone with `admin` level access to the project) can add or remove integrations.
 
@@ -84,7 +84,7 @@ There are a handful of CLI commands available, all under the `integrations` sect
 
 ### List all activities
 
-To list all the updates triggered by [activities](../integrations/integrations-integrations/activity/reference) on a given project and integration,
+To list all the updates triggered by [activities](../integrations-integrations/activity/reference) on a given project and integration,
 follow these steps:
 
 1\. Run the `{{% vendor/cli %}} integration:activities` command.

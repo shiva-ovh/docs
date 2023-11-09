@@ -37,4 +37,4 @@ Web PaaS adds a number of response headers automatically to assist in debugging 
 
 Apart from those listed above, your application is responsible for setting its own response headers.
 
-You can also [add headers to static files](../development/development-create-apps/web/custom-headers).
+You can also [add headers to static files](../development-create-apps/web/custom-headers).

@@ -14,7 +14,7 @@ Activities log changes to your project,
 including when you deploy your app,
 when you [push code](#push), and when a [cron job is run](#cron).
 
-To automate your workflows, you can parse and react to the activity's JSON object through [activity scripts](../integrations/integrations-activity).
+To automate your workflows, you can parse and react to the activity's JSON object through [activity scripts](../integrations-activity).
 
 ## Activity schema
 
@@ -158,9 +158,9 @@ The following table presents the possible activities:
 |------|-------------|
 | `integration.bitbucket.register_hooks` | An integration hook has been registered with Bitbucket Cloud. |
 | `integration.bitbucket_server.register_hooks` | An integration hook has been registered with Bitbucket Server. |
-| `integration.health.email` | A [health notification](../integrations/integrations-notifications) was sent by email. |
-| `integration.health.pagerduty` | A [health notification](../integrations/integrations-notifications) was sent to PagerDuty. |
-| `integration.health.slack` | A [health notification](../integrations/integrations-notifications) was sent to Slack. |
+| `integration.health.email` | A [health notification](../integrations-notifications) was sent by email. |
+| `integration.health.pagerduty` | A [health notification](../integrations-notifications) was sent to PagerDuty. |
+| `integration.health.slack` | A [health notification](../integrations-notifications) was sent to Slack. |
 | `integration.webhook` | A webhook was triggered. |
 | `integration.script` | An activity script has completed. |
 

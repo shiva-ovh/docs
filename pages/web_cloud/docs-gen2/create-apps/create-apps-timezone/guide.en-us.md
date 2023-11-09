@@ -28,8 +28,8 @@ The different timezones on Web PaaS are the following:
 > [!primary]  
 > 
 > Each Web PaaS project also has a **project timezone** that only affects [automated backups](../environments/backup.md#use-automated-backups).
-> By default, the project timezone is based on the [region](../create-apps/create-apps-development/regions) where your project is hosted.
-> You can [change it from the Console](../create-apps/create-apps-projects/change-project-timezone) at any time.
+> By default, the project timezone is based on the [region](../create-apps-development/regions) where your project is hosted.
+> You can [change it from the Console](../create-apps-projects/change-project-timezone) at any time.
 > 
 > 
 

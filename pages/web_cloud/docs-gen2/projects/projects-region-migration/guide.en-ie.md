@@ -10,7 +10,7 @@ section: Projects
 
 ## Objective  
 
-To host your project data, Web PaaS offers several [regions](../projects/projects-development/regions).
+To host your project data, Web PaaS offers several [regions](../projects-development/regions).
 You specify a region when you create a project.
 
 You can also change the project's region after it's created.
@@ -99,7 +99,7 @@ Make sure anything else connected to your old project is moved to your new proje
   Get a list of all variables set outside of code by running `{{% vendor/cli %}} variables`.
 - Add any users to your new project that you want to continue to have access.
 
-- Add any existing [integrations](../projects/projects-integrations).
+- Add any existing [integrations](../projects-integrations).
 
 
 ## 7. Test the site
@@ -120,7 +120,7 @@ Now that you know the new project works, switch public traffic to that site:
 
 4\. (Optional) Add any custom SSL certificates you have.
 
-5\. Update your DNS provider's records to point to the new site. See more on [setting custom domains](../projects/projects-domains/steps).
+5\. Update your DNS provider's records to point to the new site. See more on [setting custom domains](../projects-domains/steps).
 
 
 It may take some time for the DNS change and SSL change to propagate.

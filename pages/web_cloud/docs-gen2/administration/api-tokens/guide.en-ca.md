@@ -18,7 +18,7 @@ You need to set up an API token to authenticate the Web PaaS CLI for any of the 
 
 ## Before you begin
 
-You might need the [Web PaaS CLI](../administration/administration-cli) to perform certain tasks.
+You might need the [Web PaaS CLI](../administration-cli) to perform certain tasks.
 For example, you need the CLI to do the following:
 - [Check the validity of an API token](#optional-check-the-validity-of-your-api-token). 
 
@@ -30,7 +30,7 @@ For example, you need the CLI to do the following:
 
 To safely run automated tasks, first create machine users.
 Each machine user has its own Web PaaS account associated with a unique email address.
-You can grant them restrictive [access permissions](../administration/administration-users) to handle specific automated tasks.
+You can grant them restrictive [access permissions](../administration-users) to handle specific automated tasks.
 For security purposes, create a machine user for each type of task you want to automate.
 
 To create a machine user, follow these steps:

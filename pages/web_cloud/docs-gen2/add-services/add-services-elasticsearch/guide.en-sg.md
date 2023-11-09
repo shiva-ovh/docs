@@ -16,15 +16,15 @@ See the [Elasticsearch documentation](../../https:/https:-/www.elastic.co/guide/
 
 {{% frameworks version="1" %}}
 
-- [Drupal](../add-services/add-services-guides/drupal/elasticsearch)
+- [Drupal](../add-services-guides/drupal/elasticsearch)
 
 - [Jakarta EE](../guides/jakarta/deploy.md#elasticsearch)
 
-- [Micronaut](../add-services/add-services-guides/micronaut/elasticsearch)
+- [Micronaut](../add-services-guides/micronaut/elasticsearch)
 
-- [Quarkus](../add-services/add-services-guides/quarkus/elasticsearch)
+- [Quarkus](../add-services-guides/quarkus/elasticsearch)
 
-- [Spring](../add-services/add-services-guides/spring/elasticsearch)
+- [Spring](../add-services-guides/spring/elasticsearch)
 
 
 {{% /frameworks %}}

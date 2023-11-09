@@ -15,7 +15,7 @@ section: Create-Apps
 {{% version/only "1" %}}
 ## Exceeding plan storage limit
 
-Professional plans come with a default amount of storage that you can [change with your plan](../create-apps/create-apps-administration/pricing).
+Professional plans come with a default amount of storage that you can [change with your plan](../create-apps-administration/pricing).
 The storage is allocated among your services and applications using the `disk` parameter in their configuration files.
 
 You might accidentally set the sum of all `disk` parameters in the files to exceed your plans storage limit.
@@ -39,7 +39,7 @@ To fix the error, do one of the following:
 
 ## Low disk space
 
-If you have set up [health notifications](../create-apps/create-apps-integrations/notifications),
+If you have set up [health notifications](../create-apps-integrations/notifications),
 you may receive a notification of low disk space.
 
 To solve this issue:

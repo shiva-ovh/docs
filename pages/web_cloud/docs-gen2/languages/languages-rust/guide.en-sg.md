@@ -119,7 +119,7 @@ Note that there is still an Nginx proxy server sitting in front of your applicat
 
 ## Built-in variables
 
-Web PaaS exposes relationships and other configuration as [environment variables](../languages/languages-development/variables).
+Web PaaS exposes relationships and other configuration as [environment variables](../languages-development/variables).
 
 To get the `PORT` environment variable (the port on which your app is supposed to listen),
 use the following snippet:

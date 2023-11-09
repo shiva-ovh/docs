@@ -116,7 +116,7 @@ To provide a valid TLS-certificate,
 the certificate issuer checks that the requester is entitled to receive the requested certificate.
 This check is known as the _Challenge_ step.
 
-The certificate request is generated based on your [routes definition](../domains/domains-define-routes).
+The certificate request is generated based on your [routes definition](../domains-define-routes).
 If you want your site to be available with `example.com` and its `www.example.com` subdomain, make sure both are defined in your routes.
 
 To pass this verification, there are requirements you need to meet.
@@ -125,7 +125,7 @@ To pass this verification, there are requirements you need to meet.
 
 Make sure that the [apex domain](/glossary.md#apex-domain) and its `www` subdomain are both pointing where needed.
 Note that it can take up to 72 hours for DNS changes to be effective.
-For more information, see how to [set up a custom domain](../domains/domains-domains/steps).
+For more information, see how to [set up a custom domain](../domains-domains/steps).
 
 If the changes take longer than expected,
 [redeploy](../development/troubleshoot.md#force-a-redeploy) the impacted environment.
@@ -140,7 +140,7 @@ If not, [contact Support](../../learn/learn-overview/get-support).
 
 ### Check your routes configuration
 
-Certificates are generated based on your [routes configuration](../domains/domains-define-routes).
+Certificates are generated based on your [routes configuration](../domains-define-routes).
 When a certificate is renewed, the renewal bot checks that all of the defined routes can be accessed.
 If at least one of the routes defined in your `{{< vendor/configfile "routes" >}}` file can't be accessed,
 the renewal fails and the following error is displayed:

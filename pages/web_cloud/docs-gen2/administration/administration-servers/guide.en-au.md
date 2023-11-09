@@ -25,7 +25,7 @@ The log of the specific activity includes a description of what has changed with
 ### Project API server
 
 The project API server responds to API calls to make the CLI and Console work for your project.
-It acts as the Git server, mirroring the source repository in the case of [source integrations](../administration/administration-integrations/source).
+It acts as the Git server, mirroring the source repository in the case of [source integrations](../administration-integrations/source).
 
 It stores your app code and project configuration, provides API interfaces,
 and orchestrates the build and deploy process and other tasks for your environments.
@@ -33,4 +33,4 @@ and orchestrates the build and deploy process and other tasks for your environme
 ### Project metrics server
 
 The project metrics server retrieves information about your environments' use of RAM, CPU, and disk.
-You can view this information as part of [environment metrics](../administration/administration-increase-observability/metrics).
+You can view this information as part of [environment metrics](../administration-increase-observability/metrics).

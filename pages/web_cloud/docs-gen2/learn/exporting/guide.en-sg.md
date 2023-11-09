@@ -79,7 +79,7 @@ To back up your environment variables:
 
 ## What's next
 
-- Migrate data from elsewhere [into Web PaaS](../learn/learn-tutorials/migrating).
+- Migrate data from elsewhere [into Web PaaS](../learn-tutorials/migrating).
 
 - Migrate to [another region](../../projects/projects-region-migration).
 

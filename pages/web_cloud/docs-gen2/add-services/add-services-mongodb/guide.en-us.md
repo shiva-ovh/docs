@@ -15,11 +15,11 @@ MongoDB is a cross-platform, document-oriented database.<br><br>For more informa
 
 - [Jakarta EE](../guides/jakarta/deploy.md#mongodb)
 
-- [Micronaut](../add-services/add-services-guides/micronaut/mongodb)
+- [Micronaut](../add-services-guides/micronaut/mongodb)
 
-- [Quarkus](../add-services/add-services-guides/quarkus/mongodb)
+- [Quarkus](../add-services-guides/quarkus/mongodb)
 
-- [Spring](../add-services/add-services-guides/spring/mongodb)
+- [Spring](../add-services-guides/spring/mongodb)
 
 
 {{% /frameworks %}}
@@ -241,7 +241,7 @@ export DATABASE_URL="${DB_CONNECTION}://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}
 
 ## Access the service directly
 
-You can access MongoDB from you app container via [SSH](../add-services/add-services-development/ssh).
+You can access MongoDB from you app container via [SSH](../add-services-development/ssh).
 Get the `host` from your [relationship](#relationship-reference).
 Then run the following command:
 

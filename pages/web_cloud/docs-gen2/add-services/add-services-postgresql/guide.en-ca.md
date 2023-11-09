@@ -20,7 +20,7 @@ See the [PostgreSQL documentation](../../https:/https:-/www.postgresql.org/docs/
 
 - [Jakarta EE](../guides/jakarta/deploy.md#postgresql)
 
-- [Spring](../add-services/add-services-guides/spring/postgresql)
+- [Spring](../add-services-guides/spring/postgresql)
 
 
 {{% /frameworks %}}
@@ -242,7 +242,7 @@ export DATABASE_URL="${DB_CONNECTION}://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}
 
 Access the service using the {{< vendor/name >}} CLI by running `{{< vendor/cli >}} sql`.
 
-You can also access it from your app container via [SSH](../add-services/add-services-development/ssh).
+You can also access it from your app container via [SSH](../add-services-development/ssh).
 From your [relationship data](#relationship-reference), you need: `username`, `host`, and `port`.
 Then run the following command:
 
@@ -315,7 +315,7 @@ As with exporting, you can also specify a specific environment to use and a spec
 ## Sanitizing data
 
 To ensure people who review code changes can't access personally identifiable information stored in your database,
-[sanitize your preview environments](../add-services/add-services-development/sanitize-db/postgresql).
+[sanitize your preview environments](../add-services-development/sanitize-db/postgresql).
 
 ## Multiple databases
 

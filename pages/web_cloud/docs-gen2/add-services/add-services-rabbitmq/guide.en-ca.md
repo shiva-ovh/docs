@@ -17,7 +17,7 @@ and your messages a safe place to live until they're received.
 
 {{% frameworks version="1" %}}
 
-- [Spring](../add-services/add-services-guides/spring/rabbitmq)
+- [Spring](../add-services-guides/spring/rabbitmq)
 
 
 {{% /frameworks %}}
@@ -198,7 +198,7 @@ In each case, you need the login credentials that you can obtain from the [relat
 ### Via SSH
 
 To connect directly to your RabbitMQ service in an environment,
-open an SSH tunnel with the [Web PaaS CLI](../add-services/add-services-administration/cli).
+open an SSH tunnel with the [Web PaaS CLI](../add-services-administration/cli).
 
 To open an SSH tunnel to your service with port forwarding,
 run the following command:

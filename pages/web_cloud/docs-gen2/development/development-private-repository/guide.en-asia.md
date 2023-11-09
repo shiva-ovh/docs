@@ -43,7 +43,7 @@ Now your Web PaaS project can access your private repository via SSH, including 
 
 This means you can access the private repository through links like:
 <code>git@{{% variable "GIT_PROVIDER" %}}:{{% variable "PATH_OR_USERNAME" %}}/{{% variable "REPOSITORY" %}}.git</code>.
-For example, you can clone a repository in your [`build` hook](../development/development-create-apps/hooks):
+For example, you can clone a repository in your [`build` hook](../development-create-apps/hooks):
 
 
 <!-- Web PaaS -->

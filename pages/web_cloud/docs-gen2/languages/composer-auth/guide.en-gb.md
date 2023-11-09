@@ -18,7 +18,7 @@ follow the instructions on this page.
 ## Before you begin
 
 You need:
-- A Web PaaS project using [PHP](../languages/languages-php) and Composer
+- A Web PaaS project using [PHP](../languages-php) and Composer
 
 - Credentials to access a private third-party Composer repository
 

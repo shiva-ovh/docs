@@ -13,7 +13,7 @@ section: Web
 For improved security, you can enable multi-factor authentication (MFA) for the Console and CLI.
 Organizations can also [enforce MFA over SSH for all their projects](../../development/ssh/_index.md#multifactor-authentication-mfa-over-ssh).
 
-1\.  In the [Console](../administration/administration-web),
+1\.  In the [Console](../administration-web),
 
     open the user menu (your name or profile picture).
 

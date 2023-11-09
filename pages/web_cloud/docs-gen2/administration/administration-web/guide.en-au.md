@@ -15,7 +15,7 @@ order: 11
 
 ![Overview of projects in the Console](images/all-projects-revised.png "0.5")
 
-This Console offers you ways to manage projects and environments other than the [command line interface (CLI))](../administration/administration-cli).
+This Console offers you ways to manage projects and environments other than the [command line interface (CLI))](../administration-cli).
 
 ## Project list
 

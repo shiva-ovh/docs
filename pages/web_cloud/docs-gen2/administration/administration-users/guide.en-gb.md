@@ -17,7 +17,7 @@ When a user is added to a project, they are automatically added to your organiza
 ## Manage project access
 
 If you have set up an external integration to GitHub, GitLab, or Bitbucket and your users can't clone the project locally,
-see how to [troubleshoot source integrations](../administration/administration-integrations/source/troubleshoot).
+see how to [troubleshoot source integrations](../administration-integrations/source/troubleshoot).
 
 ### Project roles
 

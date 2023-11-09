@@ -14,7 +14,7 @@ When you have preview environments,
 you don't want search engines indexing them and diluting the SEO of your production site.
 
 Search engine indexers are told to ignore all preview environments.
-When you're ready to go live, give your production environment a [custom domain](../environments/environments-domains/steps)
+When you're ready to go live, give your production environment a [custom domain](../environments-domains/steps)
 and then set it to be visible to search engines.
 
 To change your production environment's visibility to search engines, follow these steps:

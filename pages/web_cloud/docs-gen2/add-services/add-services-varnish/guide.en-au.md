@@ -56,7 +56,7 @@ But you can include Varnish as a service.
 
 ## How it works
 
-All incoming requests go through the [standard router](../add-services/add-services-define-routes).
+All incoming requests go through the [standard router](../add-services-define-routes).
 The Varnish service sits between the router and all apps in the project.
 
 ``` mermaid
@@ -73,7 +73,7 @@ graph LR
 
 The `relationships` block defines the connection between Varnish and your app.
 You can define <code>{{< variable "RELATIONSHIP_NAME" >}}</code> as you like.
-<code>{{< variable "APP_NAME" >}}</code> should match your app's `name` in the [app configuration](../add-services/add-services-create-apps/app-reference).
+<code>{{< variable "APP_NAME" >}}</code> should match your app's `name` in the [app configuration](../add-services-create-apps/app-reference).
 
 The `configuration` block must reference a VCL file inside the `{{< vendor/configdir >}}` directory.
 The `path` defines the file relative to the `{{< vendor/configdir >}}` directory.
@@ -178,7 +178,7 @@ sub vcl_recv {
 
 ### 3. Route incoming requests to Varnish
 
-Edit your [route definitions](../add-services/add-services-define-routes) to point to the Varnish service you just created.
+Edit your [route definitions](../add-services-define-routes) to point to the Varnish service you just created.
 Also disable the router cache as Varnish now provides caching.
 
 To forward all incoming requests to Varnish rather than your app, you could have the following:
@@ -314,7 +314,7 @@ which provides access to some Varnish analysis and debugging tools.
 
 You can't use it from an app fronted by Varnish because of the restriction with [circular relationships](#circular-relationships).
 To access the stats, create a **separate app** (`stats-app`) with a relationship *to* Varnish, but not *from* it.
-Define [app configuration](../add-services/add-services-create-apps/app-reference) similar to the following:
+Define [app configuration](../add-services-create-apps/app-reference) similar to the following:
 
 ```yaml {configFile="apps"}
 {{% snippet name="stats-app" config="apps" root="stats" %}}
@@ -372,7 +372,7 @@ The following paths are available:
 
 To access the Varnish stats endpoint from the command line:
 
-1\. Connect to your stats app [using SSH](../add-services/add-services-development/ssh): `{{% vendor/cli %}} ssh --app stats-app`
+1\. Connect to your stats app [using SSH](../add-services-development/ssh): `{{% vendor/cli %}} ssh --app stats-app`
 
    (replace `stats-app` with the name you gave the app).
 2\. Display the [relationships array](../create-apps/app-reference.md#relationships) with `echo ${{< vendor/prefix >}}_RELATIONSHIPS | base64 -d | jq .`,

@@ -189,7 +189,7 @@ To export your data from InfluxDB, follow these steps:
 
 1\. Install and set up the [`influx` CLI](https://docs.influxdata.com/influxdb/cloud/tools/influx-cli/).
 
-2\. Connect to your InfluxDB service with the [Web PaaS CLI](../add-services/add-services-administration/cli):
+2\. Connect to your InfluxDB service with the [Web PaaS CLI](../add-services-administration/cli):
 
 
 ```bash

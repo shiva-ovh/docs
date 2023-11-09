@@ -160,7 +160,7 @@ applications:
 {{< version/specific >}}
 ## Sizes
 
-Resources are distributed across all containers in an environment from the total available from your [plan size](../create-apps/create-apps-administration/pricing).
+Resources are distributed across all containers in an environment from the total available from your [plan size](../create-apps-administration/pricing).
 So if you have more than just a single app, it doesn't get all of the resources available.
 Each environment has its own resources and there are different [sizing rules for preview environments](#sizes-in-preview-environments).
 
@@ -216,13 +216,13 @@ This name is used in the `PLATFORM_RELATIONSHIPS` environment variable,
 which gives you credentials for accessing the service.
 
 The relationship is specified in the form `service_name:endpoint_name`.
-The `service_name` is the name of the service given in the [services configuration](../create-apps/create-apps-add-services)
+The `service_name` is the name of the service given in the [services configuration](../create-apps-add-services)
 or the name of another application in the same project specified as the `name` in that app's configration.
 
 The `endpoint_name` is the exposed functionality of the service to use.
 For most services, the endpoint is the same as the service type.
 For some services (such as [MariaDB](../add-services/mysql/_index.md#multiple-databases) and [Solr](../add-services/solr.md#solr-6-and-later)),
-you can define additional explicit endpoints for multiple databases and cores in the [service's configuration](../create-apps/create-apps-add-services).
+you can define additional explicit endpoints for multiple databases and cores in the [service's configuration](../create-apps-add-services).
 
 The following example shows a single MySQL service named `mysqldb` offering two databases,
 a Redis cache service named `rediscache`, and an Elasticsearch service named `searchserver`.
@@ -316,7 +316,7 @@ See how to [troubleshoot the warning](./troubleshoot-mounts.md#overlapping-folde
 | ------------- | -------------------- | -------- | ----------- |
 | `source`      | `local` or `service` | Yes      | Specifies where the mount is. `local` sources are unique to the app (requires `disk` to be set for the app), while `service` sources can be shared among apps (requires `service` to be set here). |
 | `source_path` | `string`             | Yes      | The subdirectory within the mounted disk (the source) where the mount should point. If an empty string is passed, points to the entire directory. |
-| `service`     | `string`             |          | The name of the [network storage service](../create-apps/create-apps-add-services/network-storage). |
+| `service`     | `string`             |          | The name of the [network storage service](../create-apps-add-services/network-storage). |
 
 Basic example:
 
@@ -725,7 +725,7 @@ applications:
 
 ## Variables
 
-Web PaaS provides a number of ways to set [variables](../create-apps/create-apps-development/variables).
+Web PaaS provides a number of ways to set [variables](../create-apps-development/variables).
 Variables set in your app configuration have the lowest precedence,
 meaning they're overridden by any conflicting values provided elsewhere.
 
@@ -1125,7 +1125,7 @@ The following table shows the properties for each job:
 
 {{% /version/specific %}}
 
-Note that you can [cancel pending or running crons](../create-apps/create-apps-environments/cancel-activity).
+Note that you can [cancel pending or running crons](../create-apps-environments/cancel-activity).
 
 ### Cron commands
 
@@ -1277,18 +1277,18 @@ The following table presents the various possible modifications to your PHP or L
 
 | Name                        | Type                                                       | Language | Description |
 | --------------------------- | ---------------------------------------------------------- | -------- | ----------- |
-| `extensions`                | List of `string`s OR [extensions definitions](#extensions) | PHP      | [PHP extensions](../create-apps/create-apps-languages/php/extensions) to enable. |
-| `disabled_extensions`       | List of `string`s                                          | PHP      | [PHP extensions](../create-apps/create-apps-languages/php/extensions) to disable. |
+| `extensions`                | List of `string`s OR [extensions definitions](#extensions) | PHP      | [PHP extensions](../create-apps-languages/php/extensions) to enable. |
+| `disabled_extensions`       | List of `string`s                                          | PHP      | [PHP extensions](../create-apps-languages/php/extensions) to disable. |
 | `request_terminate_timeout` | `integer`                                                  | PHP      | The timeout for serving a single request after which the PHP-FPM worker process is killed. |
 | `sizing_hints`              | A [sizing hints definition](#sizing-hints)                 | PHP      | The assumptions for setting the number of workers in your PHP-FPM runtime. |
-| `xdebug`                    | An Xdebug definition                                       | PHP      | The setting to turn on [Xdebug](../create-apps/create-apps-languages/php/xdebug). |
+| `xdebug`                    | An Xdebug definition                                       | PHP      | The setting to turn on [Xdebug](../create-apps-languages/php/xdebug). |
 | `quicklisp`                 | Distribution definitions                                   | Lisp     | [Distributions for QuickLisp](../languages/lisp.md#quicklisp-options) to use. |
 
-You can also set your [app's runtime timezone](../create-apps/create-apps-create-apps/timezone).
+You can also set your [app's runtime timezone](../create-apps-create-apps/timezone).
 
 ### Extensions
 
-You can enable [PHP extensions](../create-apps/create-apps-languages/php/extensions) just with a list of extensions:
+You can enable [PHP extensions](../create-apps-languages/php/extensions) just with a list of extensions:
 
 
 ```yaml {configFile="app"}
@@ -1352,7 +1352,7 @@ The following table shows the properties that can be set in `sizing_hints`:
 | `request_memory`  | `integer` | 45      | 10      | The average memory consumed per request in MB. |
 | `reserved_memory` | `integer` | 70      | 70      | The amount of memory reserved in MB. |
 
-See more about [PHP-FPM workers and sizing](../create-apps/create-apps-languages/php/fpm).
+See more about [PHP-FPM workers and sizing](../create-apps-languages/php/fpm).
 
 ## Source
 

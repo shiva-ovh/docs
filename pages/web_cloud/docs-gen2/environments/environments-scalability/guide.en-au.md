@@ -11,7 +11,7 @@ section: Environments
 ## Objective  
 
 Your production environment gets a [pool of resources](../create-apps/app-reference.md#sizes)
-based on your [plan size](../environments/environments-administration/pricing).
+based on your [plan size](../environments-administration/pricing).
 These resources are split up between the apps and services you've defined.
 
 You might occasionally get increased load on your site,

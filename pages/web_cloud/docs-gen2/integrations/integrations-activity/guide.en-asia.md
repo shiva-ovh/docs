@@ -134,7 +134,7 @@ For example, to have a script trigger any time an environment is activated or de
 {{% vendor/cli %}} integration:update --events='environment.activate, environment.deactivate' {{<variable "SCRIPT_ID" >}}
 ```
 
-A complete list of possible events is available in the [webhook documentation](integrations-activity/reference).
+A complete list of possible events is available in the [webhook documentation](reference).
 
 Scripts can also trigger only when an action reaches a given state, such as `pending`, `in_progress`, or `complete`.
 The default is only when they reach "complete".
@@ -229,7 +229,7 @@ See [Underscore's documentation](https://underscorejs.org/) for available functi
 
 Every activity script has a global variable `activity` that contains detailed information about the activity,
 including embedded, JSON-ified versions of the routes configuration and relevant `{{< vendor/configfile "app" >}}` files.
-The `activity` variable is the same as the [webhook payload](integrations-activity/webhooks).
+The `activity` variable is the same as the [webhook payload](webhooks).
 See the documentation there for details and a complete example.
 
 Several of the utility functions below work by pulling out common portions of the `activity` object.

@@ -30,7 +30,7 @@ and use the generated URL as `{{<variable "URL_TO_RECEIVE_JSON" >}}`.
 
 ## Webhook schema
 
-See the [activity script](../integrations/integrations-activity/reference) reference for a description of the webhook payload.
+See the [activity script](../integrations-activity/reference) reference for a description of the webhook payload.
 
 ## Validate the integration
 

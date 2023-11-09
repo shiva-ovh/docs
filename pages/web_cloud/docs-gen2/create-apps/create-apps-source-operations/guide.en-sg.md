@@ -18,7 +18,7 @@ For example, you can set up a source operation to [automatically update your app
 [update a site from an upstream repository](#update-a-site-from-an-upstream-repository-or-template),
 or [revert to the last commit](#revert-to-the-last-commit) pushed to your Git repository.
 
-To run your source operations, you can use the [Web PaaS CLI](../create-apps/create-apps-administration/cli) or the [Console](https://console.platform.sh).
+To run your source operations, you can use the [Web PaaS CLI](../create-apps-administration/cli) or the [Console](https://console.platform.sh).
 If you want to run your source operations and update your code automatically,
 you can also define [cron jobs](./app-reference.md#crons).
 
@@ -122,11 +122,11 @@ For more possibilities, see other [source operation examples](#source-operation-
 After running a source operation, 
 to apply the changes to your local development environment run the `git pull` command.
 
-Note that you can [cancel pending or running source operations](../create-apps/create-apps-environments/cancel-activity).
+Note that you can [cancel pending or running source operations](../create-apps-environments/cancel-activity).
 
 ## Use variables in your source operations
 
-You can add [variables](../create-apps/create-apps-development/variables) to the environment of the source operation.
+You can add [variables](../create-apps-development/variables) to the environment of the source operation.
 
 Use the `env:` prefix to expose each of those variables as a Unix environment variable.
 In this way, they're referenced by the source operation
@@ -169,7 +169,7 @@ Follow these steps to run the source operation:
 
 ## Source integrations
 
-If your project is using a [source integration](../create-apps/create-apps-integrations/source),
+If your project is using a [source integration](../create-apps-integrations/source),
 any new commits resulting from a source operation are first pushed to your external Git repository.
 Then the source integration pushes those commits to Web PaaS and redeploys the environment.
 
@@ -190,7 +190,7 @@ You can use a cron to automatically run your source operations.
 Note that it’s best not to run source operations on your production environment,
 but rather on a dedicated environment where you can test changes.
 
-Make sure you have the [Web PaaS CLI](../create-apps/create-apps-administration/cli) installed
+Make sure you have the [Web PaaS CLI](../create-apps-administration/cli) installed
 and [an API token](../administration/cli/api-tokens.md#2-create-an-api-token)
 so you can run a cron job in your app container.
 
@@ -202,7 +202,7 @@ so you can run a cron job in your app container.
 > [!primary]  
 > 
 > Once you add the API token as an environment variable,
-> anyone with [SSH access](../create-apps/create-apps-development/ssh) can read its value.
+> anyone with [SSH access](../create-apps-development/ssh) can read its value.
 > Make sure you carefully check your [user access on this project](../administration/users.md#manage-project-users).
 > 
 > 

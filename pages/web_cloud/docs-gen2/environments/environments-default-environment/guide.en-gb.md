@@ -12,7 +12,7 @@ section: Environments
 
 You can set the name of your default/production environment when creating a project.
 To change it after project creation, follow the steps below.
-For consistency, the steps are all given using the [CLI](../environments/environments-administration/cli).
+For consistency, the steps are all given using the [CLI](../environments-administration/cli).
 
 The examples below are based off of changing the default environment from `old` to `main`.
 Replace these names with what suits your situation.
@@ -23,7 +23,7 @@ To minimize potential issues, take the following steps:
 
 - Switch the default environment during non-peak hours.
 
-- Keep your data by taking a [backup of the `old` environment](../environments/environments-environments/backup)
+- Keep your data by taking a [backup of the `old` environment](../environments-environments/backup)
 
 - Reduce your DNS time-to-live (TTL) to a minimum.
 
@@ -33,11 +33,11 @@ To minimize potential issues, take the following steps:
 If you have a domain set for your default environment, remove it before changing the default branch.
 Otherwise you get an error that `default domain must be a valid project domain`.
 
-To change the default branch, you need to be an [admin for the project](../environments/environments-administration/users)
+To change the default branch, you need to be an [admin for the project](../environments-administration/users)
 
 ## Note on source integrations
 
-The following steps depend of whether your project has a [source integration](../environments/environments-integrations/source).
+The following steps depend of whether your project has a [source integration](../environments-integrations/source).
 
 If it doesn't, Web PaaS is your primary remote repository for the project.
 If it does, GitHub, GitLab, or BitBucket hosts your primary remote repository for the project.
@@ -54,7 +54,7 @@ For example, you may have variables for your production environment set to not b
 (such as if you set them with `--inheritable=false` through the CLI).
 These variables aren't added automatically to child environments and so you need to add them to the `main` environment manually.
 
-If you want the `main` environment to send emails, [turn on outgoing email](../environments/environments-development/email).
+If you want the `main` environment to send emails, [turn on outgoing email](../environments-development/email).
 
 ## 3. Make `main` a top-level branch
 
@@ -85,7 +85,7 @@ Deactivate the `old` environment without deleting it by running the following CL
 ## 7. Update DNS records
 
 Whether or not you're using a CDN,
-if your site is live you have probably added a Web PaaS address somewhere when configuring a [custom domain](../environments/environments-domains/steps).
+if your site is live you have probably added a Web PaaS address somewhere when configuring a [custom domain](../environments-domains/steps).
 If you have a CDN, it's with the CDN provider.
 If you don't have a CDN, it's probably a `CNAME` record.
 

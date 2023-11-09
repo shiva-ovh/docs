@@ -106,7 +106,7 @@ Puppeteer can be used to generate PDFs and screenshots of web pages, automate fo
 Puppeteer requires at least Node.js version 6.4.0, while using the async and await examples below requires Node 7.6.0 or greater.
 
 If your app container uses a language other than Node.js, upgrade the Node.js version before using Puppeteer.
-See how to [manage your Node.js version](../add-services/add-services-languages/nodejs/node-version).
+See how to [manage your Node.js version](../add-services-languages/nodejs/node-version).
 
 ## Usage example
 

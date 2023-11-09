@@ -102,7 +102,7 @@ This service is the Web PaaS network storage implementation, not to a version of
 
 ## Multi-application usage
 
-If your project contains [multiple apps](../add-services/add-services-create-apps/multi-app), they can all use the same network mounts.
+If your project contains [multiple apps](../add-services-create-apps/multi-app), they can all use the same network mounts.
 If the `source_path` is the same for both apps,
 the files are shared between the two applications even if the mount location is different.
 

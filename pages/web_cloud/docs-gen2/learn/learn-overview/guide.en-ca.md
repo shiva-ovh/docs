@@ -13,8 +13,8 @@ section: Learn
 Web PaaS is a Platform-as-a-Service built especially for continuous deployment.
 It allows you to host web applications on the cloud while making your development and testing workflows more productive.
 
-If you're new to Web PaaS, the [Philosophy](learn-overview/philosophy), [Structure](learn-overview/structure),
-and [Build and Deploy](learn-overview/build-deploy) pages cover all the basics to start on the right track.
+If you're new to Web PaaS, the [Philosophy](philosophy), [Structure](structure),
+and [Build and Deploy](build-deploy) pages cover all the basics to start on the right track.
 
 
 <!-- Web PaaS -->

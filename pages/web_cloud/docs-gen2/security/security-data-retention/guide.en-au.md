@@ -29,7 +29,7 @@ These logs are retained for at least 6 months and at most 2 years depending upon
 
 Application logs on each customer environment are retained with the environment.
 Individual log files are truncated at 100 MB, regardless of their age.
-See how to [access logs](../security/security-increase-observability/logs/access-logs).
+See how to [access logs](../security-increase-observability/logs/access-logs).
 
 When an environment is deleted, its application logs are deleted as well.
 
@@ -100,7 +100,7 @@ Backups for {{% names/dedicated-gen-2 %}} environments are retained based on whe
 | Weeks 8--12  | One bi-weekly backup |
 | Weeks 12--22 | One backup per month |
 
-See more about [backups of {{% names/dedicated-gen-2 %}} environments](../security/security-dedicated-gen-2/overview/backups).
+See more about [backups of {{% names/dedicated-gen-2 %}} environments](../security-dedicated-gen-2/overview/backups).
 
 <--->
 <!-- Upsun -->
@@ -110,7 +110,7 @@ See more about [backups of {{% names/dedicated-gen-2 %}} environments](../securi
 (meaning, 2 days worth of backups are retained at any given point).
 
 [Manual backups](../environments/backup.md#create-a-manual-backup) are retained until you delete them or replace them with another backup.</br>
-As {{< vendor/name >}} provides a maximum of [2 manual backups per environment type](../security/security-backups),
+As {{< vendor/name >}} provides a maximum of [2 manual backups per environment type](../security-backups),
 the third manual backup automatically replaces the oldest backup.
 {{% /version/specific %}}
 

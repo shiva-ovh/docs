@@ -96,10 +96,10 @@ close to the 100% threshold, you might want to consider:
 {{% /version/specific %}}
 
 
-* [Optimizing your code](../increase-observability/increase-observability-integrate-observability) (if possible)
+* [Optimizing your code](../increase-observability-integrate-observability) (if possible)
 * [Increasing your plan](../../administration/administration-pricing)
 <--->
-* [Optimizing your code](../increase-observability/increase-observability-application-metrics) (if possible)
+* [Optimizing your code](../increase-observability-application-metrics) (if possible)
 * [Changing your app size or service size](../../manage-resources)
 {{% /version/specific %}}
 
@@ -117,7 +117,7 @@ Burst allows your container to use additional resources when they aren't needed 
 
 If you have a container in a prolonged burst state, you might want to consider:
 
-* [Optimizing your code](../increase-observability/increase-observability-integrate-observability)
+* [Optimizing your code](../increase-observability-integrate-observability)
 * Changing your [app size](../../create-apps/app-reference.md#sizes)
   or [service size](../../add-services/_index.md#size)
 * [Increasing your plan](../../administration/administration-pricing)
@@ -136,7 +136,7 @@ For Grid environments, the thresholds are set for each container.
 If the resources are high and hovering close to the 100% threshold,
 you might want to consider:
 
-* [Optimizing your code](../increase-observability/increase-observability-integrate-observability) (if possible)
+* [Optimizing your code](../increase-observability-integrate-observability) (if possible)
 * Changing your [app size](../../create-apps/app-reference.md#sizes)
   or [service size](../../add-services/_index.md#size)
 * [Increasing your plan](../../administration/administration-pricing)

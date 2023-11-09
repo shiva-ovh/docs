@@ -23,7 +23,7 @@ It's largely based on the [Next.js for Drupal project](https://next-drupal.org/)
 
 The example commands are somewhat simplified, but you can find them all in the [GitHub repository](https://github.com/platformsh-templates/nextjs-drupal).
 
-In this case, you have [two apps](../create-apps/create-apps-multi-app) and so two [`{{< vendor/configfile "app" >}}` configuration files](../).
+In this case, you have [two apps](../create-apps-multi-app) and so two [`{{< vendor/configfile "app" >}}` configuration files](../).
 Each file is in the folder for that app: `api` for Drupal and `client` for Next.js.
 You run one hook for Drupal and two hooks for Next.js.
 <--->
@@ -34,7 +34,7 @@ The following example goes through each of these hooks for a multi-app project
 - Drupal serves data as the backend container, `api`
 
 
-Configuration for [both applications](../create-apps/create-apps-multi-app) resides in a single [`{{< vendor/configfile "app" >}}` configuration file](../).
+Configuration for [both applications](../create-apps-multi-app) resides in a single [`{{< vendor/configfile "app" >}}` configuration file](../).
 Be sure to notice the `source.root` property for each.
 {{% /version/specific %}}
 
@@ -51,7 +51,7 @@ In this case, the app has two sets of dependencies:
 
 Create your `build` hook to install them all:
 
-1\. Create a `build` hook in your [app configuration](../create-apps/create-apps-app-reference):
+1\. Create a `build` hook in your [app configuration](../create-apps-app-reference):
 
 
    

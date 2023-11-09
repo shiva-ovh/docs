@@ -651,7 +651,7 @@ services:
 ## Configuring services
 
 This example assumes there is a MySQL instance.
-To configure it, [create a service](../languages/languages-add-services) such as the following:
+To configure it, [create a service](../languages-add-services) such as the following:
 
 
 ```yaml {configFile="services"}
@@ -677,7 +677,7 @@ services:
 
 ## Connecting to services
 
-Once you have a service, link to it in your [app configuration](../languages/languages-create-apps):
+Once you have a service, link to it in your [app configuration](../languages-create-apps):
 
 
 ```yaml {configFile="app"}

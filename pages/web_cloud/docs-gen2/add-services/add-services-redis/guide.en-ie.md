@@ -21,19 +21,19 @@ Web PaaS supports two different Redis configurations:
 
 {{% frameworks version="1" %}}
 
-- [Drupal](../add-services/add-services-guides/drupal/redis)
+- [Drupal](../add-services-guides/drupal/redis)
 
 - [Ibexa DXP](../guides/ibexa/deploy.md#cache-and-sessions)
 
 - [Jakarta EE](../guides/jakarta/deploy.md#redis)
 
-- [Micronaut](../add-services/add-services-guides/micronaut/redis)
+- [Micronaut](../add-services-guides/micronaut/redis)
 
-- [Quarkus](../add-services/add-services-guides/quarkus/redis)
+- [Quarkus](../add-services-guides/quarkus/redis)
 
-- [Spring](../add-services/add-services-guides/spring/redis)
+- [Spring](../add-services-guides/spring/redis)
 
-- [WordPress](../add-services/add-services-guides/wordpress/redis)
+- [WordPress](../add-services-guides/wordpress/redis)
 
 
 {{% /frameworks %}}
@@ -675,7 +675,7 @@ Retrieve the hostname and port you can connect to
 through the `{{< vendor/prefix >}}_RELATIONSHIPS` [environment variable](../../development/variables/use-variables.md#use-provided-variables).
 To do so, run the `{{< vendor/cli >}} relationships` command.
 
-After you've retrieved the hostname and port, [open an SSH session](../add-services/add-services-development/ssh).
+After you've retrieved the hostname and port, [open an SSH session](../add-services-development/ssh).
 To access your Redis service, run the following command:
 
 ```bash

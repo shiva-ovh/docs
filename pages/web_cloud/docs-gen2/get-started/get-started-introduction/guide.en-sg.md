@@ -69,7 +69,7 @@ To start a project, you should have code on your computer that you'd like to dep
 It can be a basic "Hello World" site, such as you can find in the [Web PaaS demos](https://github.com/platformsh-demos).
 Just something that you know runs.
 
-An alternative is one of the [Web PaaS templates](../get-started/get-started-development/templates).
+An alternative is one of the [Web PaaS templates](../get-started-development/templates).
 These are example apps that come with everything needed to run on Web PaaS.
 
 ## Choose your stack

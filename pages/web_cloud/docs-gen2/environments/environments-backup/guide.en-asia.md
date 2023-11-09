@@ -26,10 +26,10 @@ first activate it.
 
 ## How backup and restore works
 
-1\. As an [admin user](../environments/environments-administration/users), you can do a backup of your environment.
+1\. As an [admin user](../environments-administration/users), you can do a backup of your environment.
 
    This backup includes the complete data and code of the environment.
-   All persistent data from all running [services](../environments/environments-add-services)
+   All persistent data from all running [services](../environments-add-services)
    and any files stored on [mounts](../create-apps/app-reference.md#mounts) are included.
    The backup is stored internally on Web PaaS.
    That is, the backup can be applied to environments on Web PaaS, but it can't be downloaded.
@@ -68,12 +68,12 @@ For consistent backups, create the backups during non-peak hours for your site.
 
 ## Retention
 
-For information on how long backups are retained, see the [data retention policy](../environments/environments-security/data-retention).
+For information on how long backups are retained, see the [data retention policy](../environments-security/data-retention).
 
 {{% version/only "1" %}}
 ## Backup schedule
 
-Backups for Dedicated environments have a [specific frequency](../environments/environments-dedicated-gen-2/overview/backups).
+Backups for Dedicated environments have a [specific frequency](../environments-dedicated-gen-2/overview/backups).
 
 On Grid environments, preview environments can have up to 2 [manual backups](#create-a-manual-backup).
 The number of available backups for Production environments depends on your schedule.
@@ -121,12 +121,12 @@ To downgrade to the lower schedule, [contact support](../../learn/learn-overview
 
 
 <!-- Web PaaS -->
-For Dedicated environments, see more about [backups of Dedicated environments](../environments/environments-dedicated-gen-2/overview/backups).
+For Dedicated environments, see more about [backups of Dedicated environments](../environments-dedicated-gen-2/overview/backups).
 
 For Grid environments, automated backups are taken for Production environments at least once every day.
 The exact number of backups depends on your [backup schedule](#backup-schedule).
 
-Daily backups are taken at around 4:00 every day based on the [project timezone](../environments/environments-projects/change-project-timezone).
+Daily backups are taken at around 4:00 every day based on the [project timezone](../environments-projects/change-project-timezone).
 The time for 6-hourly backups is based on the daily backup.
 
 <--->
@@ -152,8 +152,8 @@ when the short amount of downtime is least noticed.
 
 {{% version/only "1" %}}
 <!-- Web PaaS -->
-Automated backups are always live, including those taken on [{{% names/dedicated-gen-3 %}}](../environments/environments-dedicated-gen-3)
-and [{{% names/dedicated-gen-2 %}}](../environments/environments-dedicated-gen-2/overview) environments.
+Automated backups are always live, including those taken on [{{% names/dedicated-gen-3 %}}](../environments-dedicated-gen-3)
+and [{{% names/dedicated-gen-2 %}}](../environments-dedicated-gen-2/overview) environments.
 {{% /version/only %}}
 
 You can create a manual live backup on a Grid project:
@@ -168,7 +168,7 @@ plus 2 manual backups you can use for your [preview environments](../../glossary
 For more information, see the [{{< vendor/name >}} backup policy](../../security/security-backups).
 {{% /version/only %}}
 
-You can create a manual backup using the [CLI](../environments/environments-administration/cli) or in the [Console](../environments/environments-administration/web).
+You can create a manual backup using the [CLI](../environments-administration/cli) or in the [Console](../environments-administration/web).
 
 > [!tabs]      
 

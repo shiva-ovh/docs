@@ -40,7 +40,7 @@ You need:
 {{< /version/only >}}
 
 If you are planning to use several subdomains of the same domain on different projects,
-see how to [manage multiple subdomains](domains-steps/subdomains) *before* you add your domain to Web PaaS.
+see how to [manage multiple subdomains](subdomains) *before* you add your domain to Web PaaS.
 
 {{< version/only "1" >}}
 ## 1. Get the target for your project
@@ -76,6 +76,6 @@ Add a single domain to your project:
 
 ## What's next
 
-* [Use a content delivery network](../domains/domains-cdn)
+* [Use a content delivery network](../domains-cdn)
 * [Use subdomains across multiple projects](../.././.-subdomains)
 * [Use a custom TLS certificate](../.././.-tls)

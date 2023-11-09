@@ -26,10 +26,10 @@ or anywhere else a link can go to make launching your code base as straightforwa
 
 To have a deployable template, you need to first prepare the repository.
 The Deploy on Web PaaS button works with any Git repository that's deployable on Web PaaS.
-It needs [app configuration](../development/development-create-apps)
-and [`{{< vendor/configfile "routes" >}}` file](../development/development-define-routes).
-If you are using any [services](../development/development-add-services),
-you also need a [`{{< vendor/configfile "services" >}}` file](../development/development-add-services),
+It needs [app configuration](../development-create-apps)
+and [`{{< vendor/configfile "routes" >}}` file](../development-define-routes).
+If you are using any [services](../development-add-services),
+you also need a [`{{< vendor/configfile "services" >}}` file](../development-add-services),
 
 The repository must be available at a publicly accessible Git URL.
 That may be hosted with GitHub, GitLab, Bitbucket, your own custom Git hosting,

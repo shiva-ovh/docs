@@ -57,7 +57,7 @@ A legacy region is a region running an older version of the Web PaaS orchestrati
 It doesn't include all available features.
 
 If you’re on a legacy region and want all features now,
-[migrate your project](../development/development-projects/region-migration) to a newer region.
+[migrate your project](../development-projects/region-migration) to a newer region.
 
 ## Public IP addresses
 

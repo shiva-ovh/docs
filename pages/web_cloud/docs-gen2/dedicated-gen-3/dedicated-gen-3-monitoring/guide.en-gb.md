@@ -48,8 +48,8 @@ You can subscribe to Blackfire in two different ways:
   features and usage may cost more than the equivalent bundled in the Observability Suite.
 
 Web PaaS also supports third-party observability services
-such as [New Relic](../dedicated-gen-3/dedicated-gen-3-increase-observability/integrate-observability/new-relic)
-and [Tideways](../dedicated-gen-3/dedicated-gen-3-increase-observability/integrate-observability/tideways).
+such as [New Relic](../dedicated-gen-3-increase-observability/integrate-observability/new-relic)
+and [Tideways](../dedicated-gen-3-increase-observability/integrate-observability/tideways).
 You need to get your own license for them.
 These third-party services have their own associated cost,
 are language-specific, and may not be available for all languages.
