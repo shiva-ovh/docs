@@ -24,7 +24,7 @@ For {{% names/dedicated-gen-2 %}} projects, see how to [log remotely with `rsysl
 Logs to `stdout` and `stderr` are forwarded.
 Logs in files can't be forwarded.
 
-To enable log forwarding in a project, you need to be a [project admin](../administration/administration-users).
+To enable log forwarding in a project, you need to be a [project admin](../../administration/administration-users).
 You also need your project to have the capability for log forwarding.
 To get that, contact [support](https://console.platform.sh/-/users/~/tickets/open).
 
@@ -48,7 +48,7 @@ Integrations exist for the following third-party services to enable log forwardi
 
 #### Using the CLI 
 
-To enable log forwarding for a specific project using the [Web PaaS CLI](../administration/administration-cli),
+To enable log forwarding for a specific project using the [Web PaaS CLI](../../administration/administration-cli),
 follow the steps for your selected service.
 
 > [!tabs]      
@@ -564,7 +564,7 @@ You can forward your Web PaaS and Blackfire logs to any of those endpoints.
 
 ## Forward to an HTTP endpoint
 
-Some third-party services, such as [Elasticsearch](../add-services/add-services-elasticsearch) and [OpenSearch](../add-services/add-services-opensearch),
+Some third-party services, such as [Elasticsearch](../../add-services/add-services-elasticsearch) and [OpenSearch](../../add-services/add-services-opensearch),
 support ingesting log messages through an HTTP endpoint.
 You can use HTTP forwarding to forward Web PaaSand Blackfire logs to such third-party services.
 

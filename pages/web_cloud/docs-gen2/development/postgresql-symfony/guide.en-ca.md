@@ -22,4 +22,4 @@ section: Sanitize-Db
 
 {{% sanitize-dbs/whats-next %}}
 
-If your database contains a lot of data, consider using the [`REINDEX` statement](../https:/https:-/www.postgresql.org/docs/current/sql-reindex) to help improve performance.
+If your database contains a lot of data, consider using the [`REINDEX` statement](../../https:/https:-/www.postgresql.org/docs/current/sql-reindex) to help improve performance.

@@ -23,7 +23,7 @@ Activity scripts are configured as integrations.
 That means they're at the *project level*, not at the level of an individual environment.
 While you can store the scripts in your Git repository for access, they have no effect there.
 
-To install a new activity script, use the [Web PaaS CLI](../administration/administration-cli).
+To install a new activity script, use the [Web PaaS CLI](../../administration/administration-cli).
 
 ```bash
 {{% vendor/cli %}} integration:add --type script --file ./my_script.js
@@ -217,7 +217,7 @@ GET /api/projects/{{< variable "PROJECT_ID" >}}/integrations/{{< variable "INTEG
 ## Available APIs
 
 Activity scripts can be written in ES2021 and don't support installing additional packages.
-There are a series of [utility functions you can reuse](.././.-utility)
+There are a series of [utility functions you can reuse](../.././.-utility)
 as well as the following libraries, APIs, and global variables to facilitate building out custom functionality.
 
 ### `underscore.js`
@@ -381,5 +381,5 @@ var kSecret = "wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY";
 HMAC(HMAC(HMAC(HMAC("AWS4" + kSecret,"20150830"),"us-east-1"),"iam"),"aws4_request");
 ```
 
-> Example taken from the [AWS documentation for signing API requests](../https:/https:-/docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature).
+> Example taken from the [AWS documentation for signing API requests](../../https:/https:-/docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature).
 

@@ -113,18 +113,18 @@ That's a great start to working with Web PaaS.
 
 Now that you've mastered the basics, you can choose more advanced tasks to complete:
 
-- Manage [multiple apps in a single project](../create-apps/create-apps-multi-app).
+- Manage [multiple apps in a single project](../../create-apps/create-apps-multi-app).
 
-- See how to set up for [local development](../development/development-local).
+- See how to set up for [local development](../../development/development-local).
 
-- Go live at a [custom domain](../domains/domains-steps).
+- Go live at a [custom domain](../../domains/domains-steps).
 
-- Increase observability by [integrating Blackfire](../increase-observability/increase-observability-integrate-observability/blackfire)
+- Increase observability by [integrating Blackfire](../../increase-observability/increase-observability-integrate-observability/blackfire)
 
-- To maintain code in a third-party repository, integrate with [Bitbucket, GitHub, or GitLab](../integrations/integrations-source).
+- To maintain code in a third-party repository, integrate with [Bitbucket, GitHub, or GitLab](../../integrations/integrations-source).
 
-- Read more on [health notifications](../integrations/integrations-notifications).
+- Read more on [health notifications](../../integrations/integrations-notifications).
 
-- See a reference on [all options available for activity notifications](../integrations/integrations-activity/reference) or
+- See a reference on [all options available for activity notifications](../../integrations/integrations-activity/reference) or
 
-  use an [activity script](../integrations/integrations-activity) to manage activity responses in Web PaaS.
+  use an [activity script](../../integrations/integrations-activity) to manage activity responses in Web PaaS.

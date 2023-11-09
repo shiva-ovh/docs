@@ -10,7 +10,7 @@ section: Add-Services
 
 ## Objective  
 
-[RabbitMQ](../https:/https:-/www.rabbitmq.com/documentation) is a message broker
+[RabbitMQ](../../https:/https:-/www.rabbitmq.com/documentation) is a message broker
 that supports multiple messaging protocols, such as the Advanced Message Queuing Protocol (AMQP).
 It gives your apps a common webpaas to send and receive messages
 and your messages a safe place to live until they're received.
@@ -208,11 +208,11 @@ run the following command:
 ```
 
 Then configure a RabbitMQ client to connect to this tunnel using the credentials from the [relationship](#relationship-reference).
-See a [list of RabbitMQ client libraries](../https:/https:-/www.rabbitmq.com/devtools).
+See a [list of RabbitMQ client libraries](../../https:/https:-/www.rabbitmq.com/devtools).
 
 ### Access the management UI
 
-RabbitMQ offers a [management plugin with a browser-based UI](../https:/https:-/www.rabbitmq.com/management).
+RabbitMQ offers a [management plugin with a browser-based UI](../../https:/https:-/www.rabbitmq.com/management).
 You can access this UI with an SSH tunnel.
 
 To open a tunnel, follow these steps.
@@ -261,7 +261,7 @@ You can configure your RabbitMQ service in the [services configuration](#1-confi
 |----------|-------------------|----------|------------------------------------------------------|
 | `vhosts` | List of `string`s | No       | Virtual hosts used for logically grouping resources. |
 
-You can configure additional [virtual hosts](../https:/https:-/www.rabbitmq.com/vhosts),
+You can configure additional [virtual hosts](../../https:/https:-/www.rabbitmq.com/vhosts),
 which can be useful for separating resources, such as exchanges, queues, and bindings, into their own namespaces.
 To create virtual hosts, add them to your configuration as in the following example:
 

@@ -300,7 +300,7 @@ Note that you need to place an alias with `<<:` at the same level as the other k
 
 ## What's next
 
-- See what Web PaaS makes possible with [custom tags](../.././.-platform-yaml-tags).
+- See what Web PaaS makes possible with [custom tags](../../.././.-platform-yaml-tags).
 
 - Read everything that's possible with YAML in the [YAML specification](https://yaml.org/spec/1.2.2/).
 

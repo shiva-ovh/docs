@@ -81,14 +81,14 @@ The `start` key specifies the command to use to launch your worker application.
 It may be any valid shell command, although most often it runs a command in your application in the language of your application.
 If the command specified by the `start` key terminates, it's restarted automatically.
 
-Note that [`deploy` and `post_deploy` hooks](.././.-hooks) as well as [`cron` commands](./app-reference.md#crons)
+Note that [`deploy` and `post_deploy` hooks](../.././.-hooks) as well as [`cron` commands](./app-reference.md#crons)
 run only on the [`web`](./app-reference.md#web) container, not on workers.
 
 ## Inheritance
 
 
 Any top-level definitions for [`size`](./app-reference.md#sizes), [`relationships`](./app-reference.md#relationships),
-[`access`](.././.-app-reference#access), [`disk`](.././.-app-reference), [`mount`](.././.-app-reference#mounts), and [`variables`](.././.-app-reference#variables)
+[`access`](../.././.-app-reference#access), [`disk`](../.././.-app-reference), [`mount`](../.././.-app-reference#mounts), and [`variables`](../.././.-app-reference#variables)
 are inherited by every worker, unless overridden explicitly.
 <--->
 Any top-level definitions for [`relationships`](./app-reference.md#relationships),

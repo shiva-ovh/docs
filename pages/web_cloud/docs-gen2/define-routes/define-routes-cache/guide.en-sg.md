@@ -27,7 +27,7 @@ When caching is on...
 You should _not_ use the Web PaaS HTTP cache if you're using [Varnish](../define-routes/define-routes-add-services/varnish) or an external CDN
 such as [Fastly](../define-routes/define-routes-domains/cdn/fastly) or [Cloudflare](../define-routes/define-routes-domains/cdn/cloudflare).
 Mixing cache services together most likely results in caches that are stale and can't be cleared.
-For more details, see [best practices on HTTP caching](../learn/learn-bestpractices/http-caching).
+For more details, see [best practices on HTTP caching](../../learn/learn-bestpractices/http-caching).
 
 ## Basic usage
 
@@ -404,7 +404,7 @@ routes:
 
 ### Cache HTTP and HTTPS separately using the `Vary` header
 
-Set the Vary header to `X-Forwarded-Proto` [custom request header](../development/development-headers) to render content based on the request protocol (i.e. HTTP or HTTPS). By adding `Vary: X-Forwarded-Proto` to the response header, HTTP and HTTPS content would be cached separately.
+Set the Vary header to `X-Forwarded-Proto` [custom request header](../../development/development-headers) to render content based on the request protocol (i.e. HTTP or HTTPS). By adding `Vary: X-Forwarded-Proto` to the response header, HTTP and HTTPS content would be cached separately.
 
 ### Cache zipped content separately
 

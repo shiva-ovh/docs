@@ -17,7 +17,7 @@ To deactivate an environment, you need to be an admin for the project or the giv
 > 
 > Your default environment is protected.
 > It can't be deactivated through the Console or the CLI.
-> To change which environment is the default, see how to [rename the default branch](.././.-default-environment).
+> To change which environment is the default, see how to [rename the default branch](../.././.-default-environment).
 > 
 > 
 
@@ -52,7 +52,7 @@ To reactivate an inactive environment, follow these steps:
 
 > [!tabs]      
 
-If you're not using a [source integration](../integrations/integrations-source),
+If you're not using a [source integration](../../integrations/integrations-source),
 you can also activate an environment when pushing changes to it.
 To do so, run the following command:
 

@@ -45,4 +45,4 @@ Authenticated traffic that can't be served by the CDN still sees a brief interru
 
 Web PaaS values consistency over availability,
 which means that deployments can cause your app to be unavailable for a short amount of time.
-For more information, see the [overview of the build and deploy phases](../learn/learn-overview/build-deploy).
+For more information, see the [overview of the build and deploy phases](../../learn/learn-overview/build-deploy).

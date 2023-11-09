@@ -127,7 +127,7 @@ reverse the order of the parameters:
 scp diagram.png "$({{% vendor/cli %}} ssh --pipe)":web/uploads
 ```
 
-For other options, see the [`scp` documentation](../https:/https:-/www.man7.org/linux/man-pages/man1/scp.1).
+For other options, see the [`scp` documentation](../../https:/https:-/www.man7.org/linux/man-pages/man1/scp.1).
 
 ### rsync
 
@@ -153,4 +153,4 @@ Note that `rsync` is very sensitive about trailing `/` characters.
 If you're using UTF-8 encoded files on macOS, 
 add the `--iconv=utf-8-mac,utf-8` flag to your `rsync` call.
 
-For more options, consult the [rsync documentation](../https:/https:-/man7.org/linux/man-pages/man1/rsync.1).
+For more options, consult the [rsync documentation](../../https:/https:-/man7.org/linux/man-pages/man1/rsync.1).

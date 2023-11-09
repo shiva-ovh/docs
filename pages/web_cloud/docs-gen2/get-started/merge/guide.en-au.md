@@ -18,7 +18,7 @@ Next, add a service to your preview environment.
 Web PaaS includes many services such as databases, cache, and search engines.
 These are included in your project, so you can manage them with Git and back them up with your project.
 
-Add a database service (../or choose [another service](../or choose [another service](..-../add-services)) by following these steps:
+Add a database service (../../or choose [another service](../or choose [another service](..-../add-services)) by following these steps:
 
 1\. Create a services configuration file.
 

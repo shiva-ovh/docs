@@ -125,7 +125,7 @@ If you can't access some part of your project, whether it's the live site, devel
 check the [Web PaaS status page](https://status.platform.sh/).
 There you can see planned maintenance and subscribe to updates for any potential outages.
 
-If the status is operational, [contact support](../learn/learn-overview/get-support).
+If the status is operational, [contact support](../../learn/learn-overview/get-support).
 
 ## Command not found
 
@@ -233,7 +233,7 @@ In most regions, stuck builds terminate after one hour.
 
 When a deployment is blocked, you should try the following:
 
-1\. Connect to your environment using [SSH](.././.-ssh).
+1\. Connect to your environment using [SSH](../.././.-ssh).
 
 2\. Find any long-running cron jobs or deploy hooks on the environment by running `ps afx`.
 
@@ -265,7 +265,7 @@ If they run into issues, they can cause the build to fail or hang indefinitely.
 
 `build` hooks can be tested in your local environment.
 `deploy` hooks can be tested either locally
-or by logging into the application over [SSH](.././.-ssh) and running them there.
+or by logging into the application over [SSH](../.././.-ssh) and running them there.
 Be careful not to test the scripts on production environments.
 
 You can also test your hooks with these Linux commands to help debug issues:

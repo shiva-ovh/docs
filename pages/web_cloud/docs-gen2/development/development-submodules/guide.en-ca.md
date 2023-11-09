@@ -148,7 +148,7 @@ To fix this, follow these steps:
     branch = submodule/branch
 ```
 
-2\. Add the [project's public key to your remote Git repository](.././.-private-repository).
+2\. Add the [project's public key to your remote Git repository](../.././.-private-repository).
 
    This allows your Web PaaS project to pull the repository from the remote Git service.
 

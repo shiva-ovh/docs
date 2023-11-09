@@ -150,7 +150,7 @@ when the filesystem is read-only.
 You can use a runtime operation to trigger the second `build` step
 after the initial deployment of your app or after a redeployment.
 You can also trigger it when you need to fetch content from your backend
-but want to avoid going through the whole Web PaaS [build and deploy processes](../learn/learn-overview/build-deploy) again.
+but want to avoid going through the whole Web PaaS [build and deploy processes](../../learn/learn-overview/build-deploy) again.
 
 > [!primary]  
 > 

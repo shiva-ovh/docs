@@ -26,7 +26,7 @@ You can use one of the following version managers:
 
 
 Both of the recommendations use a `.nvmrc` file to specify the desired Node.js version.
-You could also specify a different file or use [environment variables](../development/development-variables).
+You could also specify a different file or use [environment variables](../../development/development-variables).
 
 ## Use `n`
 
@@ -187,13 +187,13 @@ You can use it to:
 
 - Make a specific version available in the build and optionally the runtime container.
 
-- Control the specific versions to be installed with [environment variables](../development/development-variables),
+- Control the specific versions to be installed with [environment variables](../../development/development-variables),
 
   meaning you can also have different versions in different environments.
 
 To use `nvm`, follow these steps:
 
-1\. Define which `nvm` version to use using an [environment variable](../development/development-variables).
+1\. Define which `nvm` version to use using an [environment variable](../../development/development-variables).
 
    Add it to your [app configuration](../../create-apps):
 
@@ -245,7 +245,7 @@ applications:
 
    To get different versions in different environments, [set environment-specific variables](../../development/variables/set-variables.md#create-environment-specific-variables).
 
-3\. Add a `.nvm` directory to your cache in your [build hook](../create-apps/create-apps-hooks):
+3\. Add a `.nvm` directory to your cache in your [build hook](../../create-apps/create-apps-hooks):
 
 
 

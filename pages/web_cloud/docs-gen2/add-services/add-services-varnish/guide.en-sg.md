@@ -256,7 +256,7 @@ sub vcl_recv {
 ## Clear cache with a push
 
 You may want at times to clear a specific part of your cache when you know the content is outdated.
-With Varnish, you can clear the content with [purging and banning](../https:/https:-/varnish-cache.org/docs/trunk/users-guide/purging).
+With Varnish, you can clear the content with [purging and banning](../../https:/https:-/varnish-cache.org/docs/trunk/users-guide/purging).
 
 The following example shows how to set up purging.
 

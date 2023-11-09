@@ -14,7 +14,7 @@ order: 2
 > [{{% names/dedicated-gen-3 %}}](../../dedicated-gen-3) projects are similar,
 > but they run on dedicated hosts and each container is replicated three times.
 > 
-> For {{% names/dedicated-gen-2 %}} projects, read about how [{{% names/dedicated-gen-2 %}} projects are structured](../dedicated-gen-2/dedicated-gen-2-overview).
+> For {{% names/dedicated-gen-2 %}} projects, read about how [{{% names/dedicated-gen-2 %}} projects are structured](../../dedicated-gen-2/dedicated-gen-2-overview).
 > 
 > 
 
@@ -131,4 +131,4 @@ Worker containers are copies of an app containers
 that have no access to the outside world and can have a different start command.
 They're useful for continually running background processes.
 
-Read more about how to [work with workers](../create-apps/create-apps-workers).
+Read more about how to [work with workers](../../create-apps/create-apps-workers).

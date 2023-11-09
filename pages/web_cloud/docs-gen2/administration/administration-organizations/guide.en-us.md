@@ -52,7 +52,7 @@ and organize your projects as you want.
 As an organization owner, you can delete your own organization.
 
 Note that if your organization owns projects or owes remaining invoices, you can not delete it yourself.
-To have it deleted, [contact support](../learn/learn-overview/get-support).
+To have it deleted, [contact support](../../learn/learn-overview/get-support).
 
 > [!tabs]      
 

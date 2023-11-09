@@ -10,7 +10,7 @@ section: Php
 
 ## Objective  
 
-[Redis](../add-services/add-services-redis) is a popular structured key-value service, supported by Web PaaS.
+[Redis](../../add-services/add-services-redis) is a popular structured key-value service, supported by Web PaaS.
 It's frequently used for caching.
 
 ## Install PhpRedis
@@ -56,7 +56,7 @@ applications:
 
 ## Install Relay
 
-Relay is a [Redis](../add-services/add-services-redis) client
+Relay is a [Redis](../../add-services/add-services-redis) client
 similar to [PhpRedis](https://github.com/phpredis/phpredis) and
 [Predis](https://github.com/predis/predis).
 It's intended to be a drop-in replacement for those libraries.

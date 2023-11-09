@@ -28,7 +28,7 @@ to support automated monitoring and guarantee high SLA.
 
 ## Application performance monitoring
 
-As the official, in-house Web PaaS observability tool, [Blackfire](../increase-observability/increase-observability-integrate-observability/blackfire) provides unparalleled monitoring, profiling, and performance testing technologies.
+As the official, in-house Web PaaS observability tool, [Blackfire](../../increase-observability/increase-observability-integrate-observability/blackfire) provides unparalleled monitoring, profiling, and performance testing technologies.
 Using Blackfire on Web PaaS enhances your experience
 and allows you to enjoy greater support as well as unique upcoming features.
 

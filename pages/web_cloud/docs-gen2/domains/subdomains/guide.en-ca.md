@@ -50,7 +50,7 @@ In certain cases (such as if your domain was added manually by Web PaaS support)
 your domain may be reserved for the project you added it to.
 Then you can't set up a second project with the bare domain (`example.com`) or a subdomain (`foo.example.com`).
 
-If that happens, [contact support](../learn/learn-overview/get-support).
+If that happens, [contact support](../../learn/learn-overview/get-support).
 Include the project ID of the project that already has the domain.
 
 ## Why this is necessary

@@ -20,17 +20,17 @@ This ensures the changes you make locally appear as they would on your Web PaaS 
 It also means you don't have to worry about configuring your machine with
 the various dependencies, certificates, and connections your app needs to run.
 
-The **recommended tool** for local development with Web PaaS is **[DDEV](.././.-ddev)**.
+The **recommended tool** for local development with Web PaaS is **[DDEV](../.././.-ddev)**.
 The integration with DDEV is maintained by Web PaaS to ensure it works smoothly.
 
 
 <!-- Web PaaS -->
-Other Docker-based tools are also supported, such as [Docksal](.././.-docksal) and [Lando](.././.-lando).
+Other Docker-based tools are also supported, such as [Docksal](../.././.-docksal) and [Lando](../.././.-lando).
 If you choose to use a Docker-based tool, follow the steps on its page.
 
 <--->
 <!-- Upsun -->
-If you choose to use DDEV, follow the steps [on its page](.././.-ddev).
+If you choose to use DDEV, follow the steps [on its page](../.././.-ddev).
 {{% /version/specific %}}
 Otherwise, follow these steps to run your app on your computer.
 
@@ -53,7 +53,7 @@ You need to have:
 
 - [Git](https://git-scm.com/downloads)
 
-- The [Web PaaS CLI](../administration/administration-cli)
+- The [Web PaaS CLI](../../administration/administration-cli)
 
 
 ## 1. Get your code
@@ -70,7 +70,7 @@ If you don't have your app code on your computer, download a copy.
 {{% vendor/cli %}} get {{< variable "PROJECT_ID" >}} {{< variable "TARGET_DIRECTORY_NAME" >}}
 ```
 
-    Or pull from your [integrated Git repository](../integrations/integrations-source).
+    Or pull from your [integrated Git repository](../../integrations/integrations-source).
 
 You can now access your code from the project directory on your computer.
 The CLI created a `{{< vendor/configfile "apps" >}}/local` directory that's excluded from Git. 
@@ -86,10 +86,10 @@ For more information, see how to [connect services](../../add-services#2-connect
 
 If your app requires services to run, you have two options for developing locally:
 
-- [Tethered local development](.././.-tethered) involves running your app on a local web server
+- [Tethered local development](../.././.-tethered) involves running your app on a local web server
 
   but keeping all other services on Web PaaS and connecting to them over an SSH tunnel.
-- [Untethered local development](.././.-untethered) involves running your entire site locally,
+- [Untethered local development](../.././.-untethered) involves running your entire site locally,
 
   including all services.
 

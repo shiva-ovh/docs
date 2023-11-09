@@ -46,7 +46,7 @@ If it isn't, try the following steps:
 To find out where your domain is pointing to,
 you can use [the certificate checker tool](https://certcheck.pltfrm.sh/).
 This tool provides guidance on certificates,
-including when you use a [CDN](.././.-cdn).
+including when you use a [CDN](../.././.-cdn).
 Check both the apex and the `www` domains to ensure they both point to your project.
 
 For further investigations, run the following command in a shell:
@@ -56,7 +56,7 @@ curl -I -v  https://www.{{< variable "YOUR_DOMAIN" >}}
 ```
 
 Look for error messages.
-Often the problem is caused by a mismatch between the certificate and the domain name or an expired [custom certificate](../steps/steps-tls).
+Often the problem is caused by a mismatch between the certificate and the domain name or an expired [custom certificate](../../steps/steps-tls).
 
 ### Error provisioning certificates
 
@@ -136,7 +136,7 @@ For example, a conflicting AAAA (IPv6) DNS record can result in a `[HTTP01: The 
 If the certificate generation issue persists,
 check if an outage is ongoing with your certificate issuer (the most common one is [Let's Encrypt](https://letsencrypt.status.io/))
 and with your CDN provider if you have one.
-If not, [contact Support](../learn/learn-overview/get-support).
+If not, [contact Support](../../learn/learn-overview/get-support).
 
 ### Check your routes configuration
 
@@ -179,4 +179,4 @@ Use a tool such as the [conversion tool provided by Verisign](https://www.verisi
 
 {{% troubleshoot %}}
 
-If your website is still not working as expected, [contact support](../learn/learn-overview/get-support).
+If your website is still not working as expected, [contact support](../../learn/learn-overview/get-support).

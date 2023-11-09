@@ -60,7 +60,7 @@ You need:
 
 - An up-and-running web app in PHP, complete with [PHP-FPM](https://www.php.net/manual/en/install.fpm.php)
 
-- The [Web PaaS CLI](../administration/administration-cli)
+- The [Web PaaS CLI](../../administration/administration-cli)
 
 
 Note that the memory settings mentioned on this page are different from the [`memory_limit` PHP setting](../../.). 

@@ -123,9 +123,9 @@ The following table presents the possible activities:
 | `environment.domain.create` | A new domain has been associated with the environment. |
 | `environment.domain.delete` | A domain associated with the environment has been removed. |
 | `environment.domain.update` | A domain associated with the environment has been updated, such as having its SSL certificate modified. |
-| `environment.backup` |  A user triggered a [backup](../environments/environments-backup). |
-| `environment.backup.delete` | A user deleted a [backup](../environments/environments-backup). |
-| `environment.restore` | A user restored a [backup](../environments/environments-backup). |
+| `environment.backup` |  A user triggered a [backup](../../environments/environments-backup). |
+| `environment.backup.delete` | A user deleted a [backup](../../environments/environments-backup). |
+| `environment.restore` | A user restored a [backup](../../environments/environments-backup). |
 | `environment.push` | A user pushed code to a branch, either existing or new. |
 | `environment.branch` | A new branch has been created via the CLI, Console, or API. A branch created via Git shows up as `environment.push`. |
 | `environment.activate` | The environment has been made [active](/glossary.md#active-environment). |
@@ -143,7 +143,7 @@ The following table presents the possible activities:
 | `environment.variable.update` | A variable has been modified. |
 | `environment.update.http_access` | HTTP access rules for an environment have been modified. |
 | `environment.update.smtp` | Email sending has been enabled or disabled for an environment. |
-| `environment.update.restrict_robots` | The option to [hide from search engines](../environments/environments-search-engine-visibility) has been enabled or disabled for an environment. |
+| `environment.update.restrict_robots` | The option to [hide from search engines](../../environments/environments-search-engine-visibility) has been enabled or disabled for an environment. |
 | `environment.subscription.update` | The production environment has been resized because the plan has changed. The content of the environment hasn't changed. |
 | `environment.cron` | A cron job has completed. |
 | `environment.source-operation` | A source operation has completed. |
@@ -247,7 +247,7 @@ The following table presents the most notable properties of the environment:
 | `payload.environment.name` | The environment name. |
 | `payload.environment.type` | The [environment type](../../administration/users.md#environment-type-roles). |
 | `payload.environment.head_commit` | The ID of the environment's latest Git commit. |
-| `payload.environment.edge_hostname` | The URL you should target when setting up a [custom domain](../domains/domains-steps). |
+| `payload.environment.edge_hostname` | The URL you should target when setting up a [custom domain](../../domains/domains-steps). |
 
 Different from [`environment` activities](#type).
 
@@ -259,10 +259,10 @@ The following table presents the most notable properties of the project:
 
 | Name | Description |
 |------|-------------|
-| `payload.project.timezone` | Your project's [timezone](../projects/projects-change-project-timezone). |
+| `payload.project.timezone` | Your project's [timezone](../../projects/projects-change-project-timezone). |
 | `payload.project.region` | Your project's [region](../../development/regions.md#regions). |
 | `payload.project.title` | Your project's name. |
-| `payload.project.subscription` | All of the details about your project's [plan](../administration/administration-pricing). |
+| `payload.project.subscription` | All of the details about your project's [plan](../../administration/administration-pricing). |
 
 Different from [`project` activities](#type).
 
@@ -275,7 +275,7 @@ The following table presents the most notable properties of the deployment:
 |------|-------------|
 | `payload.deployment.routes` | All the URLs connected to the environment. The list includes redirects. To exclude redirects, find objects whose `type` is `upstream`. |
 | `payload.deployment.services` | All the services on your environment. |
-| `payload.deployment.variables` | All the [variables for the environment](../development/development-variables).  |
+| `payload.deployment.variables` | All the [variables for the environment](../../development/development-variables).  |
 
 The `payload.deployment` property includes the configuration extracted from the following sources:
 

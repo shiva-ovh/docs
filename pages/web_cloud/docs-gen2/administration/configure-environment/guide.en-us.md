@@ -17,7 +17,7 @@ From your project's main page in the Console, you can see all your environments 
 In this overview, the names of inactive environments are lighter.
 Selecting an environment allows you to see details about it,
 such as its [activity feed](#activity-feed), [services](#service-information),
-[metrics](../increase-observability/increase-observability-metrics), and [backups](../environments/environments-backup).
+[metrics](../../increase-observability/increase-observability-metrics), and [backups](../../environments/environments-backup).
 
 ## Activity Feed
 
@@ -48,12 +48,12 @@ There are also additional options:
   * **Git** for the command to clone the codebase via Git.
   
     If you're using Web PaaS as your primary remote repository, the command clones from the project.
-    If you have set up an [external integration](../integrations/integrations-source),
+    If you have set up an [external integration](../../integrations/integrations-source),
     the command clones directly from the integrated remote repository.
 
     If the project uses an external integration to a repository that you haven't been given access to,
     you can't clone until your access has been updated.
-    See how to [troubleshoot source integrations](../integrations/integrations-source/troubleshoot).
+    See how to [troubleshoot source integrations](../../integrations/integrations-source/troubleshoot).
 
 ## Environment URL
 
@@ -67,7 +67,7 @@ follow these steps:
 
 1\. Check that [you have defined routes](../../define-routes) for your default environment.
 
-2\. Verify that your [application](../create-apps/create-apps-app-reference), [services](../../add-services), and [routes](../../define-routes) configurations are correct.
+2\. Verify that your [application](../../create-apps/create-apps-app-reference), [services](../../add-services), and [routes](../../define-routes) configurations are correct.
 
 3\. Check that your default environment is [active](../../environments/deactivate-environment.md#reactivate-an-environment).
 
@@ -90,29 +90,29 @@ Under **Status**, you can check whether or not your environment is [active](/glo
 
 ![Environment status](images/env-status.png "0.5")
 
-For preview environments, you can [change their status](../environments/environments-deactivate-environment).
+For preview environments, you can [change their status](../../environments/environments-deactivate-environment).
 
 ### Outgoing emails
 
-Under **Outgoing emails**, you can allow your environment to [send emails](../development/development-email):
+Under **Outgoing emails**, you can allow your environment to [send emails](../../development/development-email):
 
 ![Environment email](images/env-email.png "0.75")
 
 ### Hide from search engines
 
-Under **Hide from search engines**, you can tell [search engines to ignore the site](../environments/environments-search-engine-visibility):
+Under **Hide from search engines**, you can tell [search engines to ignore the site](../../environments/environments-search-engine-visibility):
 
 ![Environment search](images/env-search.png "0.5")
 
 ### HTTP access control
 
-Under **HTTP access control**, you can [control access to your environment using HTTP methods](../environments/environments-http-access-control):
+Under **HTTP access control**, you can [control access to your environment using HTTP methods](../../environments/environments-http-access-control):
 
 ![Settings control access with password and by IP](images/settings-basics-access-control.png "0.5")
 
 ### Variables
 
-Under **Variables**, you can define [environment variables](../development/development-variables):
+Under **Variables**, you can define [environment variables](../../development/development-variables):
 
 ![Configure Web PaaS environment variables](images/settings-variables-environment.png "0.6")
 
@@ -144,7 +144,7 @@ You can see:
 
 * The language version, the container size, the amount of persistent disk,
   the number of cron jobs, and the command to SSH into the container.
-* A summary of [metrics for the environment](../increase-observability/increase-observability-metrics).
+* A summary of [metrics for the environment](../../increase-observability/increase-observability-metrics).
 * All cron jobs with their name, frequency, and command.
 * All workers with their name, size, amount of persistent disk, and command to SSH into the container.
 
@@ -159,6 +159,6 @@ select it in the tree or list on the left-hand side:
 
 The **Overview** gives you information about the selected service.
 You can see the service version, the container size, and the disk size, if you've configured a persistent disk.
-You can also see a summary of [metrics for the environment](../increase-observability/increase-observability-metrics).
+You can also see a summary of [metrics for the environment](../../increase-observability/increase-observability-metrics).
 
 To view the configuration file where your services are set up, click **Configuration**.

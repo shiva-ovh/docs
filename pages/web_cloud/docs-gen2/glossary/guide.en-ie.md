@@ -40,7 +40,7 @@ When you branch an environment, three things happen:
 
 - Your apps are rebuilt on the new branch, if necessary.
 
-  (This is skipped if the same code with the same [variables](../This is skipped if the same code with the same [variables](..-development/variables) has been built for any environment.)
+  (../This is skipped if the same code with the same [variables](../This is skipped if the same code with the same [variables](..-development/variables) has been built for any environment.)
 - The new branch is deployed.
 
 
@@ -62,9 +62,9 @@ They're always deployed together as a single unit.
 
 ## {{% names/dedicated-gen-2 %}}
 
-[{{% names/dedicated-gen-2 %}} environments](dedicated-gen-2/dedicated-gen-2-overview) are managed host clusters with triple redundancy.
+[{{% names/dedicated-gen-2 %}} environments](../dedicated-gen-2/dedicated-gen-2-overview) are managed host clusters with triple redundancy.
 Their dedicated architecture makes them differ from [Grid environments](#grid).
-See a [list of differences](dedicated-gen-2/dedicated-gen-2-overview/grid).
+See a [list of differences](../dedicated-gen-2/dedicated-gen-2-overview/grid).
 
 These differences aren't present with [{{% names/dedicated-gen-3 %}} projects](../dedicated-gen-3).
 
@@ -134,7 +134,7 @@ An environment that isn't deployed.
 It has no data of its own and no running services.
 If you reactivate it, it copies data from its parent.
 
-See how to [deactivate an environment](environments/environments-deactivate-environment).
+See how to [deactivate an environment](../environments/environments-deactivate-environment).
 
 ## Live environment
 
@@ -145,7 +145,7 @@ A publicly accessible environment that's deployed from the Production branch und
 MB stands for megabyte, which means 1,000,000 bytes.
 This unit is based on powers of 10.
 
-Some reporting tools, such as those used by the [CLI](administration/administration-cli),
+Some reporting tools, such as those used by the [CLI](../administration/administration-cli),
 use binary megabytes, also known as mebibytes and abbreviated as MiB.
 This unit is based on powers of 2 and so 1&nbsp;MiB equals 1024<sup>2</sup> or 1,048,576 bytes.
 So 1&nbsp;MB is less than 1&nbsp;MiB.
@@ -164,7 +164,7 @@ When you merge an environment, three things happen:
 
 - Your apps rebuilt on the parent branch, if necessary.
 
-  (This is skipped if the same code with the same [variables](../This is skipped if the same code with the same [variables](..-development/variables) has been built for any environment.)
+  (../This is skipped if the same code with the same [variables](../This is skipped if the same code with the same [variables](..-development/variables) has been built for any environment.)
 - The parent branch is deployed.
 
 
@@ -184,7 +184,7 @@ They are useful to perform user acceptance testing.
 ## Production plan
 
 A subscription level that allows you to host your production website
-by adding a domain and [a custom SSL certificate](domains/domains-steps/tls).
+by adding a domain and [a custom SSL certificate](../domains/domains-steps/tls).
 
 ## Project
 

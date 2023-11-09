@@ -23,7 +23,7 @@ Unlike PHP-FPM’s stateless operating, Swoole relies on establishing persistent
 > 
 
 
-Check the documentation related to [Laravel Octane on Web PaaS](../guides/guides-laravel/deploy/octane).
+Check the documentation related to [Laravel Octane on Web PaaS](../../guides/guides-laravel/deploy/octane).
 <--->
 <!-- @todo: To be added once Laravel guide for Upsun is live -->
 {{% /version/specific %}}

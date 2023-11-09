@@ -29,8 +29,8 @@ See how to [back up and transfer data](../../development/transfer-dedicated.md#s
 
 ## Backups
 
-Production environments are [backed up automatically](.././.-backups).
-For other environments, trigger a [manual backup](../environments/environments-backup).
+Production environments are [backed up automatically](../.././.-backups).
+For other environments, trigger a [manual backup](../../environments/environments-backup).
 
 ## PHP
 
@@ -60,7 +60,7 @@ For other PHP options, such as the following, open a support ticket:
 
 ### Xdebug
 
-All {{% names/dedicated-gen-2 %}} clusters that have [Xdebug](../languages/languages-php/xdebug) enabled have a second PHP-FPM process.
+All {{% names/dedicated-gen-2 %}} clusters that have [Xdebug](../../languages/languages-php/xdebug) enabled have a second PHP-FPM process.
 This second process is used only when requests include the correct Xdebug key in a header.
 So you can keep Xdebug always on and not worry about performance issues as it's ignored on most requests.
 
@@ -71,8 +71,8 @@ Then whenever you have Xdebug enabled, the request uses the alternate developmen
 
 ## Solr
 
-On Grid environments, [Solr](../add-services/add-services-solr) runs as a standalone instance.
-On {{% names/dedicated-gen-2 %}} environments, it runs as [SolrCloud](../https:/https:-/solr.apache.org/guide/6_6/solrcloud):
+On Grid environments, [Solr](../../add-services/add-services-solr) runs as a standalone instance.
+On {{% names/dedicated-gen-2 %}} environments, it runs as [SolrCloud](../../https:/https:-/solr.apache.org/guide/6_6/solrcloud):
 a cluster of Solr servers to ensure high availability.
 This shouldn't affect you most of the time, but may influence certain advanced use cases.
 
@@ -104,7 +104,7 @@ The following settings require a support ticket:
 * Plan upsizing
 * Increasing storage
 * Allocating storage among mounts and services
-* [PHP extensions](../languages/languages-php/extensions)
+* [PHP extensions](../../languages/languages-php/extensions)
 * Web server configuration (the [`web.locations` section of your app configuration](../../create-apps/app-reference.md#locations))
 
 

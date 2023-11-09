@@ -89,7 +89,7 @@ Some built-in modules are always on:
 - `zlib`
 
 
-To see a complete list of the compiled PHP extensions, run the following [CLI command](../administration/administration-cli):
+To see a complete list of the compiled PHP extensions, run the following [CLI command](../../administration/administration-cli):
 
 ```bash
 {{% vendor/cli %}} ssh "php -m"

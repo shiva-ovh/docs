@@ -28,7 +28,7 @@ Notifications are generated every 5 minutes, so there may be a brief delay betwe
 
 ## Configuring notifications
 
-Health notifications can be set up via the [Web PaaS CLI](../administration/administration-cli), through a number of different channels.
+Health notifications can be set up via the [Web PaaS CLI](../../administration/administration-cli), through a number of different channels.
 
 ### Slack notifications
 

@@ -17,7 +17,7 @@ To enable connections, define relationships between apps using the `http` endpoi
 You can't define circular relationships.
 If `app1` has a relationship to `app2`, then `app2` can't have a relationship to `app1`.
 If you need data to go both ways, consider coordinating through a shared data store,
-like a database or [RabbitMQ server](../add-services/add-services-rabbitmq).
+like a database or [RabbitMQ server](../../add-services/add-services-rabbitmq).
 
 Relationships between apps use HTTP, not HTTPS.
 This is still secure because they're internal and not exposed to the outside world.

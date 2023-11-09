@@ -29,9 +29,9 @@ You need:
 
 - A domain with access to its settings with the registrar
 
-- A registrar that allows `CNAME` records or [one of the alternatives](.././.-dns) on [apex domains](/glossary.md#apex-domain)
+- A registrar that allows `CNAME` records or [one of the alternatives](../.././.-dns) on [apex domains](/glossary.md#apex-domain)
 
-- Optional: The [CLI](../administration/administration-cli) installed locally
+- Optional: The [CLI](../../administration/administration-cli) installed locally
 
 <!-- There are no development plans on Upsun -->
 {{< version/only "1" >}}
@@ -77,5 +77,5 @@ Add a single domain to your project:
 ## What's next
 
 * [Use a content delivery network](../domains/domains-cdn)
-* [Use subdomains across multiple projects](.././.-subdomains)
-* [Use a custom TLS certificate](.././.-tls)
+* [Use subdomains across multiple projects](../.././.-subdomains)
+* [Use a custom TLS certificate](../.././.-tls)

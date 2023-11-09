@@ -27,7 +27,7 @@ You can use it to install packages from the Python Package Index and other locat
 
 To manage packages with pip,
 commit a `requirements.txt` file with all of the dependencies needed for your app.
-Then install the packages in your [`build` hook](../create-apps/create-apps-hooks),
+Then install the packages in your [`build` hook](../../create-apps/create-apps-hooks),
 such as by running the following command: `pip install -r requirements.txt`.
 
 The following sections present ideas to keep in mind to ensure repeatable deployments on Web PaaS.

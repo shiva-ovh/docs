@@ -44,7 +44,7 @@ For example:
 
 - Build tool versions.
 
-  If you have scripts that use specific versions of build tools (../such as a [specific Node.js version](../such as a [specific Node.js version](..-../languages/nodejs/node-version)),
+  If you have scripts that use specific versions of build tools (../../such as a [specific Node.js version](../such as a [specific Node.js version](..-../languages/nodejs/node-version)),
   You want the tools to be versioned along with your code so you can track the impact of changes.
   Set those variables [in the application](./set-variables.md#set-variables-in-your-app).
 - Credentials for common services.
@@ -180,7 +180,7 @@ Any variable with the prefix `php` is added to the PHP configuration for all PHP
 
 Using variables, you can use the same files for all your environments and override values on any given environment if needed.
 
-You can set the PHP memory limit to 256 MB on a specific environment by running the following [CLI command](../administration/administration-cli):
+You can set the PHP memory limit to 256 MB on a specific environment by running the following [CLI command](../../administration/administration-cli):
 
 ```bash
 {{% vendor/cli %}} variable:create --level environment --prefix php --name memory_limit --value 256M --environment {{< variable "ENVIRONMENT_NAME" >}}
@@ -221,7 +221,7 @@ Variables for the override are composed of three distinct parts each separated b
 
 
 Setting the `drupalsettings:system.site:name` variable overrides the `name` property of the `system.site` configuration object located in the global `$settings` array.
-You can do this by running the following [CLI command](../administration/administration-cli):
+You can do this by running the following [CLI command](../../administration/administration-cli):
 
 ``` bash
 {{% vendor/cli %}} variable:create --name "drupalsettings:system.site:name" --value "{{< variable "SITE_NAME" >}}"

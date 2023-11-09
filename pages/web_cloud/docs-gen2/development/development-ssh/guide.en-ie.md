@@ -27,13 +27,13 @@ To connect to an app securely with SSH, follow two steps.
 
 To authenticate with the CLI:
 
-1\. Install the [Web PaaS CLI](../administration/administration-cli).
+1\. Install the [Web PaaS CLI](../../administration/administration-cli).
 
 2\. Run `{{% vendor/cli %}} login`.
 
 3\. In the open browser window, log in with your Web PaaS account credentials.
 
-   (../This webpage is encrypted with [HTTPS](/This webpage is encrypted with [HTTPS](-define-routes/https), making it secure.)
+   (../../This webpage is encrypted with [HTTPS](/This webpage is encrypted with [HTTPS](-define-routes/https), making it secure.)
 4\. Authorize the CLI to use your account.
 
 
@@ -105,7 +105,7 @@ You can specify the port for the connection using the `--port` flag.
 ### Use an app tunnel
 
 Many database applications (such as MySQL Workbench) support establishing their own SSH tunnel.
-You need to use [SSH keys](.././.-ssh-keys) for authentication.
+You need to use [SSH keys](../.././.-ssh-keys) for authentication.
 Consult the documentation for your application for how to enter SSH credentials.
 
 #### Get SSH connection details
@@ -129,12 +129,12 @@ There are three basic ways to authenticate with Web PaaS:
   * Supports multifactor authentication.
   * Automatically generates new certificates to keep your connection safe.
   * Necessary when using the CLI and when your organization has multifactor authentication set up.
-* [Using SSH keys](.././.-ssh-keys)
+* [Using SSH keys](../.././.-ssh-keys)
   * Requires more setup on your part.
   * Represents only a single authentication method.
   * Requires you to regularly change the keys to maintain security.
   * Useful for checking out code as part of an automated process.
-* [Using API tokens](../administration/administration-cli/api-tokens)
+* [Using API tokens](../../administration/administration-cli/api-tokens)
   * Good for letting automation tools use the CLI.
   * Requires you to regularly change the tokens to maintain security.
 

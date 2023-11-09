@@ -11,7 +11,7 @@ hidden: true
 
 ## Objective  
 
-A Web PaaS environment contains one instance of an app (or [group of apps](../or [group of apps](..-create-apps/multi-app))
+A Web PaaS environment contains one instance of an app (../or [group of apps](../or [group of apps](..-create-apps/multi-app))
 with all the services needed for it to run.
 
 Each project can include multiple environments,
@@ -29,12 +29,12 @@ To organize your environments, you can create [hierarchical relationships](#hier
 
 You can create new environments in one of two ways:
 
--   Push a local branch through Git or a [source integration](integrations/integrations-source).
+-   Push a local branch through Git or a [source integration](../integrations/integrations-source).
 
 
--   [Branch](/glossary.md#branch) existing environments using the [CLI](administration/administration-cli)
+-   [Branch](/glossary.md#branch) existing environments using the [CLI](../administration/administration-cli)
 
-    or the [Console](administration/administration-web).
+    or the [Console](../administration/administration-web).
 
 When you branch an environment, you might want to create exact replicas of it.
 In this case, each new environment inherits all of the data and services from its parent environment.
@@ -52,10 +52,10 @@ These are called [inactive environments](#environment-status).
 
 Your default environment comes from your default branch and is a [production environment](../administration/users.md#environment-type-roles).
 Your project must have a default environment,
-but you can [name it as you want](./.-default-environment).
+but you can [name it as you want](.././.-default-environment).
 
 If you subscribed to a production plan, this environment is your **live site**.
-You might want to give it a [custom domain name](domains/domains-steps).
+You might want to give it a [custom domain name](../domains/domains-steps).
 
 ## Environment status
 
@@ -69,11 +69,11 @@ Your environments can have one of two statuses:
 
     An environment that isn't deployed and has no services or data, only code.
 
-You can see the status of your environments in the [Console](administration/administration-web) or the [CLI](administration/administration-cli).
+You can see the status of your environments in the [Console](../administration/administration-web) or the [CLI](../administration/administration-cli).
 
 > [!tabs]      
 
-You can [change an environment's status](./.-deactivate-environment) at any time.
+You can [change an environment's status](.././.-deactivate-environment) at any time.
 
 ## Organize your environments
 
@@ -85,11 +85,11 @@ In Web PaaS, your environments are organized in a hierarchy featuring parent and
 
 When you [branch](/glossary.md#branch) an environment,
 the parent of the new environment is the environment it was created from.
-You can [change the environment's parent](./.-change-parent) after it's been created.
+You can [change the environment's parent](.././.-change-parent) after it's been created.
 
-When you push a branch through Git or a [source integration](integrations/integrations-source),
+When you push a branch through Git or a [source integration](../integrations/integrations-source),
 the parent environment of the new environment is your [default environment](#default-environment).
-Alternatively, you can [change the environment's parent](./.-change-parent) after it's been created.
+Alternatively, you can [change the environment's parent](.././.-change-parent) after it's been created.
 
 Each child environment can [sync](/glossary.md#sync) code and/or data down from its parent
 and [merge](/glossary.md#merge) code up to its parent.
@@ -210,7 +210,7 @@ Web PaaS automatically pauses preview environments ([of both development and sta
 
 You can also pause an environment manually at any time.
 
-You can [ask Support](learn/learn-overview/get-support) to disable the automatic pausing of your environments
+You can [ask Support](../learn/learn-overview/get-support) to disable the automatic pausing of your environments
 if you are in one of the following situations:
 
 - You are using the default environment of your Development plan to build an app/demo
@@ -262,7 +262,7 @@ make sure you adjust the commands accordingly.
 
 > [!primary]  
 > 
-> You can't use push options if you have a [source integration](integrations/integrations-source) set up.
+> You can't use push options if you have a [source integration](../integrations/integrations-source) set up.
 > 
 > 
 

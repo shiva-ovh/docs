@@ -89,7 +89,7 @@ Depending on your needs, you can also [set up a **post-deploy** hook](#add-a-pos
 Adding a [`post-deploy` hook](/create-apps/hooks/hooks-comparison.md#post-deploy-hook) can be useful to run updates that don't require exclusive database access.
 
 {{< version/specific >}}
-Note that if you're using [Gatsby](../guides/guides-gatsby/headless) to pull from a backend container on the same environment,
+Note that if you're using [Gatsby](../../guides/guides-gatsby/headless) to pull from a backend container on the same environment,
 you need a `post-deploy` hook to successfully build and deploy your app.
 
 <--->
@@ -125,14 +125,14 @@ Web PaaS pauses all incoming requests and holds them to avoid downtime.
 Then, the current containers are stopped and the new ones are started.
 Web PaaS then opens networking connections between the various containers,
 as specified in the configuration files.
-The connection information for each service is available from the [`{{< vendor/prefix >}}_RELATIONSHIPS` environment variable](../development/development-variables/use-variables).
+The connection information for each service is available from the [`{{< vendor/prefix >}}_RELATIONSHIPS` environment variable](../../development/development-variables/use-variables).
 
 <--->
 <!-- Upsun -->
 Then, the current containers are stopped and the new ones are started.
 Web PaaS then opens networking connections between the various containers,
 as specified in `{{< vendor/configfile "app" >}}`.
-The connection information for each service is available from the [`{{< vendor/prefix >}}_RELATIONSHIPS` environment variable](../development/development-variables/use-variables).
+The connection information for each service is available from the [`{{< vendor/prefix >}}_RELATIONSHIPS` environment variable](../../development/development-variables/use-variables).
 {{% /version/specific %}}
 
 Similar to the build step, you can define a [deploy hook](/create-apps/hooks/hooks-comparison.md#deploy-hook) to prepare your app.

@@ -10,7 +10,7 @@ section: Yaml
 
 ## Objective  
 
-In addition to the [basic functions you should be familiar with](../.././.-what-is-yaml), YAML allows for special tags.
+In addition to the [basic functions you should be familiar with](../../.././.-what-is-yaml), YAML allows for special tags.
 Web PaaS accepts certain custom tags to facilitate working with configuration files.
 
 These tags work with Web PaaS configuration files, but may not elsewhere.
@@ -119,7 +119,7 @@ This can help simplify more complex files.
 
 Use the `!archive` tag for a reference to an entire directory specified relative to where the YAML file is.
 
-For example, you might want to define a configuration directory for your [Solr service](../../add-services/add-services-solr).
+For example, you might want to define a configuration directory for your [Solr service](../../../add-services/add-services-solr).
 You might do so as follows:
 
 ```yaml {configFile="services"}

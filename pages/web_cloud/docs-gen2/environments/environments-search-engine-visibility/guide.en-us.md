@@ -22,7 +22,7 @@ To change your production environment's visibility to search engines, follow the
 > [!tabs]      
 
 Web PaaS can't guarantee that indexers follow the instructions.
-If you're concerned about access, set up [HTTP access control](.././.-http-access-control).
+If you're concerned about access, set up [HTTP access control](../.././.-http-access-control).
 
 ## How it's done
 

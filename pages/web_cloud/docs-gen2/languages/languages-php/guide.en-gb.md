@@ -202,7 +202,7 @@ applications:
 ```
 {{% /version/specific %}}
 
-See how to [create a basic PHP app with a front controller](../create-apps/create-apps-web/php-basic).
+See how to [create a basic PHP app with a front controller](../../create-apps/create-apps-web/php-basic).
 To have more control, you can define rules to specify which files you want to allow [from which location](../../create-apps/web/php-basic.md#set-different-rules-for-specific-locations).
 
 ### Complete example
@@ -272,7 +272,7 @@ So you can then use included dependencies as commands within your app container.
 You can add multiple global dependencies to the dependencies block, such as [Node.js](../nodejs/_index.md#2-specify-any-global-dependencies).
 
 If you want to have more control over Composer or if you don't want to use Composer at all, adapt the [build flavor](#change-the-build-flavor).
-You can also use a [private, authenticated third-party Composer repository](.././.-composer-auth).
+You can also use a [private, authenticated third-party Composer repository](../.././.-composer-auth).
 
 ### Change the build flavor
 
@@ -311,7 +311,7 @@ applications:
 {{% /version/specific %}}
 
 That installs production dependencies with Composer but not development dependencies.
-The same can be achieved by using the default build flavor and [adding the `COMPOSER_NO_DEV` variable](../development/development-variables/set-variables).
+The same can be achieved by using the default build flavor and [adding the `COMPOSER_NO_DEV` variable](../../development/development-variables/set-variables).
 
 See more on [build flavors](../../create-apps/app-reference.md#build).
 
@@ -517,7 +517,7 @@ Some commonly used settings are:
 
 ### Retrieve the default values
 
-To retrieve the default PHP values, run the following [CLI command](../administration/administration-cli):
+To retrieve the default PHP values, run the following [CLI command](../../administration/administration-cli):
 
 ```bash
 {{% vendor/cli %}} ssh "php --info"
@@ -534,7 +534,7 @@ For example, to get the value for `opcache.memory_consumption`, run the followin
 
 To see the settings used on your environment:
 
-1\.  Find the PHP configuration files with the following [CLI command](../administration/administration-cli):
+1\.  Find the PHP configuration files with the following [CLI command](../../administration/administration-cli):
 
 
 ```bash
@@ -640,7 +640,7 @@ For more information about the start command, see the [web commands reference](.
 By default, start commands use PHP-CLI.
 Find out how and when to use each [execution mode](#execution-mode).
 
-Note that the `start` command must run in the foreground and is executed before the [deploy hook](../create-apps/create-apps-hooks/hooks-comparison).
+Note that the `start` command must run in the foreground and is executed before the [deploy hook](../../create-apps/create-apps-hooks/hooks-comparison).
 That means that PHP-FPM can't run simultaneously with another persistent process
 such as [ReactPHP](https://github.com/platformsh-examples/platformsh-example-reactphp)
 or [Amp](https://github.com/platformsh-examples/platformsh-example-amphp).
@@ -662,7 +662,7 @@ If you are using C code, you need `.so` library files.
 Either place these files directly in your repository or compile them in a makefile using `gcc` in your [build hook](../../create-apps/hooks/hooks-comparison.md#build-hook).
 Note: The `.so` library files shouldn't be located in a publicly accessible directory.
 
-If you are compiling Rust code, use the build hook to [install Rust](../https:/https:-/doc.rust-lang.org/stable/book/ch01-01-installation).
+If you are compiling Rust code, use the build hook to [install Rust](../../https:/https:-/doc.rust-lang.org/stable/book/ch01-01-installation).
 
 To leverage FFIs, follow these steps:
 

@@ -30,9 +30,9 @@ Copy the token.
 
 > [!primary]  
 > 
-> To create a project access token, you need to have a [sufficient GitLab license tier](../https:/https:-/docs.gitlab.com/ee/user/project/settings/project_access_tokens).
+> To create a project access token, you need to have a [sufficient GitLab license tier](../../https:/https:-/docs.gitlab.com/ee/user/project/settings/project_access_tokens).
 > If you don't see **Access Tokens** under **Settings**, upgrade your GitLab tier.
-> Alternatively, you can create a [personal access token](../https:/https:-/docs.gitlab.com/ee/user/profile/personal_access_tokens),
+> Alternatively, you can create a [personal access token](../../https:/https:-/docs.gitlab.com/ee/user/profile/personal_access_tokens),
 > but that's attached to a specific user rather than the project as a whole
 > and grants more permissions.
 > 

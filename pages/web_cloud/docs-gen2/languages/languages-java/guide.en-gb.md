@@ -149,7 +149,7 @@ applications:
 
 ## Other JVM languages
 
-It’s worth remembering that the JVM by its specification [doesn't read Java code](../https:/https:-/docs.oracle.com/javase/specs/jvms/se8/html/index), but bytecode. So within the JVM, it’s possible to [run several languages](https://en.wikipedia.org/wiki/List_of_JVM_languages). Web PaaS supports several of them, such as Kotlin, Groovy, and Scala, so long as that language works with any build automation that Web PaaS supports.
+It’s worth remembering that the JVM by its specification [doesn't read Java code](../../https:/https:-/docs.oracle.com/javase/specs/jvms/se8/html/index), but bytecode. So within the JVM, it’s possible to [run several languages](https://en.wikipedia.org/wiki/List_of_JVM_languages). Web PaaS supports several of them, such as Kotlin, Groovy, and Scala, so long as that language works with any build automation that Web PaaS supports.
 
 | Article                                                      | Link                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |

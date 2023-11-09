@@ -28,7 +28,7 @@ Application variables are available at both build time and runtime.
 ## Create project variables
 
 Add secrets for all environments in project variables
-using [the Console](../../administration/web/configure-project.md#variables) or the [CLI](../administration/administration-cli).
+using [the Console](../../administration/web/configure-project.md#variables) or the [CLI](../../administration/administration-cli).
 
 For example, you may need to vary API credentials between production and other environments.
 To do so, set the non-production credentials as a project variable

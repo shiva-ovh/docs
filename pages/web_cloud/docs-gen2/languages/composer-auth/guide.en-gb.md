@@ -22,7 +22,7 @@ You need:
 
 - Credentials to access a private third-party Composer repository
 
-- The [Web PaaS CLI](../administration/administration-cli)
+- The [Web PaaS CLI](../../administration/administration-cli)
 
 
 ## 1. Declare a private Composer repository
@@ -44,7 +44,7 @@ declare the repository in your Composer setup.
 ## 2. Set up Composer authentication using a variable
 
 To allow Composer to successfully authenticate when accessing the declared private repository,
-set an [`env:COMPOSER_AUTH` variable](../development/development-variables) for your project.
+set an [`env:COMPOSER_AUTH` variable](../../development/development-variables) for your project.
 
 To do so, run the following command:
 
@@ -70,7 +70,7 @@ To do so, run the following command:
 ## Access dependencies downloaded from a private repository
 
 When you download a dependency from a private third-party Composer repository,
-that dependency is usually hosted in a [private Git repository](../development/development-private-repository).
+that dependency is usually hosted in a [private Git repository](../../development/development-private-repository).
 Access to private Git repositories is restricted through the use of SSH keys.
 But most private Composer tools mirror tagged releases of dependencies
 and serve them directly without hitting the Git repository.

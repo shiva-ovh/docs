@@ -10,7 +10,7 @@ section: Environments
 
 ## Objective  
 
-Once you have [backups of your environment](.././.-backup), you can restore data from a previous point.
+Once you have [backups of your environment](../.././.-backup), you can restore data from a previous point.
 
 To restore an environment, you need an [Admin role for that environment type](../environments/environments-administration/users).
 

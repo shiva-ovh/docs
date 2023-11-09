@@ -18,8 +18,8 @@ Within the Console, metrics can be found for an environment under **Metrics**.
 
 The information under **Metrics** shows usage metrics for:
 
-[{{% names/dedicated-gen-2 %}} environments](../dedicated-gen-2/dedicated-gen-2-overview):
-each of the three hosts in your [N+1 configuration](../dedicated-gen-2/dedicated-gen-2-architecture)
+[{{% names/dedicated-gen-2 %}} environments](../../dedicated-gen-2/dedicated-gen-2-overview):
+each of the three hosts in your [N+1 configuration](../../dedicated-gen-2/dedicated-gen-2-architecture)
 and their average for the Production environment.
 Metrics aren't available for other {{% names/dedicated-gen-2 %}} environments (such as a staging environment),
 but are available for Grid environments (such as your preview environments).
@@ -97,7 +97,7 @@ close to the 100% threshold, you might want to consider:
 
 
 * [Optimizing your code](../increase-observability/increase-observability-integrate-observability) (if possible)
-* [Increasing your plan](../administration/administration-pricing)
+* [Increasing your plan](../../administration/administration-pricing)
 <--->
 * [Optimizing your code](../increase-observability/increase-observability-application-metrics) (if possible)
 * [Changing your app size or service size](../../manage-resources)
@@ -120,7 +120,7 @@ If you have a container in a prolonged burst state, you might want to consider:
 * [Optimizing your code](../increase-observability/increase-observability-integrate-observability)
 * Changing your [app size](../../create-apps/app-reference.md#sizes)
   or [service size](../../add-services/_index.md#size)
-* [Increasing your plan](../administration/administration-pricing)
+* [Increasing your plan](../../administration/administration-pricing)
 
 You can reallocate your existing resources if other containers have resources they aren't using.
 
@@ -139,7 +139,7 @@ you might want to consider:
 * [Optimizing your code](../increase-observability/increase-observability-integrate-observability) (if possible)
 * Changing your [app size](../../create-apps/app-reference.md#sizes)
   or [service size](../../add-services/_index.md#size)
-* [Increasing your plan](../administration/administration-pricing)
+* [Increasing your plan](../../administration/administration-pricing)
 
 Review your configuration or plan size if your containers are in a prolonged burst
 state, because burst isn't guaranteed for long periods.

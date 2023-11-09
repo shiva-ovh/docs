@@ -19,7 +19,7 @@ Available workarounds depend on your DNS provider.
  
 Each site on Web PaaS is made up of a set of containers.
 To map incoming requests to the appropriate container,
-Web PaaS runs routers in [each region](../development/development-regions).
+Web PaaS runs routers in [each region](../../development/development-regions).
 A router's IP address can change in two cases:
 - During an upgrade or maintenance operation, routers can be taken offline while changes are applied.
 

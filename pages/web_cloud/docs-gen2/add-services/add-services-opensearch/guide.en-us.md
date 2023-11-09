@@ -59,7 +59,7 @@ The latest compatible minor version and patches are applied automatically.
 
 {{% /version/specific %}}
 
-You can see the latest minor and patch versions of OpenSearch available from the [`2.x`](../https:/https:-/opensearch.org/lines/2x) and [`1.x`](../https:/https:-/opensearch.org/lines/1x) release lines.
+You can see the latest minor and patch versions of OpenSearch available from the [`2.x`](../../https:/https:-/opensearch.org/lines/2x) and [`1.x`](../../https:/https:-/opensearch.org/lines/1x) release lines.
 
 ## Deprecated versions
 
@@ -303,7 +303,7 @@ To enable them, list them under the `configuration.plugins` key in your `{{< ven
 
 In this example you'd have the ICU analysis plugin and the size mapper plugin.
 
-If there is a publicly available plugin you need that isn't listed here, [contact support](../learn/learn-overview/get-support).
+If there is a publicly available plugin you need that isn't listed here, [contact support](../../learn/learn-overview/get-support).
 
 ### Available plugins
 

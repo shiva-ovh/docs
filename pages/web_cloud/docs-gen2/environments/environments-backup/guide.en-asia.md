@@ -33,7 +33,7 @@ first activate it.
    and any files stored on [mounts](../create-apps/app-reference.md#mounts) are included.
    The backup is stored internally on Web PaaS.
    That is, the backup can be applied to environments on Web PaaS, but it can't be downloaded.
-   If you need to download backups, instead [export your mount and service data](../learn/learn-tutorials/exporting)).
+   If you need to download backups, instead [export your mount and service data](../../learn/learn-tutorials/exporting)).
 
 2\. You restore your environment using the backup.
 
@@ -114,7 +114,7 @@ To upgrade to the higher schedule, follow these steps:
 6\. Click **Save**.
 
 
-To downgrade to the lower schedule, [contact support](../learn/learn-overview/get-support).
+To downgrade to the lower schedule, [contact support](../../learn/learn-overview/get-support).
 {{% /version/only %}}
 
 ## Use automated backups
@@ -132,10 +132,10 @@ The time for 6-hourly backups is based on the daily backup.
 <--->
 <!-- Upsun -->
 {{< vendor/name >}} provides 1 automated backup a day for your production environment,
-with a [2-day retention](../security/security-data-retention) (2 days worth of backups are retained at any given point).
+with a [2-day retention](../../security/security-data-retention) (2 days worth of backups are retained at any given point).
 
 For more information on the backups {{< vendor/name >}} provides,
-see the [{{< vendor/name >}} backup policy](../security/security-backups).
+see the [{{< vendor/name >}} backup policy](../../security/security-backups).
 {{< /version/specific >}}
 
 Automated backups are always [live](#live-backups).
@@ -165,7 +165,7 @@ You can create a manual live backup on a Grid project:
 {{% version/only "2" %}}
 {{< vendor/name >}} provides up to 2 manual backups of your production environment,
 plus 2 manual backups you can use for your [preview environments](../../glossary).
-For more information, see the [{{< vendor/name >}} backup policy](../security/security-backups).
+For more information, see the [{{< vendor/name >}} backup policy](../../security/security-backups).
 {{% /version/only %}}
 
 You can create a manual backup using the [CLI](../environments/environments-administration/cli) or in the [Console](../environments/environments-administration/web).

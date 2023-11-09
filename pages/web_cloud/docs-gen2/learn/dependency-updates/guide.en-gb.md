@@ -11,13 +11,13 @@ order: 9
 
 ## Objective  
 
-Web PaaS allows you to update your dependencies through [source operations](../create-apps/create-apps-source-operations).
+Web PaaS allows you to update your dependencies through [source operations](../../create-apps/create-apps-source-operations).
 
 ## Before you start
 
 You need:
 
-- The [Web PaaS CLI](../administration/administration-cli)
+- The [Web PaaS CLI](../../administration/administration-cli)
 
 - An [API token](/administration/cli/api-tokens.md#2-create-an-api-token)
 
@@ -40,7 +40,7 @@ you can automate it using a cron job.
 Note that it’s best not to run source operations on your production environment,
 but rather on a dedicated environment where you can test changes.
 
-Make sure you have the [Web PaaS CLI](../administration/administration-cli) installed
+Make sure you have the [Web PaaS CLI](../../administration/administration-cli) installed
 and [an API token](/administration/cli/api-tokens.md#2-create-an-api-token)
 so you can run a cron job in your app container.
 
@@ -52,7 +52,7 @@ so you can run a cron job in your app container.
 > [!primary]  
 > 
 > Once you add the API token as an environment variable,
-> anyone with [SSH access](../development/development-ssh) can read its value.
+> anyone with [SSH access](../../development/development-ssh) can read its value.
 > Make sure you carefully check your [user access on this project](/administration/users.md#manage-project-users).
 > 
 > 
@@ -187,7 +187,7 @@ to receive notifications every time a dependency update is triggered.
 >     sendSlackMessage(activity.text, activity.log);
 >     ```
 > 
-> 4.  Run the following [Web PaaS CLI](../administration/administration-cli) command:
+> 4.  Run the following [Web PaaS CLI](../../administration/administration-cli) command:
 > 
 >     ```bash
 >     {{% vendor/cli %}} integration:add --type script --file ./my_script.js --events=environment.source-operation
@@ -205,12 +205,12 @@ to receive notifications every time a dependency update is triggered.
 After you've defined a source operation to [update your dependencies on your project](#1-define-a-source-operation-to-update-your-dependencies),
 you can configure a webhook to receive notifications every time a dependency update is triggered.
 
-[Webhooks](../integrations/integrations-activity/webhooks) allow you to host a script yourself externally.
+[Webhooks](../../integrations/integrations-activity/webhooks) allow you to host a script yourself externally.
 This script receives the same payload as an activity script and responds to the same events,
 but can be hosted on your own server and in your own language.
 
 To configure the integration between your webhook and your source operation,
-run the following [Web PaaS CLI](../administration/administration-cli) command:
+run the following [Web PaaS CLI](../../administration/administration-cli) command:
 
 ```bash
 {{% vendor/cli %}} integration:add --type=webhook --url=URL_TO_RECEIVE_JSON --events=environment.source-operation

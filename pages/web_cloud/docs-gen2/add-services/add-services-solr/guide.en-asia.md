@@ -12,7 +12,7 @@ section: Add-Services
 
 Apache Solr is a scalable and fault-tolerant search index.
 
-Solr search with generic schemas provided, and a custom schema is also supported. See the [Solr documentation](../https:/https:-/lucene.apache.org/solr/6_3_0/index) for more information.
+Solr search with generic schemas provided, and a custom schema is also supported. See the [Solr documentation](../../https:/https:-/lucene.apache.org/solr/6_3_0/index) for more information.
 
 {{% frameworks version="1" %}}
 
@@ -585,7 +585,7 @@ This is the complete list of plugins that are available and loaded by default:
 | Plugin                                                                             | Description                                            | 8.11 | 9.x |
 |------------------------------------------------------------------------------------|--------------------------------------------------------|------|-----|
 | [JTS](https://solr.apache.org/guide/8_1/spatial-search.html#jts-and-polygons-flat) | Library for creating and manipulating vector geometry. |*     |*    |
-| [ICU4J](../https:/https:-/solr.apache.org/guide/8_3/language-analysis)                  | Library providing Unicode and globalization support.                                                                                                                                      |*     |*    |  
+| [ICU4J](../../https:/https:-/solr.apache.org/guide/8_3/language-analysis)                  | Library providing Unicode and globalization support.                                                                                                                                      |*     |*    |  
 
 ## Upgrading
 

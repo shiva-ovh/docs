@@ -134,7 +134,7 @@ The following table presents the keys you can define for each service:
 
 ##### Size
 
-Resources are distributed across all containers in a project from the total available from your [plan size](administration/administration-pricing).
+Resources are distributed across all containers in a project from the total available from your [plan size](../administration/administration-pricing).
 
 By default, Web PaaS allocates CPU and memory resources to each container automatically.
 Some services are optimized for high CPU load, some for high memory load.

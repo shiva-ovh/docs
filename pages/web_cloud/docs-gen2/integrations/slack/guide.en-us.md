@@ -85,4 +85,4 @@ Common properties you may want to send to Slack (in the last line of the script)
 - `activity.log`: The complete build and deploy log output, as it would be seen in the Console log screen.
 
 
-For more properties, see the [activity reference](.././.-reference).
+For more properties, see the [activity reference](../.././.-reference).

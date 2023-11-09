@@ -27,12 +27,12 @@ On Grid plans and {{% names/dedicated-gen-3 %}} infrastructure, configure your p
 The configuration for New Relic varies a bit by language.
 See language-specific instructions:
 
-- [Java](.././.-java)
+- [Java](../.././.-java)
 
-- [Node.js](.././.-nodejs)
+- [Node.js](../.././.-nodejs)
 
-- [PHP](.././.-php)
+- [PHP](../.././.-php)
 
 
 For more languages, see the [New Relic Documentation](https://docs.newrelic.com/docs/agents/).
-Install the specific agent in the [build hook](../create-apps/create-apps-hooks).
+Install the specific agent in the [build hook](../../create-apps/create-apps-hooks).

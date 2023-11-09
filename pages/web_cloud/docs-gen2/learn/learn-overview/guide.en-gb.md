@@ -31,7 +31,7 @@ and features recommended optimizations for several [featured frameworks](../../g
 The main requirement of Web PaaS is that you use Git to manage your application code.
 If you have a single-app project, you can configure it from a single `{{< vendor/configfile "app" >}}` file,
 usually located at the root of your app folder in your Git repository.
-[Multi-app projects](../create-apps/create-apps-multi-app) can be set up in various ways.
+[Multi-app projects](../../create-apps/create-apps-multi-app) can be set up in various ways.
 
 Web PaaS is built on Debian, supports many different programming [languages](../../languages) and environments,
 and features recommended optimizations for several [featured frameworks](../../get-started).
@@ -72,9 +72,9 @@ Web PaaS respects the structure of branches. It's entirely up to you.
 
 Managing your full stack on Web PaaS gives you the following unique features:
 
-1\. **Unified Environment:** All of your [services](../../add-services) (MySQL, Elasticsearch, MongoDB, etc.) are managed inside the cluster and included in the price, with no external single-points-of-failure. When you [back up an environment](../environments/environments-backup), you get a fully consistent snapshot of your whole application.
+1\. **Unified Environment:** All of your [services](../../add-services) (MySQL, Elasticsearch, MongoDB, etc.) are managed inside the cluster and included in the price, with no external single-points-of-failure. When you [back up an environment](../../environments/environments-backup), you get a fully consistent snapshot of your whole application.
 
-2\. **Multi-Services & Multi-App:** You can deploy [multiple applications](../create-apps/create-apps-multi-app) (for example, in a microservice-based architecture), using multiple data backends (MySQL, PostgreSQL, Redis, etc.) written in multiple frameworks (Drupal + NodeJS + Flask, for example) in multiple languages, all in the same cluster.
+2\. **Multi-Services & Multi-App:** You can deploy [multiple applications](../../create-apps/create-apps-multi-app) (for example, in a microservice-based architecture), using multiple data backends (MySQL, PostgreSQL, Redis, etc.) written in multiple frameworks (Drupal + NodeJS + Flask, for example) in multiple languages, all in the same cluster.
 
 3\. **Full Cluster Cloning Technology:** The full production cluster can be cloned in under a minute&mdash;including all of its data&mdash;to create on-the-fly, ephemeral [preview environments](/glossary/_index.md#preview-environment) that are a byte-level copy of production.
 

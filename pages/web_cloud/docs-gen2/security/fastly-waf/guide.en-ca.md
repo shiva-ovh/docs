@@ -10,7 +10,7 @@ section: Web-Application-Firewall
 
 ## Objective  
 
-On top of the [Web PaaS Web Application Firewall (WAF)](.././.-waf) included in Enterprise and Elite plans,
+On top of the [Web PaaS Web Application Firewall (WAF)](../.././.-waf) included in Enterprise and Elite plans,
 you can subscribe to the Fastly Next-Gen WAF to further protect your app from security threats.
 
 ## Available offers

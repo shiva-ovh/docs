@@ -19,24 +19,24 @@ To run a Java application at Web PaaS you need:
 
 * [A supported Java version](/languages/java/_index.md#supported-versions)
 * [A build management tool](/languages/java/_index.md#support-build-automation)
-  * [Gradle](../https:/https:-/docs.gradle.org/current/userguide/gradle_wrapper)
+  * [Gradle](../../https:/https:-/docs.gradle.org/current/userguide/gradle_wrapper)
   * [Maven](https://maven.apache.org/)
   * [Maven Wrapper](https://www.baeldung.com/maven-wrapper)
   * [Ant](https://ant.apache.org/)
 * A Git Repository:
-  * [GitHub](../integrations/integrations-source/github)
-  * [BitBucket](../integrations/integrations-source/bitbucket)
-  * [GitLab](../integrations/integrations-source/gitlab)
+  * [GitHub](../../integrations/integrations-source/github)
+  * [BitBucket](../../integrations/integrations-source/bitbucket)
+  * [GitLab](../../integrations/integrations-source/gitlab)
   * The default Git repository provided by Web PaaS
 
 > [!primary]  
 > A container application can't be bigger than **8 GB** of memory.
-> For more details, see [tuning](.././.-tuning).
+> For more details, see [tuning](../.././.-tuning).
 > 
 
 ## Monolith/Single Application
 
-To start a Java application, you need to understand the [Web PaaS structure](../learn/learn-overview/structure).
+To start a Java application, you need to understand the [Web PaaS structure](../../learn/learn-overview/structure).
 You will need to configure your [application](../../create-apps), [routes](../../define-routes),
 and [services](../../add-services).
 
@@ -69,7 +69,7 @@ applications:
 
 1\. [A Java version](/languages/java/_index.md#supported-versions), e,g.: `java:{{% latest "java" %}}`
 
-2\. [Hooks define what happens when building the application](../create-apps/create-apps-hooks). This build process typically generates an executable file such as a uber-jar e.g.: `mvn clean package`
+2\. [Hooks define what happens when building the application](../../create-apps/create-apps-hooks). This build process typically generates an executable file such as a uber-jar e.g.: `mvn clean package`
 
 3\. [The commands key defines the command to launch the application](../../create-apps/app-reference.md#web-commands). E.g.:  `java -jar file.jar`
 
@@ -134,11 +134,11 @@ applications:
 
 You have the option to use several languages in microservices. If you're using Java there are several options to aggregate these services into a microservices:
 
-* [Maven Modules](../https:/https:-/maven.apache.org/guides/mini/guide-multiple-modules)
+* [Maven Modules](../../https:/https:-/maven.apache.org/guides/mini/guide-multiple-modules)
 * [Gradle Multi-project](https://guides.gradle.org/creating-multi-project-builds/)
-* [Git submodules](../development/development-submodules)
+* [Git submodules](../../development/development-submodules)
 
-[Web PaaS supports multiple applications](../create-apps/create-apps-multi-app) and there are two options:
+[Web PaaS supports multiple applications](../../create-apps/create-apps-multi-app) and there are two options:
 
 * One application YAML file to each application
 * Aggregate all applications in a single file with an `{{< vendor/configfile "apps" >}}` file
@@ -194,7 +194,7 @@ export DB_HOST=`echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r ".databas
 | [Spring Data MongoDB](https://community.platform.sh/t/how-to-overwrite-spring-data-mongodb-variable-to-access-platform-sh-services/528) | [Source](https://github.com/platformsh-examples/java-overwrite-configuration/tree/master/spring-mongodb) |
 | [Jakarta EE/MicroProfile Config](https://community.platform.sh/t/how-to-overwrite-configuration-to-jakarta-microprofile-to-access-platform-sh-services/520) | [Source](https://github.com/platformsh-examples/java-overwrite-configuration/tree/master/jakarta-nosql) |
 | [Spring Data JPA](https://community.platform.sh/t/how-to-overwrite-spring-data-variable-to-access-platform-sh-services/518) | [Source](https://github.com/platformsh-examples/java-overwrite-configuration/tree/master/spring-jpa) |
-| [Payara JPA](https://community.platform.sh/t/how-to-overwrite-variables-to-payara-jpa-access-platform-sh-sql-services/519) | [Source](../https:/https:-/github.com/platformsh-examples/java-overwrite-configuration/blob/master/payara/README) |
+| [Payara JPA](https://community.platform.sh/t/how-to-overwrite-variables-to-payara-jpa-access-platform-sh-sql-services/519) | [Source](../../https:/https:-/github.com/platformsh-examples/java-overwrite-configuration/blob/master/payara/README) |
 
 > [!primary]  
 > While the table above shows examples for Web PaaS rather than for Web PaaS, the same rules apply with only slight changes in configuration.

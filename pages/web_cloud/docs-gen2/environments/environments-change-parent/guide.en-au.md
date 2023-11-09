@@ -20,7 +20,7 @@ To change the environment's parent, follow these steps:
 
 > [!tabs]      
 
-If you're not using a [source integration](../integrations/integrations-source),
+If you're not using a [source integration](../../integrations/integrations-source),
 you can also set a parent for your environment when pushing changes to it.
 To do so, run the following command:
 

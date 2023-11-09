@@ -80,12 +80,12 @@ You can have services that are only exposed to another service as well as servic
 In a clustered application, you can have one of the following configurations:
 
 
-- Multiple [`{{< vendor/configfile "app" >}}` files](../create-apps/create-apps-multi-app) in different directories, with separate code bases that deploy separately
+- Multiple [`{{< vendor/configfile "app" >}}` files](../../create-apps/create-apps-multi-app) in different directories, with separate code bases that deploy separately
 
 - A single app that spawns one or more [worker instances](/create-apps/app-reference.md#workers) that run background processes
 
 <--->
-- Multiple [applications](../create-apps/create-apps-multi-app), often in different directories or with separate code bases that deploy separately
+- Multiple [applications](../../create-apps/create-apps-multi-app), often in different directories or with separate code bases that deploy separately
 
 - A single app that spawns one or more [worker instances](/create-apps/app-reference.md#workers) that run background processes
 
@@ -101,11 +101,11 @@ In a clustered application, you can have one of the following configurations:
 {{% /version/only %}}
 
 With a clustered application, you often don't need multiple service instances.
-The [MySQL, MariaDB](../add-services/add-services-mysql),
-and [Solr](../add-services/add-services-solr) services support defining multiple databases on a single service,
+The [MySQL, MariaDB](../../add-services/add-services-mysql),
+and [Solr](../../add-services/add-services-solr) services support defining multiple databases on a single service,
 which is significantly more efficient than defining multiple services.
-[Redis](../add-services/add-services-redis), [Memcached](../add-services/add-services-memcached),
-[Elasticsearch](../add-services/add-services-elasticsearch), and [RabbitMQ](../add-services/add-services-rabbitmq)
+[Redis](../../add-services/add-services-redis), [Memcached](../../add-services/add-services-memcached),
+[Elasticsearch](../../add-services/add-services-elasticsearch), and [RabbitMQ](../../add-services/add-services-rabbitmq)
 natively support multiple bins (also called _queues_ or _indexes_) defined by the client application as part of the request.
 Therefore, they don't need additional configuration on Web PaaS.
 

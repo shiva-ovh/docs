@@ -16,7 +16,7 @@ While usually used for local development, it can also be helpful for debugging a
 As configured on Web PaaS, it avoids any runtime overhead for non-debug requests, even in production, and only allows connections via SSH tunnels to avoid any security issues.
 
 Note that Xdebug runs only on your app containers.
-So you can't use it for [worker containers](../create-apps/create-apps-workers).
+So you can't use it for [worker containers](../../create-apps/create-apps-workers).
 
 Also, note that if you use a [custom start command](./_index.md#alternate-start-commands),
 Xdebug is automatically disabled.
@@ -36,17 +36,17 @@ The following table shows the PHP versions where Xdebug is available:
 
 You also need:
 
-- The Web PaaS [CLI](../administration/administration-cli)
+- The Web PaaS [CLI](../../administration/administration-cli)
 
 - A Xdebug-compatible IDE installed on your machine.
 
-    For setup instructions, consult your IDE's Xdebug documentation, such as that for [PHPStorm](../https:/https:-/www.jetbrains.com/help/phpstorm/configuring-xdebug).
+    For setup instructions, consult your IDE's Xdebug documentation, such as that for [PHPStorm](../../https:/https:-/www.jetbrains.com/help/phpstorm/configuring-xdebug).
 
 ## 1. Set up Xdebug
 
 Xdebug runs as a second PHP-FPM process used only for debugging requests, leaving the normal process unaffected.
 
-To enable Xdebug, add the following to your [app configuration](../create-apps/create-apps-app-reference):
+To enable Xdebug, add the following to your [app configuration](../../create-apps/create-apps-app-reference):
 
 
 ```yaml {configFile="app"}
@@ -71,7 +71,7 @@ When that key is defined, Web PaaS starts a second PHP-FPM process on the contai
 Only incoming requests that have an Xdebug cookie or query parameter set are forwarded to the debug PHP-FPM process.
 All other requests are directed to the normal PHP-FPM process and thus have no performance impact.
 
-If you have enabled the [router cache](../define-routes/define-routes-cache),
+If you have enabled the [router cache](../../define-routes/define-routes-cache),
 you need to explicitly add the Xdebug cookie (`XDEBUG_SESSION`) to the cookie allowlist.
 Depending on the cookies already listed, the result should look similar to the following:
 
@@ -109,7 +109,7 @@ For a full list of available options, consult the [Xdebug documentation](https:/
 
 ### Open a tunnel
 
-To open an SSH tunnel to the server from a local checkout of your app, run the following [CLI command](../administration/administration-cli) :
+To open an SSH tunnel to the server from a local checkout of your app, run the following [CLI command](../../administration/administration-cli) :
 
 ```bash
 {{% vendor/cli %}} environment:xdebug
@@ -139,7 +139,7 @@ Their respective plugin pages document how to trigger them when needed.
 
 ## 3. Configure your IDE
 
-Follow the instructions for your IDE, such as those for [PHPStorm](../https:/https:-/www.jetbrains.com/help/phpstorm/configuring-xdebug).
+Follow the instructions for your IDE, such as those for [PHPStorm](../../https:/https:-/www.jetbrains.com/help/phpstorm/configuring-xdebug).
 
 The common steps for setup usually include:
 

@@ -97,7 +97,7 @@ To get the `PORT` environment variable (the port on which your web application i
 String.to_integer(System.get_env("PORT") || "8888")
 ```
 
-Some of the environment variables are in JSON format and are base64 encoded. You would need to import a JSON parsing library such as [JSON](../https:/https:-/hexdocs.pm/json/readme) or [Poison](../https:/https:-/hexdocs.pm/poison/api-reference) to read those. (There is an example for doing this to decode the `PLATFORM_RELATIONSHIPS` environment variable in the section [below](#accessing-services-manually).)
+Some of the environment variables are in JSON format and are base64 encoded. You would need to import a JSON parsing library such as [JSON](../../https:/https:-/hexdocs.pm/json/readme) or [Poison](../../https:/https:-/hexdocs.pm/poison/api-reference) to read those. (There is an example for doing this to decode the `PLATFORM_RELATIONSHIPS` environment variable in the section [below](#accessing-services-manually).)
 
 > [!primary]  
 > **Tip**: Remember `config/prod.exs` is evaluated at **build time** and has no access to runtime configuration. Use `config/releases.exs` to configure your runtime environment.

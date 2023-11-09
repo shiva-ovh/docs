@@ -85,7 +85,7 @@ They all have different configurations for how they serve the files. For more de
 > 
 > 
 
-To allow your apps to communicate with each other, define [relationships](.././.-relationships).
+To allow your apps to communicate with each other, define [relationships](../.././.-relationships).
 
 Note that with this setup, when you amend the code of one of your apps,
 the build image for your other apps can still be reused.

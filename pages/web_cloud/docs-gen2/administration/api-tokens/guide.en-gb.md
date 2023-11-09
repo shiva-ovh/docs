@@ -108,7 +108,7 @@ To do so, set your API token as a [top-level environment variable](../../develop
 > [!primary]  
 > 
 > Once you add the token as an environment variable,
-> anyone with [SSH access](../development/development-ssh) can read its value.
+> anyone with [SSH access](../../development/development-ssh) can read its value.
 > Make sure your [machine user has only the necessary permissions](#1-create-a-machine-user).
 > 
 > 

@@ -28,14 +28,14 @@ and the estimated average memory size of each process.
 
 You have two ways to increase the number of workers:
 
-- Adjust the [worker sizing hints](.././.-fpm) for your project.
+- Adjust the [worker sizing hints](../.././.-fpm) for your project.
 
 - Upgrade your Web PaaS plan to get more computing resources.
 
 <--->
 You have two ways to increase the number of workers:
 
-- Adjust the [worker sizing hints](.././.-fpm) for your project.
+- Adjust the [worker sizing hints](../.././.-fpm) for your project.
 
 - Add [additional resources](../../manage-resources) with the `{{% vendor/cli %}} resources:set` command
 
@@ -67,14 +67,14 @@ grep $(date +%Y-%m-%dT%H --date='-1 hours') /var/log/php.access.log | sort -k 4 
 
 
 If you see that the processing time of certain requests is slow (such as taking longer than 1000&nbsp;ms),
-you should consider a continuous observability solution like [Blackfire](../increase-observability/increase-observability-integrate-observability/blackfire)
+you should consider a continuous observability solution like [Blackfire](../../increase-observability/increase-observability-integrate-observability/blackfire)
 to monitor your app and help you improve the performance issue.
 <--->
 If you see that the processing time of certain requests is slow (such as taking longer than 1000&nbsp;ms),
-you should consider a [continuous observability solution](../increase-observability/increase-observability-application-metrics)
+you should consider a [continuous observability solution](../../increase-observability/increase-observability-application-metrics)
 to monitor your app and help you improve the performance issue.
 
-Full access to [Blackfire.io](../increase-observability/increase-observability-application-metrics/blackfire) is bundled with your PHP and Python {{< vendor/name >}} projects.
+Full access to [Blackfire.io](../../increase-observability/increase-observability-application-metrics/blackfire) is bundled with your PHP and Python {{< vendor/name >}} projects.
 
 {{% /version/specific %}}
 
@@ -83,7 +83,7 @@ Otherwise, you may check if the following options are applicable:
 
 - Find the most visited pages and see if they can be cached and/or put behind a CDN.
 
-  Refer to [how caching works](../define-routes/define-routes-cache).
+  Refer to [how caching works](../../define-routes/define-routes-cache).
 - Upgrade your Web PaaS plan to get more computing resources.
 
 <--->
@@ -91,7 +91,7 @@ Otherwise, you may check if the following options are applicable:
 
 - Find the most visited pages and see if they can be cached and/or put behind a CDN.
 
-  Refer to [how caching works](../define-routes/define-routes-cache).
+  Refer to [how caching works](../../define-routes/define-routes-cache).
 - Add [additional resources](../../manage-resources) with the `{{% vendor/cli %}} resources:set` command
 
 {{% /version/specific %}}
@@ -107,7 +107,7 @@ WARNING: [pool web] child 112 exited on signal 11 (SIGSEGV) after 7.405936 secon
 
 Either a PHP extension is hitting a segmentation fault or your PHP app code is crashing.
 Review recent changes in your app and try to find the root cause.
-You might want to use a tool such as [Xdebug](.././.-xdebug) for quicker troubleshooting.
+You might want to use a tool such as [Xdebug](../.././.-xdebug) for quicker troubleshooting.
 
 ## Troubleshoot a killed PHP process
 
@@ -124,7 +124,7 @@ To solve this issue, try the following approaches:
 
 - Check if the memory usage of your app is as expected and try to optimize it.
 
-- Use [sizing hints](.././.-fpm) to reduce the amount of PHP workers, which reduces the memory footprint.
+- Use [sizing hints](../.././.-fpm) to reduce the amount of PHP workers, which reduces the memory footprint.
 
 - Upgrade your Web PaaS plan to get more computing resources.
 
@@ -134,7 +134,7 @@ To solve this issue, try the following approaches:
 <!-- @todo: resources link -->
 - Check if the memory usage of your app is as expected and try to optimize it.
 
-- Use [sizing hints](.././.-fpm) to reduce the amount of PHP workers, which reduces the memory footprint.
+- Use [sizing hints](../.././.-fpm) to reduce the amount of PHP workers, which reduces the memory footprint.
 
 - Add [additional resources](../../manage-resources) with the `{{% vendor/cli %}} resources:set` command
 
@@ -169,12 +169,12 @@ To address the issue, you can:
 - Lower the memory consumption of each request so that the amount of PHP workers gets automatically raised.
 
   This can be customized with the `runtime.sizing_hints.request_memory` key in your `{{< vendor/configfile "app" >}}` file.
-  For more details, consult [PHP-FPM sizing](.././.-fpm).
-- Add a [CDN](../domains/domains-cdn).
+  For more details, consult [PHP-FPM sizing](../.././.-fpm).
+- Add a [CDN](../../domains/domains-cdn).
 
-- Set up [HTTP caching](../learn/learn-bestpractices/http-caching).
+- Set up [HTTP caching](../../learn/learn-bestpractices/http-caching).
 
-- Follow the global [performance tuning recommendations](.././.-tuning).
+- Follow the global [performance tuning recommendations](../.././.-tuning).
 
 - Remove stale plugins and extensions when using a CMS.
 
@@ -184,12 +184,12 @@ To address the issue, you can:
 - Lower the memory consumption of each request so that the amount of PHP workers gets automatically raised.
 
   This can be customized with the `runtime.sizing_hints.request_memory` key in your `{{< vendor/configfile "app" >}}` file.
-  For more details, consult [PHP-FPM sizing](.././.-fpm).
-- Add a [CDN](../domains/domains-cdn).
+  For more details, consult [PHP-FPM sizing](../.././.-fpm).
+- Add a [CDN](../../domains/domains-cdn).
 
-- Set up [HTTP caching](../learn/learn-bestpractices/http-caching).
+- Set up [HTTP caching](../../learn/learn-bestpractices/http-caching).
 
-- Follow the global [performance tuning recommendations](.././.-tuning).
+- Follow the global [performance tuning recommendations](../.././.-tuning).
 
 - Remove stale plugins and extensions when using a CMS.
 

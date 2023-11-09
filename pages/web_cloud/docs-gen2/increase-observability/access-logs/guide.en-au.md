@@ -11,11 +11,11 @@ section: Logs
 
 Changes to your environments, such as deployments, cron jobs, and code or variable updates,
 are each logged as activities.
-You can access the logs either in the Console or using the [CLI](../administration/administration-cli):
+You can access the logs either in the Console or using the [CLI](../../administration/administration-cli):
 
 > [!tabs]      
 
-If a running activity is stuck, you can [cancel the activity](../environments/environments-cancel-activity).
+If a running activity is stuck, you can [cancel the activity](../../environments/environments-cancel-activity).
 
 ### Sharing activity logs
 

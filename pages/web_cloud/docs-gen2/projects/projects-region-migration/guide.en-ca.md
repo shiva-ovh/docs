@@ -65,11 +65,11 @@ Then upload them to your new project:
 
 
 <!-- Web PaaS -->
-See more options on [how to export files](../learn/learn-tutorials/exporting)
+See more options on [how to export files](../../learn/learn-tutorials/exporting)
 and [how to import files](/learn/tutorials/migrating.md#5-import-data).
 <--->
 <!-- Version 2 -->
-See more options on [how to export files](../learn/learn-tutorials/exporting)
+See more options on [how to export files](../../learn/learn-tutorials/exporting)
 and [how to import files](/learn/tutorials/migrating/from-psh.md#5-import-data).
 {{% /version/specific %}}
 

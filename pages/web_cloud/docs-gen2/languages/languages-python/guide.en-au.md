@@ -178,7 +178,7 @@ applications:
     {{% /version/specific %}}
 
 You can choose from many web servers such as Daphne, Gunicorn, Hypercorn, and Uvicorn.
-See more about [running Python web servers](.././.-server).
+See more about [running Python web servers](../.././.-server).
 
 ### Use uWSGI
 
@@ -312,7 +312,7 @@ def application(env, start_response):
 
 Your app container comes with pip pre-installed.
 For more about managing packages with pip, Pipenv, and Poetry,
-see how to [manage dependencies](.././.-dependencies).
+see how to [manage dependencies](../.././.-dependencies).
 
 To add global dependencies (packages available as commands),
 add them to the `dependencies` in your [app configuration](../../create-apps/app-reference.md#dependencies):
@@ -464,7 +464,7 @@ markdownify=false
 
 By default, data is inherited automatically by each child environment from its parent.
 If you need to sanitize data in preview environments for compliance,
-see how to [sanitize databases](../development/development-sanitize-db).
+see how to [sanitize databases](../../development/development-sanitize-db).
 
 ## Frameworks
 
@@ -472,10 +472,10 @@ All major Python web frameworks can be deployed on Web PaaS.
 See dedicated guides for deploying and working with them:
 
 {{< version/specific >}}
-- [Django](../guides/guides-django)
+- [Django](../../guides/guides-django)
 
 <--->
-- [Django](../get-started/get-started-django)
+- [Django](../../get-started/get-started-django)
 
 {{< /version/specific >}}
 

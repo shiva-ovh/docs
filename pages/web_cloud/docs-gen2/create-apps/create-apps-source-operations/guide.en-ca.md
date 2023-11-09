@@ -14,7 +14,7 @@ On Web PaaS, you can run automated code updates through a feature called **sourc
 Defined in your [app configuration](../../.), source operations let you specify commands
 that can commit changes to your project's repository when called.
 
-For example, you can set up a source operation to [automatically update your application dependencies](../learn/learn-tutorials/dependency-updates),
+For example, you can set up a source operation to [automatically update your application dependencies](../../learn/learn-tutorials/dependency-updates),
 [update a site from an upstream repository](#update-a-site-from-an-upstream-repository-or-template),
 or [revert to the last commit](#revert-to-the-last-commit) pushed to your Git repository.
 
@@ -272,7 +272,7 @@ and then runs the `update-file` source operation defined [previously](#define-a-
 
 ### Update your application dependencies
 
-You can set up a source operation and a cron job to [automate your dependency updates](../learn/learn-tutorials/dependency-updates).
+You can set up a source operation and a cron job to [automate your dependency updates](../../learn/learn-tutorials/dependency-updates).
 
 ### Update a site from an upstream repository or template
 

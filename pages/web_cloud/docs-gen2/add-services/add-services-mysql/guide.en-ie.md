@@ -21,7 +21,7 @@ or [MySQL documentation](https://dev.mysql.com/doc/refman/en/) for more informat
 
 - [Jakarta EE](../../guides/jakarta/deploy.md#mysql)
 
-- [Spring](../guides/guides-spring/mysql)
+- [Spring](../../guides/guides-spring/mysql)
 
 
 {{% /frameworks %}}
@@ -289,7 +289,7 @@ Example configuration:
 
 You can access the service using the {{< vendor/name >}} CLI by running `{{< vendor/cli >}} sql`.
 
-You can also access it from you app container via [SSH](../development/development-ssh).
+You can also access it from you app container via [SSH](../../development/development-ssh).
 From your [relationship data](#relationship-reference), you need: `host`, `port`, `user`, `path`.
 Then run the following command:
 
@@ -328,7 +328,7 @@ Possible permissions:
 | Read-only   | `ro`          | Can select, create temporary tables, and see views. |
 | Read-write  | `rw`          | In addition to read-only permissions, can also insert, update, delete, manage and execute events, execute routines, create and drop indexes, manage and execute triggers, and lock tables. |
 | Admin       | `admin`       | In addition to read-write permissions, can also create, drop, and alter tables; create views; and create and alter routines. |
-| Replication | `replication` | For [replicating databases](.././.-mysql-replication). In addition to read-only permissions, can also lock tables. |
+| Replication | `replication` | For [replicating databases](../.././.-mysql-replication). In addition to read-only permissions, can also lock tables. |
 
 ## Multiple databases
 
@@ -636,8 +636,8 @@ If either `schemas` or `endpoints` are defined, no default is applied and you ha
 ## Sanitizing data
 
 To ensure people who review code changes can't access personally identifiable information stored in your database,
-[sanitize your preview environments](../development/development-sanitize-db).
+[sanitize your preview environments](../../development/development-sanitize-db).
 
 ## Troubleshoot
 
-If you run into issues, [troubleshoot MySQL](.././.-troubleshoot).
+If you run into issues, [troubleshoot MySQL](../.././.-troubleshoot).

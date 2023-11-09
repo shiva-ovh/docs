@@ -16,7 +16,7 @@ For example, a container might have a long-term support version, while you want 
 In such cases, use the [Pyenv version manager](https://github.com/pyenv/pyenv)
 to install the specific version you want to use.
 
-1\.  Add your target Python version as a [variable](../development/development-variables):
+1\.  Add your target Python version as a [variable](../../development/development-variables):
 
 
 

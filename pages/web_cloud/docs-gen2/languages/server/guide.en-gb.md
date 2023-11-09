@@ -82,7 +82,7 @@ These examples define four worker processes with `-w 4`.
 For more recommendations on this and other settings, see the [Uvicorn documentation](https://www.uvicorn.org/settings/#timeouts).
 
 Instead of the `-w` flag, you can also use the `WEB_CONCURRENCY` variable.
-See how to [set variables](../development/development-variables/set-variables).
+See how to [set variables](../../development/development-variables/set-variables).
 
 ## Hypercorn
 
@@ -95,7 +95,7 @@ See how to [set variables](../development/development-variables/set-variables).
 ### Hypercorn workers
 
 These examples define four worker processes with `-w 4`.
-For more details on what you can configure, see the [Hypercorn documentation](../https:/https:-/hypercorn.readthedocs.io/en/latest/how_to_guides/configuring).
+For more details on what you can configure, see the [Hypercorn documentation](../../https:/https:-/hypercorn.readthedocs.io/en/latest/how_to_guides/configuring).
 
 Workers can also be defined with a custom [worker class](https://hypercorn.readthedocs.io/en/latest/how_to_guides/configuring.html#configuration-options),
 such as Asyncio, Uvloop, or Trio.

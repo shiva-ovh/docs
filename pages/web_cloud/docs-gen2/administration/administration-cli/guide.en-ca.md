@@ -29,7 +29,7 @@ To list and manage your projects, authenticate by running the following command:
 ```
 
 This process opens a browser tab for you to log in.
-It also creates certificates on your computer for [SSH](../development/development-ssh).
+It also creates certificates on your computer for [SSH](../../development/development-ssh).
 
 Once you are logged in, a list of your projects appears, along with some tips for getting started.
 If you experience authentication issues or want to force a login, run the command `{{% vendor/cli %}} login`.
@@ -125,7 +125,7 @@ export PLATFORM_BRANCH=staging;
 {{% vendor/cli %}} environment:info
 ```
 
-In [multi-app](../create-apps/create-apps-multi-app) projects, this applies also to selecting the right app
+In [multi-app](../../create-apps/create-apps-multi-app) projects, this applies also to selecting the right app
 (the environment variable would be `PLATFORM_APPLICATION_NAME`).
 
 #### RootNotFoundException

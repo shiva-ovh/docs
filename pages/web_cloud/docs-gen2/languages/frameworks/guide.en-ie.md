@@ -11,13 +11,13 @@ section: Java
 
 [Hibernate ORM](https://hibernate.org/) is an object-relational mapping tool for the Java programming language. It provides a framework for mapping an object-oriented domain model to a relational database. Hibernate handles object-relational impedance mismatch problems by replacing direct, persistent database accesses with high-level object handling functions.
 
-* [Hibernate Best Practices](../guides/guides-hibernate/deploy)
+* [Hibernate Best Practices](../../guides/guides-hibernate/deploy)
 
 ## Jakarta EE/ Eclipse MicroProfile
 
 [Eclipse MicroProfile](https://microprofile.io/) is a semi-new community dedicated to optimizing the Enterprise Java mission for microservice-based architectures. Now Enterprise Java has been standardized under the Eclipse Foundation as [Jakarta EE](https://jakarta.ee/).
 
-* [Jakarta EE/ Eclipse MicroProfile Best Practices](../guides/guides-jakarta/deploy)
+* [Jakarta EE/ Eclipse MicroProfile Best Practices](../../guides/guides-jakarta/deploy)
 
 ### Templates
 
@@ -63,9 +63,9 @@ section: Java
 
 ## Spring
 
-The [Spring Framework](https://spring.io/projects/spring-framework) provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. Web PaaS is flexible, and allows you to use Spring Framework in several flavors such as [Spring MVC](../https:/https:-/docs.spring.io/spring/docs/current/spring-framework-reference/web) and [Spring Boot](https://spring.io/projects/spring-boot).
+The [Spring Framework](https://spring.io/projects/spring-framework) provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. Web PaaS is flexible, and allows you to use Spring Framework in several flavors such as [Spring MVC](../../https:/https:-/docs.spring.io/spring/docs/current/spring-framework-reference/web) and [Spring Boot](https://spring.io/projects/spring-boot).
 
-* [Spring Best Practices](../guides/guides-spring)
+* [Spring Best Practices](../../guides/guides-spring)
 
 ### Templates
 

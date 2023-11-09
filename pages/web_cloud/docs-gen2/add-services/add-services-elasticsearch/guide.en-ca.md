@@ -12,7 +12,7 @@ section: Add-Services
 
 {{% description %}}
 
-See the [Elasticsearch documentation](../https:/https:-/www.elastic.co/guide/en/elasticsearch/reference/current/index) for more information.
+See the [Elasticsearch documentation](../../https:/https:-/www.elastic.co/guide/en/elasticsearch/reference/current/index) for more information.
 
 {{% frameworks version="1" %}}
 
@@ -149,7 +149,7 @@ but they're at their end of life and are no longer receiving security updates fr
 To ensure your project remains stable in the future,
 switch to [a premium version](#supported-versions).
 
-Alternatively, you can switch to one of the latest, free versions of [OpenSearch](.././.-opensearch).
+Alternatively, you can switch to one of the latest, free versions of [OpenSearch](../.././.-opensearch).
 To do so, follow the same procedure as for [upgrading](#upgrading).
 
 {{% relationship-ref-intro %}}
@@ -387,7 +387,7 @@ use the `elasticsearch-enterprise` type.
 
 In this example you'd have the ICU analysis plugin and Python script support plugin.
 
-If there is a publicly available plugin you need that isn't listed here, [contact support](../learn/learn-overview/get-support).
+If there is a publicly available plugin you need that isn't listed here, [contact support](../../learn/learn-overview/get-support).
 
 ### Available plugins
 

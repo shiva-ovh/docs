@@ -15,7 +15,7 @@ section: Create-Apps
 
 For single-app projects, the configuration is all done in a `{{< vendor/configfile "app" >}}` file,
 usually located at the root of your app folder in your Git repository.
-[Multi-app projects](.././.-multi-app) can be set up in various ways.
+[Multi-app projects](../.././.-multi-app) can be set up in various ways.
 <--->
 Configuration is all done in a `{{< vendor/configfile "app" >}}` file,
 located at the root of your Git repository.
@@ -24,7 +24,7 @@ located at the root of your Git repository.
 See a [comprehensive example](./_index.md#comprehensive-example) of a configuration in a `{{< vendor/configfile "app" >}}` file.
 
 {{% version/only "1" %}}
-For reference, see a [log of changes to app configuration](.././.-upgrading).
+For reference, see a [log of changes to app configuration](../.././.-upgrading).
 {{% /version/only %}}
 
 
@@ -69,7 +69,7 @@ To override any part of a property, you have to provide the entire property.
 | `mounts`           | A dictionary of [mounts](#mounts)                   |          | Yes              | Directories that are writable even after the app is built. If set as a local source, `disk` is required. |
 | `web`              | A [web instance](#web)                              |          | N/A              | How the web application is served. |
 | `workers`          | A [worker instance](#workers)                       |          | N/A              | Alternate copies of the application to run as background processes. |
-| `timezone`         | `string`                                            |          | No               | The timezone for crons to run. Format: a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Defaults to `UTC`, which is the timezone used for all logs no matter the value here. See also [app runtime timezones](.././.-timezone) |
+| `timezone`         | `string`                                            |          | No               | The timezone for crons to run. Format: a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Defaults to `UTC`, which is the timezone used for all logs no matter the value here. See also [app runtime timezones](../.././.-timezone) |
 | `access`           | An [access dictionary](#access)                     |          | Yes              | Access control for roles accessing app environments. |
 | `variables`        | A [variables dictionary](#variables)                |          | Yes              | Variables to control the environment. |
 | `firewall`         | A [firewall dictionary](#firewall)                  |          | Yes              | Outbound firewall rules for the application. |
@@ -91,7 +91,7 @@ To override any part of a property, you have to provide the entire property.
 | `mounts`           | A dictionary of [mounts](#mounts)                   |          | Yes              | Directories that are writable even after the app is built. Allocated disk for mounts is defined with a separate resource configuration call using `{{% vendor/cli %}} resources:set`. |
 | `web`              | A [web instance](#web)                              |          | N/A              | How the web application is served. |
 | `workers`          | A [worker instance](#workers)                       |          | N/A              | Alternate copies of the application to run as background processes. |
-| `timezone`         | `string`                                            |          | No               | The timezone for crons to run. Format: a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Defaults to `UTC`, which is the timezone used for all logs no matter the value here. See also [app runtime timezones](.././.-timezone) |
+| `timezone`         | `string`                                            |          | No               | The timezone for crons to run. Format: a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Defaults to `UTC`, which is the timezone used for all logs no matter the value here. See also [app runtime timezones](../.././.-timezone) |
 | `access`           | An [access dictionary](#access)                     |          | Yes              | Access control for roles accessing app environments. |
 | `variables`        | A [variables dictionary](#variables)                |          | Yes              | Variables to control the environment. |
 | `firewall`         | A [firewall dictionary](#firewall)                  |          | Yes              | Outbound firewall rules for the application. |
@@ -127,7 +127,7 @@ That is, if a custom value for `source.root` is not provided in your configurati
 
 {{% /version/specific %}}
 
-To specify another directory, for example for a [multi-app project](.././.-multi-app)),
+To specify another directory, for example for a [multi-app project](../.././.-multi-app)),
 use the [`source.root` property](#source).
 
 ## Types
@@ -355,7 +355,7 @@ The files still exist on disk until manually removed.
 ### Mounts, instances, and Network Storage
 
 Even though the configuration is slightly different for `local` and `service` (Network Storage) mounts,
-in reality **all** Web PaaS mounts are [Network Storage](../add-services/add-services-network-storage) mounts.
+in reality **all** Web PaaS mounts are [Network Storage](../../add-services/add-services-network-storage) mounts.
 
 With this in mind, there are some consequences to be aware of:
 
@@ -397,7 +397,7 @@ applications:
 ```
 
 Remember that the `/tmp` has a [maximum allocation of 4 GB](/create-apps/troubleshoot-disks.md#no-space-left-on-device). 
-If your project requires more disk, [contact Support](../learn/learn-overview/get-support).
+If your project requires more disk, [contact Support](../../learn/learn-overview/get-support).
 
 {{% /note %}}
 
@@ -414,7 +414,7 @@ Defaults may vary with a different [image `type`](#types).
 | `upstream`  | An [upstream dictionary](#upstream)          |                               | How the front server connects to your app. |
 | `locations` | A [locations dictionary](#locations)         |                               | How the app container responds to incoming requests. |
 
-See some [examples of how to configure what's served](.././.-web).
+See some [examples of how to configure what's served](../.././.-web).
 
 ### Web commands
 
@@ -1362,15 +1362,15 @@ The following table shows the properties that can be set in `source`:
 
 | Name         | Type                     | Required | Description |
 | ------------ | ------------------------ | -------- | ----------- |
-| `operations` | An operations dictionary |          |  Operations that can be applied to the source code. See [source operations](.././.-source-operations) |
-| `root`       | `string`                 |          |  The path where the app code lives. Defaults to the directory of the `{{< vendor/configfile "app" >}}` file. Useful for [multi-app setups](.././.-multi-app). |
+| `operations` | An operations dictionary |          |  Operations that can be applied to the source code. See [source operations](../.././.-source-operations) |
+| `root`       | `string`                 |          |  The path where the app code lives. Defaults to the directory of the `{{< vendor/configfile "app" >}}` file. Useful for [multi-app setups](../.././.-multi-app). |
 
 <--->
 
 | Name         | Type                     | Required | Description |
 | ------------ | ------------------------ | -------- | ----------- |
-| `operations` | An operations dictionary |          |  Operations that can be applied to the source code. See [source operations](.././.-source-operations) |
-| `root`       | `string`                 |          |  The path where the app code lives. Defaults to the root project directory. Useful for [multi-app setups](.././.-multi-app). |
+| `operations` | An operations dictionary |          |  Operations that can be applied to the source code. See [source operations](../.././.-source-operations) |
+| `root`       | `string`                 |          |  The path where the app code lives. Defaults to the root project directory. Useful for [multi-app setups](../.././.-multi-app). |
 
 {{% /version/specific %}}
 

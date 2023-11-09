@@ -22,7 +22,7 @@ Web PaaS recommends [Blackfire](../integrations/integrations-increase-observabil
 which is part of the standard Web PaaS Observability Suite.
 Note that only a project administrator (someone with `admin` level access to the project) can add or remove integrations.
 
-See [User administration](../administration/administration-users) for more details.
+See [User administration](../../administration/administration-users) for more details.
 
 <--->
 {{% /version/specific %}}

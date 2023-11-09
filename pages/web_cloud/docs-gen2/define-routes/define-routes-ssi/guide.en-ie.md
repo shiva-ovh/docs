@@ -63,7 +63,7 @@ And your final rendered page includes the other file:
 
 ## Caching and dynamic content
 
-You can use SSI to have [caching](.././.-cache) and dynamic content in one.
+You can use SSI to have [caching](../.././.-cache) and dynamic content in one.
 So one file is cached, while another updates dynamically.
 
 For example, you can activate SSI on one route with cache disabled and enable cache on another route:
@@ -126,4 +126,4 @@ echo date(DATE_RFC2822);
 Then you can visit `index.php` and refresh the page a few times.
 You see the first number updating to the current time, while the second (included) one only changes every 60 seconds.
 
-For more on SSI, see the [nginx documentation](../https:/https:-/nginx.org/en/docs/http/ngx_http_ssi_module).
+For more on SSI, see the [nginx documentation](../../https:/https:-/nginx.org/en/docs/http/ngx_http_ssi_module).

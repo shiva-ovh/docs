@@ -25,7 +25,7 @@ You need:
 
 - A {{< vendor/name >}} account -- if you don't already have one, [start a trial](https://auth.api.platform.sh/register?trial_type=general)
 
-- The [{{< vendor/name >}} CLI](../administration/administration-cli) installed locally
+- The [{{< vendor/name >}} CLI](../../administration/administration-cli) installed locally
 
 <--->
 - An app that works and is ready to be built
@@ -34,7 +34,7 @@ You need:
 
 - A {{< vendor/name >}} account -- if you don't already have one, [register](https://upsun.com/register/).
 
-- The [{{< vendor/name >}} CLI](../administration/administration-cli) installed locally
+- The [{{< vendor/name >}} CLI](../../administration/administration-cli) installed locally
 
 {{% /version/specific %}}
 
@@ -59,7 +59,7 @@ Run the following command:
 {{% vendor/cli %}} project:create
 ```
 
-When prompted, fill in details like the project name, [region](../development/development-regions), and [plan](../administration/administration-pricing).
+When prompted, fill in details like the project name, [region](../../development/development-regions), and [plan](../../administration/administration-pricing).
 
 <--->
 
@@ -69,8 +69,8 @@ title=In the Console
 
 [Create a new project from scratch]({{% create-project-link scratch=true %}}).
 
-In the form, fill in details like the project name and [region](../development/development-regions).
-The project is automatically created with a [Development plan](../administration/administration-pricing),
+In the form, fill in details like the project name and [region](../../development/development-regions).
+The project is automatically created with a [Development plan](../../administration/administration-pricing),
 which you can then upgrade.
 
 {{< /codetabs >}}
@@ -94,7 +94,7 @@ Then run the following command to create a project:
 {{% vendor/cli %}} project:create
 ```
 
-When prompted, fill in details like the project name, [region](../development/development-regions), and the name of your organization.
+When prompted, fill in details like the project name, [region](../../development/development-regions), and the name of your organization.
 
 <--->
 
@@ -108,7 +108,7 @@ If you do not already have an organization created to put the project, you'll fi
 
 Once you have done so, select that organization from the dropdown, and select **Create from scratch**.
 
-In the form, fill in details like the project name and [region](../development/development-regions).
+In the form, fill in details like the project name and [region](../../development/development-regions).
 You'll be able to define resources for the project after your first push.
 
 {{< /codetabs >}}
@@ -127,7 +127,7 @@ You likely want to configure three areas:
 
 {{% version/only "1" %}}
 <!-- Web PaaS -->
-You can also take guidance from the [project templates](../development/development-templates),
+You can also take guidance from the [project templates](../../development/development-templates),
 which are starting points for various technology stacks with working configuration examples.
 {{% /version/only %}}
 
@@ -136,7 +136,7 @@ When you've added your configuration, make sure to commit it to Git.
 ## 4. Push your code
 
 The way to push your code to Web PaaS depends on
-whether you're hosting your code with a third-party service using a [source integration](../integrations/integrations-source).
+whether you're hosting your code with a third-party service using a [source integration](../../integrations/integrations-source).
 If you aren't, your repository is hosted in Web PaaS
 and you can use the CLI or just Git itself.
 
@@ -221,7 +221,7 @@ Or upload to your mounts using a different [SSH method](/development/file-transf
 
 ## Optional: Add variables
 
-If your app requires environment variables to build properly, [add them to your environment](../development/development-variables/set-variables).
+If your app requires environment variables to build properly, [add them to your environment](../../development/development-variables/set-variables).
 
 ## What's next
 
@@ -231,16 +231,16 @@ Now that your app is ready to be deployed, you can do more:
 - Upgrade from a Development plan.
 
 {{% /version/only %}}
-- [Add a domain](../domains/domains-steps).
+- [Add a domain](../../domains/domains-steps).
 
-- Set up for [local development](../development/development-local).
+- Set up for [local development](../../development/development-local).
 
-- Configure [health notifications](../integrations/integrations-notifications).
+- Configure [health notifications](../../integrations/integrations-notifications).
 
 
-- For monitoring and profiling, [integrate Blackfire](../increase-observability/increase-observability-integrate-observability/blackfire).
+- For monitoring and profiling, [integrate Blackfire](../../increase-observability/increase-observability-integrate-observability/blackfire).
 
 <--->
-- For monitoring and profiling, [integrate Blackfire](../increase-observability/increase-observability-application-metrics/blackfire).
+- For monitoring and profiling, [integrate Blackfire](../../increase-observability/increase-observability-application-metrics/blackfire).
 
 {{% /version/specific %}}

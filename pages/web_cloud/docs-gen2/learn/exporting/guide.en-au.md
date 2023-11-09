@@ -24,7 +24,7 @@ You need:
 
 - Code in your project
 
-- Optional: the [Web PaaS CLI](../administration/administration-cli)
+- Optional: the [Web PaaS CLI](../../administration/administration-cli)
 
 
 ## 1. Download your app's code
@@ -46,7 +46,7 @@ You can download your files [using the CLI](/development/file-transfer.md#transf
 
 The mechanism for downloading from each service (such as your database) varies.
 
-For services designed to hold non-persistent data, such as [Redis](../add-services/add-services-redis) or [Solr](../add-services/add-services-solr),
+For services designed to hold non-persistent data, such as [Redis](../../add-services/add-services-redis) or [Solr](../../add-services/add-services-solr),
 it's generally not necessary to download data as it can be rebuilt from the primary data store.
 
 For services designed to hold persistent data, see each service's page for instructions:
@@ -81,7 +81,7 @@ To back up your environment variables:
 
 - Migrate data from elsewhere [into Web PaaS](../learn/learn-tutorials/migrating).
 
-- Migrate to [another region](../projects/projects-region-migration).
+- Migrate to [another region](../../projects/projects-region-migration).
 
-- To use data from an environment locally, export your data and set up your [local development environment](../development/development-local).
+- To use data from an environment locally, export your data and set up your [local development environment](../../development/development-local).
 

@@ -82,7 +82,7 @@ To access environment variables in your app, use a built-in method for the given
 * PHP: The [`getenv()` function](https://www.php.net/manual/en/function.getenv.php)
 * Python: The [`os.environ` object](https://docs.python.org/3/library/os.html#os.environ)
 * Node.js: The [`process.env` object](https://nodejs.org/api/process.html#process_process_env)
-* Ruby: The [`ENV` accessor](../https:/https:-/ruby-doc.org/current/ENV)
+* Ruby: The [`ENV` accessor](../../https:/https:-/ruby-doc.org/current/ENV)
 * Java: The [`System.getenv()` method](https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getenv-java.lang.String-)
 {{% /version/specific %}}
 
@@ -168,7 +168,7 @@ and at runtime.
 | `{{< vendor/prefix >}}_RELATIONSHIPS`    | No    | Yes     | A base64-encoded JSON object of relationships. The keys are the relationship name and the values are arrays of relationship endpoint definitions. The exact format is defined differently for each [service](../../add-services). |
 | `{{< vendor/prefix >}}_ROUTES`           | No    | Yes     | A base64-encoded JSON object that describes the routes for the environment. It maps the content of your [routes configuration](../../define-routes). Note that this information is also available in your `/run/config.json` file. |
 | `{{< vendor/prefix >}}_SMTP_HOST`        | No    | Yes     | The SMTP host to send email messages through. Is empty when mail is disabled for the current environment. |
-| `{{< vendor/prefix >}}_SOURCE_DIR`       | Yes   | No      | The path to the root directory of your code repository in the context of a running [source operation](../create-apps/create-apps-source-operations). The directory contains a writable copy of your repository that you can commit to during the operation. |
+| `{{< vendor/prefix >}}_SOURCE_DIR`       | Yes   | No      | The path to the root directory of your code repository in the context of a running [source operation](../../create-apps/create-apps-source-operations). The directory contains a writable copy of your repository that you can commit to during the operation. |
 | `{{< vendor/prefix >}}_TREE_ID`          | Yes   | Yes     | The ID of the tree the application was built from, essentially the SHA hash of the tree in Git. Use when you need a unique ID for each build. |
 | `{{< vendor/prefix >}}_VARIABLES`        | Some  | Some    | A base64-encoded JSON object with all user-defined project and environment variables that don't use a [prefix](./_index.md#variable-prefixes). The keys are the variable names and the values are the variable values. Availability during builds and at runtime depends on the settings for each variable. See how to [access individual variables](#access-variables-in-a-shell). |
 | `PORT`                      | No    | Yes     | A `string` representing the port to which requests are sent if the [`web.upstream.socket_family` property](../../create-apps/app-reference.md#upstream) is unset or set to `tcp`. |
@@ -178,7 +178,7 @@ and at runtime.
 <!-- These two sections are Web PaaS-specific -->
 ### Variables on {{% names/dedicated-gen-2 %}} environments
 
-[{{% names/dedicated-gen-2 %}} instances](../dedicated-gen-2/dedicated-gen-2-overview) also have the following variables available:
+[{{% names/dedicated-gen-2 %}} instances](../../dedicated-gen-2/dedicated-gen-2-overview) also have the following variables available:
 
 | Variable name    | Build | Runtime | Description |
 | ---------------- | ----- | ------- | ----------- |

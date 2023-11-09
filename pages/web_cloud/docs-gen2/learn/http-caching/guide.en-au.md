@@ -19,7 +19,7 @@ Mixing them together most likely results in stale cache that can't be cleared.
 
 ## The Web PaaS router cache
 
-Every project includes a router instance that includes [optional HTTP caching](../define-routes/define-routes-cache).
+Every project includes a router instance that includes [optional HTTP caching](../../define-routes/define-routes-cache).
 It's reasonably configurable and obeys HTTP cache directives, but doesn't support push-based clearing.
 
 If you're uncertain what caching tool to use, start with this one.
@@ -29,7 +29,7 @@ It's enough for most uses.
 
 
 Web PaaS is compatible with most commercial CDNs.
-If you have a Dedicated instance, it comes with the [Fastly CDN](../domains/domains-cdn/fastly).
+If you have a Dedicated instance, it comes with the [Fastly CDN](../../domains/domains-cdn/fastly).
 <--->
 Web PaaS is compatible with most commercial CDNs.
 {{% /version/specific %}}
@@ -37,12 +37,12 @@ Web PaaS is compatible with most commercial CDNs.
 CDNs generally offer the best performance as they're the only option that includes multiple geographic locations.
 But they do tend to be the most expensive option.
 
-See more on setting up [Fastly](../domains/domains-cdn/fastly) and [Cloudflare](../domains/domains-cdn/cloudflare).
+See more on setting up [Fastly](../../domains/domains-cdn/fastly) and [Cloudflare](../../domains/domains-cdn/cloudflare).
 The methods for other CDNs are similar.
 
 ## Varnish
 
-Web PaaS offers a [Varnish service](../add-services/add-services-varnish) that you can insert between the router and your app.
+Web PaaS offers a [Varnish service](../../add-services/add-services-varnish) that you can insert between the router and your app.
 
 It has roughly the same performance as the router cache.
 Varnish is more configurable, but it requires you to be comfortable with Varnish Configuration Language (VCL).

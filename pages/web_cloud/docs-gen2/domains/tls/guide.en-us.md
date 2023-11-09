@@ -32,7 +32,7 @@ Wildcard certificates that cover all `*.platform.sh` domains, including preview 
 
 ### Add a custom certificate
 
-You can add a custom certificate using the [CLI](../administration/administration-cli) or in the [Console](../administration/administration-web).
+You can add a custom certificate using the [CLI](../../administration/administration-cli) or in the [Console](../../administration/administration-web).
 
 Your certificate has to be in PKCS #1 format and start with `-----BEGIN RSA PRIVATE KEY-----`.
 If it doesn't start that way, [change the format](#change-the-private-key-format).

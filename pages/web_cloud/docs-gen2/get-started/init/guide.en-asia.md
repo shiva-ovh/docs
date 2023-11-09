@@ -27,7 +27,7 @@ Then go through each of the steps to create the project:
 
 1\. Give it a title.
 
-2\. Choose a [region](../development/development-regions).
+2\. Choose a [region](../../development/development-regions).
 
    The CLI lists each region's location, cloud provider, and average carbon intensity.
 3\. Choose a plan.
@@ -42,7 +42,7 @@ Then go through each of the steps to create the project:
    This defaults to 5 GiB, which is included in any production-level plan, but you can add more.
 6\. Choose a default branch.
 
-   This defaults to `main`, but you can always [change it later](../environments/environments-default-environment).
+   This defaults to `main`, but you can always [change it later](../../environments/environments-default-environment).
 
 A Git repository is automatically initialized and Web PaaS is set as a remote.
 

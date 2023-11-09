@@ -38,7 +38,7 @@ crons:
 
 ## Changes in version 2017.11 (2017-11-09)
 
-* The `!archive` tag in YAML files is now deprecated in favor of the more generic [`!include`](../learn/learn-overview/yaml).
+* The `!archive` tag in YAML files is now deprecated in favor of the more generic [`!include`](../../learn/learn-overview/yaml).
 For example, the following `{{< vendor/configfile "services" >}}` snippet:
 
 ```yaml
@@ -102,7 +102,7 @@ disable client-side caching. This change only affects static files served
 directly by the web server. Responses served from `passthru` URLs continue to use
 whatever caching headers were set by the application..
 
-To enable caching on your static files, make sure you include an `expires` key in your [web configuration](.././.-app-reference), as shown below:
+To enable caching on your static files, make sure you include an `expires` key in your [web configuration](../.././.-app-reference), as shown below:
 
 ```yaml
 web:

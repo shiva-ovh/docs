@@ -12,7 +12,7 @@ section: Local
 
 To test changes locally, you can connect your locally running web server
 to service containers on an active Web PaaS environment.
-This method requires less configuration than tools such as [DDEV](.././.-ddev),
+This method requires less configuration than tools such as [DDEV](../.././.-ddev),
 but may not perform well enough for everyday use.
 Because it replies on a local web server, it's also less consistent across your team.
 

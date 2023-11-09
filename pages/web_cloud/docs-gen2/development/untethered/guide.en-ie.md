@@ -19,4 +19,4 @@ If you already have a development workflow in place that works for you, you can 
 
 To synchronize data from an environment on Web PaaS, consult the documentation for each [service](../../add-services).
 Each service type has its own native data import/export process and Web PaaS doesn't get in the way of that.
-It's also straightforward to [download user files](../learn/learn-tutorials/exporting) from your application using rsync.
+It's also straightforward to [download user files](../../learn/learn-tutorials/exporting) from your application using rsync.

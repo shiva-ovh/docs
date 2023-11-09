@@ -79,13 +79,13 @@ You need:
 
 - At least one preview (staging or development) environment
 
-- Optional: The [Web PaaS CLI](../administration/administration-cli) (v4.8.0+)
+- Optional: The [Web PaaS CLI](../../administration/administration-cli) (v4.8.0+)
 
 
 To prevent abuse, by default you can add custom domains to up to 5 preview environments per project only.
 This limit doesn't include the production environment,
 and you can increase it without charge.
-To do so, [contact Support](../learn/learn-overview/get-support).
+To do so, [contact Support](../../learn/learn-overview/get-support).
 
 > [!primary]  
 > 

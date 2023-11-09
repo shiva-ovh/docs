@@ -10,10 +10,10 @@ section: Create-Apps
 
 ## Objective  
 
-As your app goes through the [build and deploy process](../learn/learn-overview/build-deploy),
+As your app goes through the [build and deploy process](../../learn/learn-overview/build-deploy),
 you might want to run custom commands.
 These might include compiling the app, setting the configuration for services based on variables, and rebuilding search indexes.
-Do these tasks using one of [three hooks](.././.-hooks-comparison).
+Do these tasks using one of [three hooks](../.././.-hooks-comparison).
 
 
 The following example goes through each of these hooks for the [Next.js Drupal template](https://github.com/platformsh-templates/nextjs-drupal).

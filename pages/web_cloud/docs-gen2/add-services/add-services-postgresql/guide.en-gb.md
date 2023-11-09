@@ -12,7 +12,7 @@ section: Add-Services
 
 PostgreSQL is a high-performance, standards-compliant relational SQL database.
 
-See the [PostgreSQL documentation](../https:/https:-/www.postgresql.org/docs/9.6/index) for more information.
+See the [PostgreSQL documentation](../../https:/https:-/www.postgresql.org/docs/9.6/index) for more information.
 
 {{% frameworks version="1" %}}
 
