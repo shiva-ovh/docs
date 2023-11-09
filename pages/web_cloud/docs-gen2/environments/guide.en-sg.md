@@ -5,13 +5,13 @@ section: Environments
 hidden: true
 ---
 
-**Last updated 6th November 2023**
+**Last updated 9th November 2023**
 
 
 
 ## Objective  
 
-A Web PaaS environment contains one instance of an app (or [group of apps](../create-apps/multi-app/_index.md))
+A Web PaaS environment contains one instance of an app (or [group of apps](../or [group of apps](..-create-apps/multi-app))
 with all the services needed for it to run.
 
 Each project can include multiple environments,
@@ -29,12 +29,12 @@ To organize your environments, you can create [hierarchical relationships](#hier
 
 You can create new environments in one of two ways:
 
--   Push a local branch through Git or a [source integration](../integrations/source/_index.md).
+-   Push a local branch through Git or a [source integration](integrations/integrations-source).
 
 
--   [Branch](../glossary#branch) existing environments using the [CLI](administration-cli)
+-   [Branch](/glossary.md#branch) existing environments using the [CLI](administration/administration-cli)
 
-    or the [Console](../administration/web/_index.md).
+    or the [Console](administration/administration-web).
 
 When you branch an environment, you might want to create exact replicas of it.
 In this case, each new environment inherits all of the data and services from its parent environment.
@@ -52,28 +52,28 @@ These are called [inactive environments](#environment-status).
 
 Your default environment comes from your default branch and is a [production environment](../administration/users.md#environment-type-roles).
 Your project must have a default environment,
-but you can [name it as you want](./default-environment.md).
+but you can [name it as you want](./.-default-environment).
 
 If you subscribed to a production plan, this environment is your **live site**.
-You might want to give it a [custom domain name](../domains/steps/_index.md).
+You might want to give it a [custom domain name](domains/domains-steps).
 
 ## Environment status
 
 Your environments can have one of two statuses:
 
--   [Active](../glossary#active-environment):
+-   [Active](/glossary.md#active-environment):
 
     A deployed environment with services and data.
 
--   [Inactive](../glossary#inactive-environment):
+-   [Inactive](/glossary.md#inactive-environment):
 
     An environment that isn't deployed and has no services or data, only code.
 
-You can see the status of your environments in the [Console](../administration/web/_index.md) or the [CLI](administration-cli).
+You can see the status of your environments in the [Console](administration/administration-web) or the [CLI](administration/administration-cli).
 
 > [!tabs]      
 
-You can [change an environment's status](./deactivate-environment.md) at any time.
+You can [change an environment's status](./.-deactivate-environment) at any time.
 
 ## Organize your environments
 
@@ -83,16 +83,16 @@ You can [change an environment's status](./deactivate-environment.md) at any tim
 
 In Web PaaS, your environments are organized in a hierarchy featuring parent and child environments.
 
-When you [branch](../glossary#branch) an environment,
+When you [branch](/glossary.md#branch) an environment,
 the parent of the new environment is the environment it was created from.
-You can [change the environment's parent](./change-parent.md) after it's been created.
+You can [change the environment's parent](./.-change-parent) after it's been created.
 
-When you push a branch through Git or a [source integration](../integrations/source/_index.md),
+When you push a branch through Git or a [source integration](integrations/integrations-source),
 the parent environment of the new environment is your [default environment](#default-environment).
-Alternatively, you can [change the environment's parent](./change-parent.md) after it's been created.
+Alternatively, you can [change the environment's parent](./.-change-parent) after it's been created.
 
-Each child environment can [sync](../glossary#sync) code and/or data down from its parent
-and [merge](../glossary#merge) code up to its parent.
+Each child environment can [sync](/glossary.md#sync) code and/or data down from its parent
+and [merge](/glossary.md#merge) code up to its parent.
 You can use child environments for development, staging, and testing.
 
 ### Workflows
@@ -122,7 +122,7 @@ You may want to take one of the following approaches when creating your workflow
 
 Example Agile workflow:
 
-1\.  An admin [branches](../glossary#branch) the Live (default) environment to create a Sprint environment.
+1\.  An admin [branches](/glossary.md#branch) the Live (default) environment to create a Sprint environment.
 
 
 2\.  The admin gives each developer permission to branch the Sprint environment to create new feature environments.
@@ -133,12 +133,12 @@ Example Agile workflow:
 3\.  Feature 1 is developed and work is reviewed by accessing the deployed Feature 1 environment.
 
 
-4\.  When the review is done, Feature 1 is [merged](../glossary#merge) into the Sprint environment.
+4\.  When the review is done, Feature 1 is [merged](/glossary.md#merge) into the Sprint environment.
 
 
     ![Feature 1 is merged into the Sprint 1 environment](images/merge-feature.svg "0.25")
 
-5\.  The remaining features [sync](../glossary#sync) with the Sprint environment.
+5\.  The remaining features [sync](/glossary.md#sync) with the Sprint environment.
 
     This ensures their working environment is up-to-date with the latest code.
 
@@ -192,9 +192,9 @@ Staging
 
 ## Paused environments
 
-[Preview environments](../glossary#preview-environment) are often used for a limited time and then abandoned.
+[Preview environments](/glossary.md#preview-environment) are often used for a limited time and then abandoned.
 To prevent unnecessary consumption of resources,
-Web PaaS automatically pauses preview environments ([of both development and staging types](../glossary#environment-type)) that haven't been redeployed in 14 days.
+Web PaaS automatically pauses preview environments ([of both development and staging types](/glossary.md#environment-type)) that haven't been redeployed in 14 days.
 
 
 
@@ -210,7 +210,7 @@ Web PaaS automatically pauses preview environments ([of both development and sta
 
 You can also pause an environment manually at any time.
 
-You can [ask Support](learn-overview/get-support) to disable the automatic pausing of your environments
+You can [ask Support](learn/learn-overview/get-support) to disable the automatic pausing of your environments
 if you are in one of the following situations:
 
 - You are using the default environment of your Development plan to build an app/demo
@@ -262,7 +262,7 @@ make sure you adjust the commands accordingly.
 
 > [!primary]  
 > 
-> You can't use push options if you have a [source integration](integrations-source) set up.
+> You can't use push options if you have a [source integration](integrations/integrations-source) set up.
 > 
 > 
 

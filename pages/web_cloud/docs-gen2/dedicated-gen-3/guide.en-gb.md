@@ -5,7 +5,7 @@ section: Dedicated-Gen-3
 hidden: true
 ---
 
-**Last updated 6th November 2023**
+**Last updated 9th November 2023**
 
 
 
@@ -38,8 +38,8 @@ of [the following benefits](https://platform.sh/blog/the-ultimate-generation-of-
 - **Greater self serviceability and control over your dedicated resources.**<BR>
 
   You don't need to submit a support ticket to add, configure,
-  or remove your [apps](../create-apps/_index.md), [services](../add-services/_index.md) and [routes](../define-routes/_index.md).
-  Just amend your [`.yaml` files](learn-overview/yaml) and push your changes.
+  or remove your [apps](../create-apps), [services](../add-services) and [routes](../define-routes).
+  Just amend your [`.yaml` files](learn/learn-overview/yaml) and push your changes.
 
   As a {{% names/dedicated-gen-3 %}} user,
   you can take advantage of the [MariaDB Galera multi master cluster](https://mariadb.com/kb/en/galera-cluster/).
@@ -78,8 +78,8 @@ The following table shows the currently available services and their versions fo
 {{< gen-3-services >}}
 
 Your app can connect to each service by referencing
-the exact same [environment variables](../development/variables/_index.md) as for Grid environments.
-See the [services documentation](../../add-services/_index.md) for service-specific details.
+the exact same [environment variables](development/development-variables) as for Grid environments.
+See the [services documentation](../add-services) for service-specific details.
 
 ### Local mounts
 
@@ -87,12 +87,12 @@ See the [services documentation](../../add-services/_index.md) for service-speci
 and local mounts aren't shared between the three hosts.
 
 If you need a folder to be shared between your hosts,
-set up a [network storage mount](../add-services/network-storage.md).
+set up a [network storage mount](add-services/add-services-network-storage).
 
 ## Differences with {{% names/dedicated-gen-2 %}} 
 
 Just like {{% names/dedicated-gen-3 %}},
-[{{% names/dedicated-gen-2 %}}](../../dedicated-gen-2/overview/_index.md) ensures increased uptime
+[{{% names/dedicated-gen-2 %}}](dedicated-gen-2/dedicated-gen-2-overview) ensures increased uptime
 and availability for your apps and services.
 But as a {{% names/dedicated-gen-2 %}} user,
 you have to go through the Web PaaS Customer Success team to make configuration or application topology changes.

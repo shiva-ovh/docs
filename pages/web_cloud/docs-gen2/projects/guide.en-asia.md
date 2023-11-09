@@ -5,11 +5,11 @@ section: Projects
 hidden: true
 ---
 
-**Last updated 6th November 2023**
+**Last updated 9th November 2023**
 
 
 
 ## Objective  
 
 See how to manage projects within Web PaaS.
-To create a project, see how to [get started](../get-started/_index.md).
+To create a project, see how to [get started](../get-started).

@@ -5,7 +5,7 @@ section: Glossary
 hidden: true
 ---
 
-**Last updated 6th November 2023**
+**Last updated 9th November 2023**
 
 
 ## Active environment
@@ -40,7 +40,7 @@ When you branch an environment, three things happen:
 
 - Your apps are rebuilt on the new branch, if necessary.
 
-  (This is skipped if the same code with the same [variables](../development/variables/_index.md) has been built for any environment.)
+  (This is skipped if the same code with the same [variables](../This is skipped if the same code with the same [variables](..-development/variables) has been built for any environment.)
 - The new branch is deployed.
 
 
@@ -62,11 +62,11 @@ They're always deployed together as a single unit.
 
 ## {{% names/dedicated-gen-2 %}}
 
-[{{% names/dedicated-gen-2 %}} environments](../dedicated-gen-2/overview/_index.md) are managed host clusters with triple redundancy.
+[{{% names/dedicated-gen-2 %}} environments](dedicated-gen-2/dedicated-gen-2-overview) are managed host clusters with triple redundancy.
 Their dedicated architecture makes them differ from [Grid environments](#grid).
-See a [list of differences](../dedicated-gen-2/overview/grid.md).
+See a [list of differences](dedicated-gen-2/dedicated-gen-2-overview/grid).
 
-These differences aren't present with [{{% names/dedicated-gen-3 %}} projects](../dedicated-gen-3/_index.md).
+These differences aren't present with [{{% names/dedicated-gen-3 %}} projects](../dedicated-gen-3).
 
 {{< /version/only >}}
 
@@ -95,7 +95,7 @@ You can also configure them manually.
 
 ## Environment
 
-An [environment](../environments/_index.md) is a standalone copy of your site,
+An [environment](../environments) is a standalone copy of your site,
 complete with code, data, and running services.
 Your production environment comes from the [default branch](../environments/_index.md#default-environment)
 and you can set up any other branch as a testing environment.
@@ -134,7 +134,7 @@ An environment that isn't deployed.
 It has no data of its own and no running services.
 If you reactivate it, it copies data from its parent.
 
-See how to [deactivate an environment](../environments/deactivate-environment.md).
+See how to [deactivate an environment](environments/environments-deactivate-environment).
 
 ## Live environment
 
@@ -145,7 +145,7 @@ A publicly accessible environment that's deployed from the Production branch und
 MB stands for megabyte, which means 1,000,000 bytes.
 This unit is based on powers of 10.
 
-Some reporting tools, such as those used by the [CLI](../administration/cli/_index.md),
+Some reporting tools, such as those used by the [CLI](administration/administration-cli),
 use binary megabytes, also known as mebibytes and abbreviated as MiB.
 This unit is based on powers of 2 and so 1&nbsp;MiB equals 1024<sup>2</sup> or 1,048,576 bytes.
 So 1&nbsp;MB is less than 1&nbsp;MiB.
@@ -164,7 +164,7 @@ When you merge an environment, three things happen:
 
 - Your apps rebuilt on the parent branch, if necessary.
 
-  (This is skipped if the same code with the same [variables](../development/variables/_index.md) has been built for any environment.)
+  (This is skipped if the same code with the same [variables](../This is skipped if the same code with the same [variables](..-development/variables) has been built for any environment.)
 - The parent branch is deployed.
 
 
@@ -184,11 +184,11 @@ They are useful to perform user acceptance testing.
 ## Production plan
 
 A subscription level that allows you to host your production website
-by adding a domain and [a custom SSL certificate](../domains/steps/tls.md).
+by adding a domain and [a custom SSL certificate](domains/domains-steps/tls).
 
 ## Project
 
-A [project](../projects/_index.md) is the site that you’re working on. 
+A [project](../projects) is the site that you’re working on. 
 Each project corresponds to one Git repository. 
 A project can contain multiple apps that run in their own isolated containers. 
 Each branch of a project can be deployed in its own environment.

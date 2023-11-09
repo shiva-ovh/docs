@@ -5,14 +5,14 @@ section: Define-Routes
 hidden: true
 ---
 
-**Last updated 6th November 2023**
+**Last updated 9th November 2023**
 
 
 
 ## Objective  
 
 You might need to control how people access your web applications,
-for example when you have [multiple apps](../create-apps/multi-app/_index.md) in one project.
+for example when you have [multiple apps](create-apps/create-apps-multi-app) in one project.
 Or you might just want to direct requests to specific places, such as removing the `www` at the start of all requests.
 
 {{< version/specific >}}
@@ -113,7 +113,7 @@ Redirects from `http` to `https` are generally included by default and don't nee
 
 ### Multi-app route definition
 
-The specifics of configuring the Router container for multiple applications is explored in detail in the [Multiple apps](create-apps-multi-app/routes) documentation.
+The specifics of configuring the Router container for multiple applications is explored in detail in the [Multiple apps](create-apps/create-apps-multi-app/routes) documentation.
 
 ## Trailing slashes
 
@@ -179,7 +179,7 @@ Each route in your configuration file is defined in one of two ways:
 * A URL with a placeholder such as `https://{default}/blog`
 
 The available placeholders are `{default}` and `{all}`.
-They stand in for the [custom domains](../domains/steps/_index.md) you've defined in your project.
+They stand in for the [custom domains](domains/domains-steps) you've defined in your project.
 
 These domains can be top-level domains (`example.com`) or subdomains (`app.example.com`).
 
@@ -366,7 +366,7 @@ are both routed to the same endpoint.
 
 Let's Encrypt wildcard certificates aren't supported (they would need DNS validation).
 So if you want to use a wildcard route and protect it with HTTPS,
-you need to provide a [custom TLS certificate](../domains/steps/tls.md).
+you need to provide a [custom TLS certificate](domains/domains-steps/tls).
 
 {{% version/only "1" %}}
 > [!primary]  
@@ -374,7 +374,7 @@ you need to provide a [custom TLS certificate](../domains/steps/tls.md).
 > In projects created before November 2017, the `.` in subdomains was replaced with a triple hyphen (`---`).
 > It was switched to preserve `.` to simplify SSL handling and improve support for longer domains.
 > If your project was created before November 2017, it still uses `---` to the left of the environment name.
-> To switch to dotted-domains, [contact support](learn-overview/get-support).
+> To switch to dotted-domains, [contact support](learn/learn-overview/get-support).
 > Doing so may change the domain name that your production domain name should `CNAME` to.
 > 
 > 
@@ -537,12 +537,12 @@ You can configure each route separately with the following properties:
 
 | Name         | Type      | Required                | Description |
 | ------------ | --------- | ----------------------- | ----------- |
-| `type`       | `string`  | Yes                     | One of the following options:<ul><li>`upstream` means content is served at that route by an app and requires the `upstream` property to be set.</li><li>`redirect` means the route is redirected elsewhere in your project and requires the `to` property.</li><li>`proxy` means requests are redirected _outside_ your project and requires the `to` property. See more about [proxy routes](./proxy.md).</li></ul> |
-| `upstream`   | `string`  | If `type` is `upstream` | The `name` of the app to be served (as defined in your [app configuration](../create-apps/_index.md)) followed by `:http`. Example: `app:http` |
+| `type`       | `string`  | Yes                     | One of the following options:<ul><li>`upstream` means content is served at that route by an app and requires the `upstream` property to be set.</li><li>`redirect` means the route is redirected elsewhere in your project and requires the `to` property.</li><li>`proxy` means requests are redirected _outside_ your project and requires the `to` property. See more about [proxy routes](./.-proxy).</li></ul> |
+| `upstream`   | `string`  | If `type` is `upstream` | The `name` of the app to be served (as defined in your [app configuration](../as defined in your [app configuration](..-create-apps)) followed by `:http`. Example: `app:http` |
 | `to`         | `string`  | If `type` is `redirect` | The absolute URL or other route to which the given route should be redirected with an HTTP 301 status code. |
-| `ssi`        | `boolean` | No                      | Whether [server side includes](./ssi.md) are enabled. |
-| `redirects`  | Object    | No                      | Defines redirects for partial routes. For definition and options, see the [redirect rules](./redirects.md). |
-| `cache`      | Object    | No                      | Defines caching policies for the given route. Enabled by default. For details and options, see [route caching](./cache.md). |
+| `ssi`        | `boolean` | No                      | Whether [server side includes](./.-ssi) are enabled. |
+| `redirects`  | Object    | No                      | Defines redirects for partial routes. For definition and options, see the [redirect rules](./.-redirects). |
+| `cache`      | Object    | No                      | Defines caching policies for the given route. Enabled by default. For details and options, see [route caching](./.-cache). |
 | `id`         | `string`  | No                      | A unique identifier for the route. See [route identifiers](#route-identifiers). |
 | `primary`    | `boolean` | No                      | Whether the route is the primary route for the project. Can only be `true` for one route in the configuration file, but if you use the [`{all}` placeholder](#all), it can be `true` for multiple final routes. Defaults to the first defined `upstream` route. |
 | `tls`        | Object    | No                      | TLS configuration. See [HTTPS](./https.md#optional-configure-tls-connections). |
@@ -550,7 +550,7 @@ You can configure each route separately with the following properties:
 
 ## CLI access
 
-The [Web PaaS CLI](../administration/cli/_index.md) can show you the routes you have configured for an environment.
+The [Web PaaS CLI](administration/administration-cli) can show you the routes you have configured for an environment.
 These are the routes as defined in the `{{< vendor/configfile "routes" >}}` file with the [placeholders](#route-placeholders)
 plus the default redirect from HTTP to HTTPS.
 They aren't the final generated routes.
@@ -642,5 +642,5 @@ web:
 Web PaaS uses Nginx servers, not Apache ones.
 You [can't use `.htaccess` files with Nginx](https://www.nginx.com/resources/wiki/start/topics/examples/likeapache-htaccess/),
 they are therefore ignored on Web PaaS.
-You can accomplish the same redirect and rewrite goals with your [routes](../define-routes/_index.md)
-and [web server locations](../create-apps/web/_index.md).
+You can accomplish the same redirect and rewrite goals with your [routes]()
+and [web server locations](create-apps/create-apps-web).
