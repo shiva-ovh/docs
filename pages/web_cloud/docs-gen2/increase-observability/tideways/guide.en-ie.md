@@ -4,7 +4,7 @@ slug: tideways
 section: Integrate-Observability
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -29,7 +29,7 @@ Sign up at [Tideways](https://app.tideways.io/register/) and get your license ke
 Add your Tideways license key as a project level variable:
 
 ```bash
-{{% vendor/cli %}} variable:create --visible-build false php:tideways.api_key --value '<your-license-key>'
+platform variable:create --visible-build false php:tideways.api_key --value '<your-license-key>'
 ```
 
 ### 3. Enable the Tideways extension
@@ -63,5 +63,5 @@ this hook for your application in Tideways "Application Settings" screen under t
 "Exports & Integrations". Here is an example:
 
 ```bash
-{{% vendor/cli %}} integration:add --type=webhook --url="https://app.tideways.io/api/events/external/1234/abcdefghijklmnopqrstuvwxyz1234567890"
+platform integration:add --type=webhook --url="https://app.tideways.io/api/events/external/1234/abcdefghijklmnopqrstuvwxyz1234567890"
 ```

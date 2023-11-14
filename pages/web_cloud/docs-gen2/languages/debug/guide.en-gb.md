@@ -4,7 +4,7 @@ slug: debug
 section: Nodejs
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -25,7 +25,7 @@ In either case, make sure to debug in a preview environment.
 Start by creating a new environment completely isolated from production but with the same data for debugging:
 
 ```bash
-{{% vendor/cli %}} branch debug-branch
+platform branch debug-branch
 ```
 
 ## 2. Get access
@@ -53,7 +53,7 @@ Listening on port 8888
 In another terminal, create an SSH tunnel that forwards to the 9229 port:
 
 ```bash
-ssh -N -L 9229:localhost:9229 $({{% vendor/cli %}} ssh --pipe)
+ssh -N -L 9229:localhost:9229 $(webpaas ssh --pipe)
 ```
 
 ## 5. Connect the debugger

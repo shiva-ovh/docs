@@ -4,7 +4,7 @@ slug: forward-logs
 section: Logs
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -573,7 +573,7 @@ HTTP forwarding makes a `POST` HTTP request with an `application/json` body whil
 As an example, to forward logs to Elasticsearch using HTTP log forwarding, run the following command:
 
 ```
-{{% vendor/cli %}} integration:add --type httplog --url "https://{{< variable "ELASTICSEARCH_URL" >}}/{{< variable "INDEX_NAME" >}}/_doc" --header "Authorization: Basic <basic_auth_token>" --header "Content-Type: application/json"
+platform integration:add --type httplog --url "https://{{< variable "ELASTICSEARCH_URL" >}}/{{< variable "INDEX_NAME" >}}/_doc" --header "Authorization: Basic <basic_auth_token>" --header "Content-Type: application/json"
 ```
 
 `type` and `url` are the only properties required for all endpoints.

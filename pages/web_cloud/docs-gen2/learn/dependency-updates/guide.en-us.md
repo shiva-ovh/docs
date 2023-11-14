@@ -5,7 +5,7 @@ section: Tutorials
 order: 9
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -69,22 +69,9 @@ hooks:
         curl -fsSL https://raw.githubusercontent.com/platformsh/cli/main/installer.sh | bash
 
         echo "Testing Web PaaS CLI"
-        {{% vendor/cli %}}
+        platform
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    myapp:
-        hooks:
-            build: |
-                set -e
-                echo "Installing Web PaaS CLI"
-                curl -fsSL https://raw.githubusercontent.com/platformsh/cli/main/installer.sh | bash
 
-                echo "Testing Web PaaS CLI"
-                {{% vendor/cli %}}
-```
-{{% /version/specific %}}
 
 3\. Then, to configure a cron job to automatically update your dependencies once a day,
 
@@ -99,25 +86,10 @@ crons:
         commands:
             start: |
                 set -e
-                {{% vendor/cli %}} sync -e development code data --no-wait --yes
-                {{% vendor/cli %}} source-operation:run update --no-wait --yes
+                platform sync -e development code data --no-wait --yes
+                platform source-operation:run update --no-wait --yes
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    myapp:
-        # ...
-        crons:
-            update:
-                # Run the code below every day at midnight.
-                spec: '0 0 * * *'
-                commands:
-                    start: |
-                        set -e
-                        {{% vendor/cli %}} sync -e development code data --no-wait --yes
-                        {{% vendor/cli %}} source-operation:run update --no-wait --yes
-```
-{{% /version/specific %}}
+
 
 The example above synchronizes the `development` environment with its parent
 and then runs the `update` source operation defined [previously](#1-define-a-source-operation-to-update-your-dependencies).
@@ -190,7 +162,7 @@ to receive notifications every time a dependency update is triggered.
 > 4.  Run the following [Web PaaS CLI](../../administration/administration-cli) command:
 > 
 >     ```bash
->     {{% vendor/cli %}} integration:add --type script --file ./my_script.js --events=environment.source-operation
+>     platform integration:add --type script --file ./my_script.js --events=environment.source-operation
 >     ```
 >     Optional: to only get notifications about specific environments,
 >     add the following flag to the command: `--environments=your_environment_name`.
@@ -213,7 +185,7 @@ To configure the integration between your webhook and your source operation,
 run the following [Web PaaS CLI](../../administration/administration-cli) command:
 
 ```bash
-{{% vendor/cli %}} integration:add --type=webhook --url=URL_TO_RECEIVE_JSON --events=environment.source-operation
+platform integration:add --type=webhook --url=URL_TO_RECEIVE_JSON --events=environment.source-operation
 ```
 
 Optional: to only get notifications about specific environments,

@@ -5,7 +5,7 @@ section: Development
 order: 5
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -29,7 +29,7 @@ To authenticate with the CLI:
 
 1\. Install the [Web PaaS CLI](../../administration/administration-cli).
 
-2\. Run `{{% vendor/cli %}} login`.
+2\. Run `platform login`.
 
 3\. In the open browser window, log in with your Web PaaS account credentials.
 
@@ -50,14 +50,14 @@ You are now ready to run CLI commands and connect to an environment.
 To access an app in a given environment via the CLI, run the following command:
 
 ```bash
-{{% vendor/cli %}} ssh --project {{< variable "PROJECT_ID" >}} --environment {{< variable "ENVIRONMENT_NAME" >}} --app {{< variable "APPLICATION_NAME" >}}
+platform ssh --project {{< variable "PROJECT_ID" >}} --environment {{< variable "ENVIRONMENT_NAME" >}} --app {{< variable "APPLICATION_NAME" >}}
 ```
 
 Replace each of <code>{{< variable "PROJECT_ID" >}}</code>, <code>{{< variable "ENVIRONMENT_NAME" >}}</code>, and <code>{{< variable "APPLICATION_NAME" >}}</code> with the values you want to access.
 To find these values in the Console,
 navigate to the environment you want to access and click **SSH** in the top right-hand corner.
 
-Alternatively, just run `{{% vendor/cli %}} ssh` and select the values from each list presented to you.
+Alternatively, just run `platform ssh` and select the values from each list presented to you.
 
 Once you've connected, you get a welcome message detailing which environment you're connected to.
 
@@ -75,7 +75,7 @@ Then you can connect either with a [direct tunnel](#use-a-direct-tunnel) or a [t
 To open SSH tunnels for all of your services, run the following command:
 
 ```bash
-{{% vendor/cli %}} tunnel:open
+platform tunnel:open
 ```
 
 You get output similar to the following:
@@ -83,11 +83,11 @@ You get output similar to the following:
 ```bash
 SSH tunnel opened to database at: http://127.0.0.1:30000
 
-Logs are written to: ~/.{{% vendor/cli %}}/tunnels.log
+Logs are written to: ~/.platform/tunnels.log
 
-List tunnels with: {{% vendor/cli %}} tunnels
-View tunnel details with: {{% vendor/cli %}} tunnel:info
-Close tunnels with: {{% vendor/cli %}} tunnel:close
+List tunnels with: platform tunnels
+View tunnel details with: platform tunnel:info
+Close tunnels with: platform tunnel:close
 
 Save encoded tunnel details to the PLATFORM_RELATIONSHIPS variable using:
   export PLATFORM_RELATIONSHIPS="$(platform tunnel:info --encode)"

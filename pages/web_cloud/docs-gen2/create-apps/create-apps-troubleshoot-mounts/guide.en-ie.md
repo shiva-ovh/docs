@@ -4,7 +4,7 @@ slug: create-apps-troubleshoot-mounts
 section: Create-Apps
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -67,19 +67,7 @@ mounts:
         source: local
         source_path: uploads
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    myapp:
-        mounts:
-            'private':
-                source: local
-                source_path: private
-            'uploads':
-                source: local
-                source_path: uploads
-```
-{{% /version/specific %}}
+
 
 
 With only this definition, their behavior is the same.
@@ -100,24 +88,7 @@ web:
             scripts: false
             allow: true
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    myapp:
-        web:
-            locations:
-                '/':
-                    # Handle dynamic requests
-                    root: 'public'
-                    passthru: '/app.php'
-                # Allow uploaded files to be served, but don't run scripts.
-                '/uploads':
-                    root: 'uploads'
-                    expires: 300s
-                    scripts: false
-                    allow: true
-```
-{{% /version/specific %}}
+
 
 
 ## Mounts starting with a dot ignored
@@ -133,17 +104,7 @@ mounts:
         source: local
         source_path: 'myhiddenfolder'
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    myapp:
-        web:
-            mounts:
-                '/.myhiddenfolder':
-                    source: local
-                    source_path: 'myhiddenfolder'
-```
-{{% /version/specific %}}
+
 
 ## Disk space issues
 
@@ -151,7 +112,7 @@ If you are worried about how much disk your mounts are using, check the size wit
 
 
 ```bash
-{{% vendor/cli %}} mount:size
+platform mount:size
 ```
 
 You see the total size and what's available for each directory:
@@ -167,9 +128,4 @@ Checking disk usage for all mounts on abcdefg123456-main-abcd123--app@ssh.eu.pla
 +-------------------------+-----------+---------+-----------+-----------+----------+
 ```
 
-<--->
-<!-- @todo: does the previous command still work for some per-directory breakdown? -->
-```bash
-{{% vendor/cli %}} resources:get
-```
-{{% /version/specific %}}
+

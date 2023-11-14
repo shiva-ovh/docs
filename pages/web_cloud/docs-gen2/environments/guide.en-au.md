@@ -5,7 +5,7 @@ section: Environments
 hidden: true
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -221,11 +221,7 @@ if you are in one of the following situations:
 - You are using your staging environment to run integration or penetration tests
 
 
-<--->
 
-You can also pause an environment manually at any time.
-
-{{% /version/specific %}}
 
 ### Pause an environment
 
@@ -251,13 +247,13 @@ which allows you to push changes to your environment and trigger the following a
 
 | Action                                     | Command                                                                                                                 |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| Activate the environment                   | `git push {{% vendor/cli %}} -o "environment.status=active"`                                    |
-| Set a title for the environment            | `git push {{% vendor/cli %}} -o "environment.title=<ENVIRONMENT_TITLE>"`       |
-| Set the parent environment                 | `git push {{% vendor/cli %}} -o "environment.parent=<PARENT_ENVIRONMENT_NAME>"` |         
-| Clone the data from the parent environment | `git push {{% vendor/cli %}} -o "environment.clone_parent_on_create=True"` |
-| Disable the cloning of the data from the parent environment | `git push {{% vendor/cli %}} -o "environment.clone_parent_on_create=False"` |
+| Activate the environment                   | `git push platform -o "environment.status=active"`                                    |
+| Set a title for the environment            | `git push platform -o "environment.title=<ENVIRONMENT_TITLE>"`       |
+| Set the parent environment                 | `git push platform -o "environment.parent=<PARENT_ENVIRONMENT_NAME>"` |         
+| Clone the data from the parent environment | `git push platform -o "environment.clone_parent_on_create=True"` |
+| Disable the cloning of the data from the parent environment | `git push platform -o "environment.clone_parent_on_create=False"` |
 
-If your remote location isn't named `{{% vendor/cli %}}`,
+If your remote location isn't named `platform`,
 make sure you adjust the commands accordingly.
 
 > [!primary]  
@@ -271,5 +267,5 @@ you can activate your environment, set a title for it,
 set a parent environment for it, and clone the data from its parent into it.
 
 ```bash {location="Terminal"}
-git push {{% vendor/cli %}} -o "environment.status=active" -o "environment.title=my-environment-title" -o "environment.parent=my-parent-environment" -o "environment.clone_parent_on_create=True"
+git push platform -o "environment.status=active" -o "environment.title=my-environment-title" -o "environment.parent=my-parent-environment" -o "environment.clone_parent_on_create=True"
 ```

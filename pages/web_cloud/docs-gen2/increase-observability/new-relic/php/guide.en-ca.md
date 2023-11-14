@@ -4,7 +4,7 @@ slug: php
 section: New-Relic
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 ## Get your license key
@@ -16,7 +16,7 @@ Sign up at New Relic to [get your license key](https://docs.newrelic.com/docs/ap
 Add your New Relic license key as an environment level variable:
 
 ```bash
-{{% vendor/cli %}} variable:create --level environment --environment {{< variable "ENVIRONMENT_NAME" >}} --visible-build false --inheritable false --json false --sensitive true --enabled true --visible-runtime true php:newrelic.license --value {{< variable "NEW_RELIC_LICENSE_KEY" >}}
+platform variable:create --level environment --environment {{< variable "ENVIRONMENT_NAME" >}} --visible-build false --inheritable false --json false --sensitive true --enabled true --visible-runtime true php:newrelic.license --value {{< variable "NEW_RELIC_LICENSE_KEY" >}}
 ```
 
 ## Give your application a name
@@ -24,7 +24,7 @@ Add your New Relic license key as an environment level variable:
 Add a new environment level variable to give your application a recognizable name:
 
 ```bash
-{{% vendor/cli %}} variable:create --level environment --environment {{< variable "ENVIRONMENT_NAME" >}} --visible-build false --inheritable false --json false --sensitive true --enabled true --visible-runtime true php:newrelic.appname --value {{< variable "APP_NAME" >}}
+platform variable:create --level environment --environment {{< variable "ENVIRONMENT_NAME" >}} --visible-build false --inheritable false --json false --sensitive true --enabled true --visible-runtime true php:newrelic.appname --value {{< variable "APP_NAME" >}}
 ```
 
 > [!primary]  
@@ -56,7 +56,7 @@ That's it! You need to wait a little bit for your New Relic dashboard to be gene
 Additionally, you can check that your application is properly connected to New Relic by looking at the `/var/log/app.log` file:
 
 ```bash
-{{% vendor/cli %}} log app
+platform log app
 
 2017/04/19 14:00:16.706450 (93) Info: Reporting to: https://rpm.newrelic.com/accounts/xxx/applications/xxx
 2017/04/19 14:00:16.706668 (93) Info: app 'xxx-main-xxx.app' connected with run id 'xxx'

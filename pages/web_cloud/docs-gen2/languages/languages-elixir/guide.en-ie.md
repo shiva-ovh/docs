@@ -5,7 +5,7 @@ section: Languages
 order: 4
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -41,15 +41,7 @@ order: 4
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-1.15 |  
-|  1.14 |  
-|  1.13 |  
-|  1.12
-
-{{% /version/specific %}}
 
 {{% language-specification type="elixir" display_name="Elixir" %}}
 
@@ -65,25 +57,7 @@ For example:
 type: 'elixir:{{% latest "elixir" %}}'
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    <APP_NAME>:
-        type: 'elixir:<VERSION_NUMBER>'
-```
-
-For example:
-
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'elixir:{{% latest "elixir" %}}'
-```
-
-{{% /version/specific %}}
 
 ## Built-in variables
 
@@ -113,16 +87,7 @@ variables:
     env:
         MIX_ENV: 'prod'
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'elixir:{{% latest "elixir" %}}'
-        variables:
-            env:
-                MIX_ENV: 'prod'
-```
-{{% /version/specific %}}
+
 
 The `SECRET_KEY_BASE` variable is generated automatically based on the [`PLATFORM_PROJECT_ENTROPY` variable](../development/variables/use-variables.md#use-provided-variables).
 You can change it.
@@ -137,18 +102,7 @@ hooks:
         mix local.rebar --force
         mix do deps.get --only prod, deps.compile, compile
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'elixir:{{% latest "elixir" %}}'
-        hooks:
-            build: |
-                mix local.hex --force
-                mix local.rebar --force
-                mix do deps.get --only prod, deps.compile, compile
-```
-{{% /version/specific %}}
+
 
 > [!primary]  
 > 
@@ -185,31 +139,7 @@ web:
             allow: false
             passthru: true
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'elixir:{{% latest "elixir" %}}'
 
-        variables:
-            env:
-                MIX_ENV: 'prod'
-
-        hooks:
-            build: |
-                mix local.hex --force
-                mix local.rebar --force
-                mix do deps.get --only prod, deps.compile, compile
-
-        web:
-            commands:
-                start: mix phx.server
-            locations:
-                /:
-                    allow: false
-                    passthru: true
-```
-{{% /version/specific %}}
 
 Note that there is still an Nginx proxy server sitting in front of your application. If desired, certain paths may be served directly by Nginx without hitting your application (for static files, primarily) or you may route all requests to the Elixir application unconditionally, as in the example above.
 
@@ -262,16 +192,7 @@ Given a relationship defined in `{{< vendor/configfile "app" >}}`:
 relationships:
     postgresdatabase: "dbpostgres:postgresql"
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'elixir:{{% latest "elixir" %}}'
-        ...
-        relationships:
-            postgresdatabase: "dbpostgres:postgresql"
-```
-{{% /version/specific %}}
+
 
 Assuming you have in `mix.exs` the Poison library to parse JSON:
 

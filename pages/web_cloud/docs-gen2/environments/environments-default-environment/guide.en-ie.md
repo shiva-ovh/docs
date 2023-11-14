@@ -4,7 +4,7 @@ slug: environments-default-environment
 section: Environments
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -62,7 +62,7 @@ To have `main` be your default, it needs to not be a child of `old`.
 Use the following command to remove its parent and make it a top-level branch:
 
 ```bash
-{{% vendor/cli %}} environment:info -e main parent -
+platform environment:info -e main parent -
 ```
 
 ## 4. Make `main` the parent for other environments
@@ -75,7 +75,7 @@ To change your default branch, you first need to deactivate the existing default
 Deactivate the `old` environment without deleting it by running the following CLI command:
 
 ```bash
-{{% vendor/cli %}} environment:delete --no-delete-branch old
+platform environment:delete --no-delete-branch old
 ```
 
 ## 6. Set `main` as the default branch
@@ -95,7 +95,7 @@ Update the setting to use the new environment name.
 Verify that the new URL is correct by comparing it to the result from this command:
 
 ```bash
-{{% vendor/cli %}} environment:info edge_hostname
+platform environment:info edge_hostname
 ```
 
 ## 8. Optional: Delete the `old` environment
@@ -103,5 +103,5 @@ Verify that the new URL is correct by comparing it to the result from this comma
 If you no longer want the `old` environment, such as to stop accidental use, delete it completely:
 
 ```bash
-{{% vendor/cli %}} environment:delete --delete-branch old
+platform environment:delete --delete-branch old
 ```

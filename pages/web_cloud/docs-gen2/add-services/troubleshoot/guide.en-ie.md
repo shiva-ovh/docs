@@ -4,7 +4,7 @@ slug: troubleshoot
 section: Mysql
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -61,7 +61,7 @@ SELECT
 ### Disk space issues
 
 Errors such as `PDO Exception 'MySQL server has gone away'` are usually the result of exhausting your available disk space.
-Get an estimate of current disk usage using the CLI command `{{% vendor/cli %}} db:size`.
+Get an estimate of current disk usage using the CLI command `platform db:size`.
 Just keep in mind it's an estimate and not exact.
 
 {{< version/specific >}}
@@ -71,36 +71,4 @@ Allocate more space to the service in [`{{< vendor/configfile "services" >}}`](.
 As table space can grow rapidly,
 it's usually advisable to make your database mount size twice the size reported by the `db:size` command.
 
-<--->
-<!-- Version 2 -->
 
-Allocate more space to the service by running the `upsun resources:set` command.
-For more information, see how to [manage resources](../../manage-resources).
-
-As table space can grow rapidly,
-it's usually advisable to make your database mount size twice the size reported by the `db:size` command.
-
-{{< /version/specific >}}
-
-You may want to add a [low-disk warning](../../integrations/notifications.md#low-disk-warning)
-to learn about low disk space before it becomes an issue.
-
-### Packet size limitations
-
-`MySQL server has gone away` errors may be caused by the size of the database packets.
-If so, the logs may show warnings like `Error while sending QUERY packet` before the error.
-
-One way to resolve the issue is to use the [`max_allowed_packet` parameter](./_index.md#configure-the-database).
-
-### Worker timeout
-
-`MySQL server has gone away` errors may be caused by server timeouts.
-MySQL has a built-in timeout for idle connections, which defaults to 10 minutes.
-Most typical web connections end long before that's ever approached,
-but a long-running worker may idle and not need the database for longer than the timeout, leading to a "server has gone away" message.
-
-The best approach is to wrap your connection logic in code that detects a "server has gone away" exception
-and tries to re-establish the connection.
-
-Alternatively, if your worker is idle for too long it can self-terminate.
-Web PaaS automatically restarts the worker process and the new process can establish a new database connection.

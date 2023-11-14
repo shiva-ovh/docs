@@ -5,7 +5,7 @@ section: Languages
 order: 4
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -39,14 +39,7 @@ order: 4
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-3.2 |  
-|  3.1 |  
-|  3.0
-
-{{% /version/specific %}}
 
 {{% language-specification type="lisp" display_name="Lisp" %}}
 
@@ -62,25 +55,7 @@ For example:
 type: 'lisp:{{% latest "lisp" %}}'
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    <APP_NAME>:
-        type: 'lisp:<VERSION_NUMBER>'
-```
-
-For example:
-
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'lisp:{{% latest "lisp" %}}'
-```
-
-{{% /version/specific %}}
 
 ## Assumptions
 
@@ -100,17 +75,7 @@ build:
     flavor: none
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'lisp:{{% latest "lisp" %}}'
-        build:
-            flavor: none
-```
-
-{{% /version/specific %}}
 
 ## Dependencies
 
@@ -140,35 +105,7 @@ runtime:
             version: '2019-07-11'
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    <APP_NAME>:
-        type: 'lisp:<VERSION_NUMBER>'
-        runtime:
-            quicklisp:
-                {{< variable "DISTRIBUTION_NAME" >}}:
-                    url: "..."
-                    version: "..."
-```
-
-For example:
-
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'lisp:{{% latest "lisp" %}}'
-        runtime:
-            quicklisp:
-                quicklisp:
-                    url: 'http://beta.quicklisp.org/dist/quicklisp.txt'
-                    version: '2019-07-11'
-```
-
-{{% /version/specific %}}
 
 
 ## Built-in variables
@@ -203,22 +140,7 @@ web:
 disk: 512
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'lisp:{{% latest "lisp" %}}'
-        web:
-            commands:
-                start: ./example
-            locations:
-                /:
-                    allow: false
-                    passthru: true
-```
-
-{{% /version/specific %}}
 
 Note that a proxy server is still in front of your app.
 If desired, certain paths may be served directly by the router without hitting your app (for static files, primarily) or you may route all requests to the Lisp application unconditionally, as in the example above.
@@ -252,17 +174,7 @@ relationships:
     pg: postgresql:postgresql
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'lisp:{{% latest "lisp" %}}'
-        relationships:
-            pg: postgresql:postgresql
-```
-
-{{% /version/specific %}}
 
 The following would access that relationship, and provide your Lisp program the credentials to connect to a PostgreSQL instance. Add this to your `.asd` file:
 

@@ -4,7 +4,7 @@ slug: redis
 section: Php
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -41,18 +41,7 @@ hooks:
         # Install PhpRedis v5.3.7:
         curl -fsS https://raw.githubusercontent.com/platformsh/snippets/main/src/install-phpredis.sh | { bash /dev/fd/3 5.3.7 ; } 3<&0
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        hooks:
-            build: |
-                set -e
-                # Install PhpRedis v5.3.7:
-                curl -fsS https://raw.githubusercontent.com/platformsh/snippets/main/src/install-phpredis.sh | { bash /dev/fd/3 5.3.7 ; } 3<&0
-```
-{{% /version/specific %}}
+
 
 ## Install Relay
 
@@ -78,22 +67,11 @@ hooks:
         # Install Relay v0.6.0:
         curl -fsS https://raw.githubusercontent.com/platformsh/snippets/main/src/install-relay.sh | { bash /dev/fd/3 v0.6.0 ; } 3<&0
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        hooks:
-            build: |
-                set -e
-                # Install Relay v0.6.0:
-                curl -fsS https://raw.githubusercontent.com/platformsh/snippets/main/src/install-relay.sh | { bash /dev/fd/3 v0.6.0 ; } 3<&0
-```
-{{% /version/specific %}}
+
 
 ## Change extension or version
 
-To change the Redis extension or the version you are using, update the build hook and clear the build cache: `{{% vendor/cli %}} project:clear-build-cache`.
+To change the Redis extension or the version you are using, update the build hook and clear the build cache: `platform project:clear-build-cache`.
 
 The new version is *not* be used until you clear the build cache.
 

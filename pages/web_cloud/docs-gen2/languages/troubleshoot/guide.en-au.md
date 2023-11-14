@@ -4,7 +4,7 @@ slug: troubleshoot
 section: Php
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -32,14 +32,7 @@ You have two ways to increase the number of workers:
 
 - Upgrade your Web PaaS plan to get more computing resources.
 
-<--->
-You have two ways to increase the number of workers:
 
-- Adjust the [worker sizing hints](../.././.-fpm) for your project.
-
-- Add [additional resources](../../manage-resources) with the `{{% vendor/cli %}} resources:set` command
-
-{{% /version/specific %}}
 
 ## Execution timeout
 
@@ -69,14 +62,7 @@ grep $(date +%Y-%m-%dT%H --date='-1 hours') /var/log/php.access.log | sort -k 4 
 If you see that the processing time of certain requests is slow (such as taking longer than 1000&nbsp;ms),
 you should consider a continuous observability solution like [Blackfire](../../increase-observability/increase-observability-integrate-observability/blackfire)
 to monitor your app and help you improve the performance issue.
-<--->
-If you see that the processing time of certain requests is slow (such as taking longer than 1000&nbsp;ms),
-you should consider a [continuous observability solution](../../increase-observability/increase-observability-application-metrics)
-to monitor your app and help you improve the performance issue.
 
-Full access to [Blackfire.io](../../increase-observability/increase-observability-application-metrics/blackfire) is bundled with your PHP and Python {{< vendor/name >}} projects.
-
-{{% /version/specific %}}
 
 
 Otherwise, you may check if the following options are applicable:
@@ -86,15 +72,7 @@ Otherwise, you may check if the following options are applicable:
   Refer to [how caching works](../../define-routes/define-routes-cache).
 - Upgrade your Web PaaS plan to get more computing resources.
 
-<--->
-Otherwise, you may check if the following options are applicable:
 
-- Find the most visited pages and see if they can be cached and/or put behind a CDN.
-
-  Refer to [how caching works](../../define-routes/define-routes-cache).
-- Add [additional resources](../../manage-resources) with the `{{% vendor/cli %}} resources:set` command
-
-{{% /version/specific %}}
 
 ## Troubleshoot a crashed PHP process
 
@@ -128,17 +106,7 @@ To solve this issue, try the following approaches:
 
 - Upgrade your Web PaaS plan to get more computing resources.
 
-<--->
-That means the memory usage of your container exceeds the limit that's been allocated, so the kernel kills the offending process.
-To solve this issue, try the following approaches:
-<!-- @todo: resources link -->
-- Check if the memory usage of your app is as expected and try to optimize it.
 
-- Use [sizing hints](../.././.-fpm) to reduce the amount of PHP workers, which reduces the memory footprint.
-
-- Add [additional resources](../../manage-resources) with the `{{% vendor/cli %}} resources:set` command
-
-{{% /version/specific %}}
 
 ## Restart PHP processes stuck during a build or deployment
 
@@ -180,19 +148,4 @@ To address the issue, you can:
 
 - Upgrade the container size to get more resources.
 
-<--->
-- Lower the memory consumption of each request so that the amount of PHP workers gets automatically raised.
 
-  This can be customized with the `runtime.sizing_hints.request_memory` key in your `{{< vendor/configfile "app" >}}` file.
-  For more details, consult [PHP-FPM sizing](../.././.-fpm).
-- Add a [CDN](../../domains/domains-cdn).
-
-- Set up [HTTP caching](../../learn/learn-bestpractices/http-caching).
-
-- Follow the global [performance tuning recommendations](../.././.-tuning).
-
-- Remove stale plugins and extensions when using a CMS.
-
-- Add [additional resources](../../manage-resources) with the `{{% vendor/cli %}} resources:set` command
-
-{{% /version/specific %}}

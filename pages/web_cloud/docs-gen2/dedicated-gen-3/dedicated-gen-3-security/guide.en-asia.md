@@ -4,7 +4,7 @@ slug: dedicated-gen-3-security
 section: Dedicated-Gen-3
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 

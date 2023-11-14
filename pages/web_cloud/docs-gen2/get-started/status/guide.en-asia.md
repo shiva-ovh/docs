@@ -4,7 +4,7 @@ slug: status
 section: Monitor-And-Troubleshoot
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -24,7 +24,7 @@ This notification is automatically sent to all project admins.
 See this notification by running this command:
 
 ```bash
-{{% vendor/cli %}} integration:list
+platform integration:list
 ```
 
 You see a table similar to the following example:
@@ -40,13 +40,13 @@ You see a table similar to the following example:
 Assuming you want to keep admins notified, you can add another recipient with a command like the following:
 
 ```bash
-{{% vendor/cli %}} integration:update <INTEGRATION_ID> --recipients '#admins' --recipients <ADDITIONAL_EMAIL_ADDRESS>
+platform integration:update <INTEGRATION_ID> --recipients '#admins' --recipients <ADDITIONAL_EMAIL_ADDRESS>
 ```
 
 So to add `jane@example.com` to the above integration, you'd run the following:
 
 ```bash
-{{% vendor/cli %}} integration:update abcdefg123456 --recipients '#admins' --recipients jane@example.com
+platform integration:update abcdefg123456 --recipients '#admins' --recipients jane@example.com
 ```
 
 And get the following in response:
@@ -88,7 +88,7 @@ To see such a notification in action, follow these steps:
 
 
 ```bash
-{{% vendor/cli %}} integration:add --type=webhook --url <WEBHOOK_URL> --events 'environment.push,environment.redeploy' --environments 'main' --excluded-environments '' --states complete --shared-key=null
+platform integration:add --type=webhook --url <WEBHOOK_URL> --events 'environment.push,environment.redeploy' --environments 'main' --excluded-environments '' --states complete --shared-key=null
 ```
 
    The last three flags are all the default options.
@@ -97,7 +97,7 @@ To see such a notification in action, follow these steps:
 
 
 ```bash
-{{% vendor/cli %}} environment:redeploy --environment main
+platform environment:redeploy --environment main
 ```
 
 5\. After the activity has finished, see the JSON payload at the `webhook.site` page.

@@ -4,7 +4,7 @@ slug: create-apps-troubleshoot-disks
 section: Create-Apps
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -50,7 +50,7 @@ To solve this issue:
 
 ### Check your database disk space
 
-To get approximate disk usage for a database, run the command `{{% vendor/cli %}} db:size`.
+To get approximate disk usage for a database, run the command `platform db:size`.
 This returns an estimate such as the following:
 
 ```text
@@ -76,11 +76,7 @@ The sum of all `disk` keys can't exceed the available storage in your plan.
 
 If you need more storage to fit the sum of all `disk` keys, increase your plan's storage limits.
 This can only be done by people with the [manage plans permission](../administration/users.md#organization-permissions).
-<--->
-To increase the space available for applications and services,
-use the `{{% vendor/cli %}} resources:set` command.
-For more information, see how to [manage resources](../../manage-resources).
-{{% /version/specific %}}
+
 
 ## No space left on device
 

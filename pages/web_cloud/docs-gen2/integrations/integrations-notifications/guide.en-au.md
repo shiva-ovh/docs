@@ -4,7 +4,7 @@ slug: integrations-notifications
 section: Integrations
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -39,7 +39,7 @@ Note the API token is the "Bot User OAuth Access Token" provided by Slack.
 Then register that Slack bot with Web PaaS using a `health.slack` integration:
 
 ```bash
-{{% vendor/cli %}} integration:add --type health.slack --token YOUR_API_TOKEN --channel '#channelname'
+platform integration:add --type health.slack --token YOUR_API_TOKEN --channel '#channelname'
 ```
 
 That will trigger the corresponding bot to post a notification to the `#channelname` channel in your Slack group.
@@ -54,7 +54,7 @@ Now register a `health.pagerduty` integration as follows:
 
 
 ```bash
-{{% vendor/cli %}} integration:add --type health.pagerduty --routing-key YOUR_ROUTING_KEY
+platform integration:add --type health.pagerduty --routing-key YOUR_ROUTING_KEY
 ```
 
 Any notification will now trigger an alert in PagerDuty.
@@ -65,5 +65,5 @@ Any notification will now trigger an alert in PagerDuty.
 You can then verify that your integration is functioning properly [using the CLI](/integrations/overview.md#validate-integrations) command
 
 ```bash
-{{% vendor/cli %}} integration:validate
+platform integration:validate
 ```

@@ -4,7 +4,7 @@ slug: add-services-vault
 section: Add-Services
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -42,12 +42,7 @@ To store secrets such as API keys, create sensitive [environment variables](../a
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-1.12
-
-{{% /version/specific %}}
 
 ## Add Vault
 

@@ -4,7 +4,7 @@ slug: hooks-comparison
 section: Hooks
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -52,9 +52,7 @@ The only constraint on what can be downloaded during a `build` hook is the disk 
 
 
 This is _not_ the `disk` specified in your [app configuration](../app-reference.md#top-level-properties).
-<--->
-This is _not_ the disk specified by your [resources configuration](../../manage-resources).
-{{% /version/specific %}}
+
 
 If you exceed this limit, you receive a `No space left on device` error.
 See how to [troubleshoot this error](../troubleshoot-disks.md#no-space-left-on-device).

@@ -5,7 +5,7 @@ section: Best practices
 order: 10
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -84,12 +84,7 @@ In a clustered application, you can have one of the following configurations:
 
 - A single app that spawns one or more [worker instances](/create-apps/app-reference.md#workers) that run background processes
 
-<--->
-- Multiple [applications](../../create-apps/create-apps-multi-app), often in different directories or with separate code bases that deploy separately
 
-- A single app that spawns one or more [worker instances](/create-apps/app-reference.md#workers) that run background processes
-
-{{% /version/specific %}}
 
 {{% version/only "1"%}}
 <!-- Web PaaS -->

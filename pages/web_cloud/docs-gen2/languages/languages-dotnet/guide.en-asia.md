@@ -5,7 +5,7 @@ section: Languages
 order: 4
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -37,13 +37,7 @@ order: 4
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-7.0 |  
-|  6.0
-
-{{% /version/specific %}}
 
 {{% language-specification type="dotnet" display_name=".Net Core" %}}
 
@@ -59,25 +53,7 @@ For example:
 type: 'dotnet:{{% latest "dotnet" %}}'
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    <APP_NAME>:
-        type: 'dotnet:<VERSION_NUMBER>'
-```
-
-For example:
-
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'dotnet:{{% latest "dotnet" %}}'
-```
-
-{{% /version/specific %}}
 
 ## Building the application
 
@@ -93,19 +69,7 @@ hooks:
             -p:UseRazorBuildServer=false \
             -p:UseSharedCompilation=false
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'dotnet:{{% latest "dotnet" %}}'
-        hooks:
-            build: |
-                set -xe
-                dotnet publish --output "$PLATFORM_OUTPUT_DIR" \
-                    -p:UseRazorBuildServer=false \
-                    -p:UseSharedCompilation=false
-```
-{{% /version/specific %}}
+
 
 where `PLATFORM_OUTPUT_DIR` is the output directory for compiled languages available at build time.
 
@@ -158,26 +122,7 @@ web:
     commands:
         start: "dotnet WebApplication1.dll"
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'dotnet:{{% latest "dotnet" %}}'
-        web:
-            locations:
-                "/":
-                    root: "wwwroot"
-                    allow: true
-                    passthru: true
-                    rules:
-                        # Serve these common asset types with customs cache headers.
-                        \.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$:
-                            allow: true
-                            expires: 300s
-            commands:
-                start: "dotnet WebApplication1.dll"
-```
-{{% /version/specific %}}
+
 
 You can also route all requests to the application unconditionally:
 
@@ -192,21 +137,7 @@ web:
     commands:
         start: "dotnet WebApplication1.dll"
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'dotnet:{{% latest "dotnet" %}}'
-        web:
-            locations:
-                "/":
-                    allow: false
-                    passthru: true
 
-            commands:
-                start: "dotnet WebApplication1.dll"
-```
-{{% /version/specific %}}
 
 {{% version/only "1" %}}
 ## Project templates

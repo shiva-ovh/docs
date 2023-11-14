@@ -4,7 +4,7 @@ slug: integrations-overview
 section: Integrations
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -24,15 +24,14 @@ Note that only a project administrator (someone with `admin` level access to the
 
 See [User administration](../../administration/administration-users) for more details.
 
-<--->
-{{% /version/specific %}}
+
 
 ## List active integrations
 
 With the CLI, you can list all your active integrations using the following command:
 
 ```bash
-{{% vendor/cli %}} integrations
+platform integrations
 ```
 
 You get output similar to the following:
@@ -52,7 +51,7 @@ You get output similar to the following:
 Once your integration has been configured, you can check that it's working as expected.
 To do so, follow these steps:
 
-1\. Run the `{{% vendor/cli %}} integration:validate` command.
+1\. Run the `platform integration:validate` command.
 
 2\. When prompted, select the integration you want to validate:
 
@@ -87,7 +86,7 @@ There are a handful of CLI commands available, all under the `integrations` sect
 To list all the updates triggered by [activities](../integrations-integrations/activity/reference) on a given project and integration,
 follow these steps:
 
-1\. Run the `{{% vendor/cli %}} integration:activities` command.
+1\. Run the `platform integration:activities` command.
 
 2\. When prompted, select an integration.
 
@@ -120,7 +119,7 @@ Activities on the project Web PaaS | Docs (6b2eocegfkwwg), integration c4opi5tjv
 +---------------+---------------------------+-------------------------------------------------------------+----------+---------+
 ```
 
-You may also specify an integration to display in the command line directly: `{{% vendor/cli %}} integration:activities c4opi5tjv3yfd`.
+You may also specify an integration to display in the command line directly: `platform integration:activities c4opi5tjv3yfd`.
 
 The ID is an internal identifier for the activity event.
 The Description field is an arbitrary string of text produced by the integration code.
@@ -134,7 +133,7 @@ To show detailed information on a specific activity,
 run the following command:
 
 ```bash
-{{% vendor/cli %}} integration:activity:log {{< variable "INTEGRATION_ID" >}} {{< variable "ACTIVITY_ID" >}} -t
+platform integration:activity:log {{< variable "INTEGRATION_ID" >}} {{< variable "ACTIVITY_ID" >}} -t
 ```
 
 The `-t` option specifies that timestamps must be included in the display of the results.

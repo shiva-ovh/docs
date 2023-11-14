@@ -4,7 +4,7 @@ slug: migration
 section: Java
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -53,19 +53,7 @@ web:
     commands:
         start: [3]
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'java:<VERSION>'
 
-        hooks:
-            build: [2]
-        web:
-            commands:
-                start: [3]
-```
-{{% /version/specific %}}
 
 1\. [A Java version](/languages/java/_index.md#supported-versions), e,g.: `java:{{% latest "java" %}}`
 
@@ -93,27 +81,7 @@ applications:
     type: redirect
     to: "https://{default}/"
 ```
-<--->
-```yaml {configFile="app"}
-routes:
-    "https://{default}/":
-        type: upstream
-        upstream: "app:http" [1]
-    "https://www.{default}/":
-        type: redirect
-        to: "https://{default}/"
 
-applications:
-    app:
-        type: 'java:<VERSION>'
-
-        hooks:
-            build: [2]
-        web:
-            commands:
-                start: [3]
-```
-{{% /version/specific %}}
 
 1\. It defines the application will link in the route, e.g.: `"app:http"`
 
@@ -126,8 +94,8 @@ applications:
 
 > [!primary]  
 > Application instances have a limited amount of memory at build time, which has a maximum of 8 GB.
-> At runtime that limit depends on [the resources you have defined for your application container](../../manage-resources) using `{{% vendor/cli %}} resources:set`.
-> A stateless application can be scaled horizontally to multiple application instances with `{{% vendor/cli %}} resources:set` or by using Varnish in a [load balancer](https://community.platform.sh/t/how-to-configure-load-balancer-in-a-single-application/553) configuration.
+> At runtime that limit depends on [the resources you have defined for your application container](../../manage-resources) using `platform resources:set`.
+> A stateless application can be scaled horizontally to multiple application instances with `platform resources:set` or by using Varnish in a [load balancer](https://community.platform.sh/t/how-to-configure-load-balancer-in-a-single-application/553) configuration.
 > 
 
 ## Microservices
@@ -230,21 +198,7 @@ web:
     commands:
         start: java -jar $JAVA_OPTS $CREDENTIAL -Dquarkus.http.port=$PORT jarfile.jar
 ```
-<--->
-```yaml
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'java:{{% latest "java" %}}'
-        hooks:
-            build: ./mvnw package -DskipTests -Dquarkus.package.uber-jar=true
-        relationships:
-            database: "db:postgresql"
-        web:
-            commands:
-                start: java -jar $JAVA_OPTS $CREDENTIAL -Dquarkus.http.port=$PORT jarfile.jar
-```
-{{% /version/specific %}}
+
 
 {{% version/only "1" %}}
 ### Using Java Config Reader

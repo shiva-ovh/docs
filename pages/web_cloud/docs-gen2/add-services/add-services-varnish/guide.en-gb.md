@@ -4,7 +4,7 @@ slug: add-services-varnish
 section: Add-Services
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -45,14 +45,7 @@ But you can include Varnish as a service.
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-7.3 |  
-|  7.2 |  
-|  6.3
-
-{{% /version/specific %}}
 
 ## How it works
 
@@ -372,7 +365,7 @@ The following paths are available:
 
 To access the Varnish stats endpoint from the command line:
 
-1\. Connect to your stats app [using SSH](../add-services-development/ssh): `{{% vendor/cli %}} ssh --app stats-app`
+1\. Connect to your stats app [using SSH](../add-services-development/ssh): `platform ssh --app stats-app`
 
    (replace `stats-app` with the name you gave the app).
 2\. Display the [relationships array](../create-apps/app-reference.md#relationships) with `echo ${{< vendor/prefix >}}_RELATIONSHIPS | base64 -d | jq .`,

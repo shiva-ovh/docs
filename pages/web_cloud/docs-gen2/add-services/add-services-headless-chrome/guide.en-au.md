@@ -4,7 +4,7 @@ slug: add-services-headless-chrome
 section: Add-Services
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -67,21 +67,7 @@ Puppeteer can be used to generate PDFs and screenshots of web pages, automate fo
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-120 |  
-|  113 |  
-|  95 |  
-|  91 |  
-|  86 |  
-|  84 |  
-|  83 |  
-|  81 |  
-|  80 |  
-|  73
-
-{{% /version/specific %}}
 
 {{% relationship-ref-intro %}}
 
@@ -148,45 +134,7 @@ exports.getBrowser = async function (url) {
 };
 ```
 
-<--->
-<!-- API Version 2 -->
 
-Configuration for a project looks similar to the following:
-
-```yaml {configFile="app"}
-{{< snippet name="myapp" config="app" root="myapp" >}}
-type: "nodejs:{{% latest "nodejs" %}}"
-
-# Other options...
-
-# Relationships enable an app container's access to a service.
-relationships:
-    chromeheadlessbrowser: "headlessbrowser:http"
-{{< /snippet >}}
-{{< snippet name="headlessbrowser" config="service" placeholder="true" >}}
-    type: chrome-headless:{{% latest "chrome-headless" %}}
-{{< /snippet >}}
-```
-
-```json  
-
-```  
-
-```bash {location="myapp/.environment"}
-# Decode the built-in credentials object variable.
-export RELATIONSHIPS_JSON=$(echo ${{< vendor/prefix >}}_RELATIONSHIPS | base64 --decode)
-
-# Set environment variables for individual credentials.
-export CHROME_IP=$(echo $RELATIONSHIPS_JSON | jq -r ".chromeheadlessbrowser[0].ip")
-export CHROME_PORT=$(echo $RELATIONSHIPS_JSON | jq -r ".chromeheadlessbrowser[0].port")
-
-# Combine into a single base URL to be used within app.
-export CHROME_BASEURL="http://${CHROME_IP}:${CHROME_PORT}"
-```
-
-{{< /v2connect2app >}}
-
-{{% /version/specific %}}
 
 Puppeteer allows your application to [create screenshots](https://pptr.dev/#?product=Puppeteer&version=v13.0.1&show=api-pagescreenshotoptions), [emulate a mobile device](https://pptr.dev/#?product=Puppeteer&version=v13.0.1&show=api-pageemulateoptions), [generate PDFs](https://pptr.dev/#?product=Puppeteer&version=v13.0.1&show=api-pagepdfoptions), and much more.
 
@@ -199,7 +147,4 @@ You can find some useful examples of using headless Chrome and Puppeteer on {{< 
 * [How to generate PDFs using Puppeteer and Headless Chrome](https://community.platform.sh/t/how-to-generate-pdfs-using-puppeteer-and-headless-chrome/306)
 
 
-<--->
-<!-- API Version 2 -->
 
-{{% /version/specific %}}

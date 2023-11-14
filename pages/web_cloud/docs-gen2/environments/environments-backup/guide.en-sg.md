@@ -4,7 +4,7 @@ slug: environments-backup
 section: Environments
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -129,62 +129,4 @@ The exact number of backups depends on your [backup schedule](#backup-schedule).
 Daily backups are taken at around 4:00 every day based on the [project timezone](../environments-projects/change-project-timezone).
 The time for 6-hourly backups is based on the daily backup.
 
-<--->
-<!-- Upsun -->
-{{< vendor/name >}} provides 1 automated backup a day for your production environment,
-with a [2-day retention](../../security/security-data-retention) (2 days worth of backups are retained at any given point).
 
-For more information on the backups {{< vendor/name >}} provides,
-see the [{{< vendor/name >}} backup policy](../../security/security-backups).
-{{< /version/specific >}}
-
-Automated backups are always [live](#live-backups).
-
-## Live backups
-
-You can create backups without any downtime.
-This means your environment is running and open to connections during the backup.
-
-Because the connections may come in during backup creation, live backups may have data inconsistencies among containers.
-They may make restorations less reliable.
-To avoid such issues, schedule [manual backups](#create-a-manual-backup) during non-peak hours,
-when the short amount of downtime is least noticed.
-
-{{% version/only "1" %}}
-<!-- Web PaaS -->
-Automated backups are always live, including those taken on [{{% names/dedicated-gen-3 %}}](../environments-dedicated-gen-3)
-and [{{% names/dedicated-gen-2 %}}](../environments-dedicated-gen-2/overview) environments.
-{{% /version/only %}}
-
-You can create a manual live backup on a Grid project:
-
-> [!tabs]      
-
-## Create a manual backup
-
-{{% version/only "2" %}}
-{{< vendor/name >}} provides up to 2 manual backups of your production environment,
-plus 2 manual backups you can use for your [preview environments](../../glossary).
-For more information, see the [{{< vendor/name >}} backup policy](../../security/security-backups).
-{{% /version/only %}}
-
-You can create a manual backup using the [CLI](../environments-administration/cli) or in the [Console](../environments-administration/web).
-
-> [!tabs]      
-
-### Automate manual backups
-
-You can also automate the process of creating manual backups through [cron jobs](../create-apps/app-reference.md#crons).
-The cron job uses the CLI command to back up the environment.
-It requires you to [set up the CLI on the environment with an API token](../administration/cli/api-tokens.md#authenticate-in-an-environment).
-
-Although this process is automated,
-backups created in this way count as manual for the [backup schedule](#backup-schedule).
-They don't affect the automated backups taken as part of the schedule.
-
-## Physical storage location
-
-Backups are stored as binary large objects separate from your environments.
-This storage is replicated over multiple data centers in different locations
-[within the region your project is hosted in](https://platform.sh/trust-center/security/data-security/).
-This means that in the rare event a data center becomes unavailable, your backups are still available.

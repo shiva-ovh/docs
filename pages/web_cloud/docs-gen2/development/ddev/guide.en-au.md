@@ -4,7 +4,7 @@ slug: ddev
 section: Local
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -18,10 +18,7 @@ This guide assumes you have a project already running with {{< vendor/name >}} a
 <!-- Web PaaS -->
 If you're starting from scratch, first [create a project from a PHP template]({{% create-project-link template=true %}}).
 
-<--->
-<!-- Upsun -->
-If you're starting from scratch, first [create a project](/get-started/).
-{{% /version/specific %}}
+
 
 ## Before you begin
 
@@ -44,10 +41,7 @@ If you started with a Drupal template, your repository already had DDEV configur
 Otherwise, you have to answer a couple of questions about what your repository is
 so the correct files are added.
 
-<--->
-<!-- Upsun -->
-Follow the prompts to add the correct DDEV configuration files to your repository.
-{{% /version/specific %}}
+
 
 ## 3. Add an API token
 
@@ -62,7 +56,7 @@ Follow the prompts to add the correct DDEV configuration files to your repositor
 To get your environment data (files, database), run the following command:
 
 ```bash
-ddev pull {{% vendor/cli %}}
+ddev pull platform
 ```
 
 To skip pulling files, add `--skip-files` to the command.

@@ -5,7 +5,7 @@ section: Development
 order: 5
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 ## Common tasks
@@ -47,14 +47,14 @@ Assuming you want to do this for your `main` environment,
 first create a `REBUILD_DATE` environment variable:
 
 ```bash
-{{% vendor/cli %}} variable:create --environment main --level environment --prefix env --name REBUILD_DATE --value "$(date)" --visible-build true
+platform variable:create --environment main --level environment --prefix env --name REBUILD_DATE --value "$(date)" --visible-build true
 ```
 
 This triggers a build right away to propagate the variable.
 To force a rebuild at any time, update the variable with a new value:
 
 ```bash
-{{% vendor/cli %}} variable:update --environment main --value "$(date)" "env:REBUILD_DATE"
+platform variable:update --environment main --value "$(date)" "env:REBUILD_DATE"
 ```
 
 This forces your application to be built even if no code has changed.
@@ -69,7 +69,7 @@ while that service is experiencing issues.
 To clear the build cache, run the following command:
 
 ```sh
-{{% vendor/cli %}} project:clear-build-cache
+platform project:clear-build-cache
 ```
 
 The next build for each environment is likely to take longer as the cache rebuilds.
@@ -109,9 +109,7 @@ Typical causes and potential solutions include:
   - Check your code is running smoothly.
   
   - Consider adding an [observability solution](../development-increase-observability/integrate-observability) to get a better view of your application.
-  <--->
-  - Consider using the [observability solution](../development-increase-observability/application-metrics) included in your project to get a better view of your application.
-  {{% /version/specific %}}
+  
 - A PHP process is crashing because of a segmentation fault.
 
   - See [how to deal with crashed processes](../languages/php/troubleshoot.md#troubleshoot-a-crashed-php-process).
@@ -200,7 +198,7 @@ They can be used for your data: file uploads, logs, and temporary files.
 
 ### Web PaaS push fails due to lack of disk space
 
-You might see the following message when attempting to run `{{% vendor/cli %}} push`:
+You might see the following message when attempting to run `platform push`:
 `There isn't enough free space to complete the push`
 
 This usually indicates that large files are present in the repository (where they shouldn't be).

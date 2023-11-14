@@ -4,7 +4,7 @@ slug: slack
 section: Activity
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 

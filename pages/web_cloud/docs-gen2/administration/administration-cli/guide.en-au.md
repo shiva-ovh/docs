@@ -5,7 +5,7 @@ section: Administration
 order: 11
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -25,14 +25,14 @@ Its source code is hosted on [GitHub](https://github.com/platformsh/cli).
 To list and manage your projects, authenticate by running the following command:
 
 ```bash
-{{% vendor/cli %}}
+platform
 ```
 
 This process opens a browser tab for you to log in.
 It also creates certificates on your computer for [SSH](../../development/development-ssh).
 
 Once you are logged in, a list of your projects appears, along with some tips for getting started.
-If you experience authentication issues or want to force a login, run the command `{{% vendor/cli %}} login`.
+If you experience authentication issues or want to force a login, run the command `platform login`.
 
 ## 3. Use
 
@@ -43,13 +43,13 @@ including your services and data.
 Get a list of all available commands with:
 
 ```bash
-{{% vendor/cli %}} list
+platform list
 ```
 
 To get more information on a specific command, preface it with `help`:
 
 ```bash
-{{% vendor/cli %}} help get
+platform help get
 ```
 
 You get output similar to the following:
@@ -60,7 +60,7 @@ Aliases: get
 Description: Clone a project locally
 
 Usage:
- {{% vendor/cli %}} get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [--host HOST] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
+ platform get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [--host HOST] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
 
 Arguments:
   project                            The project ID
@@ -83,7 +83,7 @@ Options:
 
 Examples:
  Clone the project "abc123" into the directory "my-project":
-   {{% vendor/cli %}} get abc123 my-project
+   platform get abc123 my-project
 ```
 
 ### Select the right project and environment
@@ -94,7 +94,7 @@ if you run a command that requires a specific project and environment, you are p
 For example, if you run the following command:
 
 ```bash
-{{% vendor/cli %}} environment:info
+platform environment:info
 ```
 
 You get the following output:
@@ -115,14 +115,14 @@ You can always specify the project and environment in two ways:
 * As arguments for the command:
 
 ```bash
-{{% vendor/cli %}} environment:info --project=my-project --environment=staging
+platform environment:info --project=my-project --environment=staging
 ```
 * With environment variables:
 
 ```bash
 export PLATFORM_PROJECT=my-project;
 export PLATFORM_BRANCH=staging;
-{{% vendor/cli %}} environment:info
+platform environment:info
 ```
 
 In [multi-app](../../create-apps/create-apps-multi-app) projects, this applies also to selecting the right app
@@ -130,7 +130,7 @@ In [multi-app](../../create-apps/create-apps-multi-app) projects, this applies a
 
 #### RootNotFoundException
 
-If you check out a project via Git directly and not using the `{{% vendor/cli %}} get` command,
+If you check out a project via Git directly and not using the `platform get` command,
 the CLI may be unable to determine what project it's in.
 You might run a CLI command from within a project directory you've checked out and get an error like this:
 
@@ -142,23 +142,23 @@ Then the CLI hasn't been able to determine the project to use.
 To fix this, run:
 
 ```bash
-{{% vendor/cli %}} project:set-remote --project {{< variable "PROJECT_ID" >}}
+platform project:set-remote --project {{< variable "PROJECT_ID" >}}
 ```
 
 Replace `{{< variable "PROJECT_ID" >}}` with the ID of your project.
-You can find that in the Console or by running `{{% vendor/cli %}} projects` to list all accessible projects.
+You can find that in the Console or by running `platform projects` to list all accessible projects.
 
 ### Choose between the CLI and Git commands
 
 Some CLI commands (especially many within the `environment` namespace) have some overlap with Git commands.
 Generally, they offer more options than the Git commands alone.
-For example, `{{% vendor/cli %}} push` offers options such as `--activate` (to activate an environment before pushing)
+For example, `platform push` offers options such as `--activate` (to activate an environment before pushing)
 and `--no-wait` (so you can continue working without waiting for the push to complete).
 
 For all of them, you don't need to configure a Git remote.
 It's enough to have a project ID.
 
-An example of how this affects commands is that when you run `{{% vendor/cli %}} merge`,
+An example of how this affects commands is that when you run `platform merge`,
 it doesn't affect your local codebase.
 You don't even need the code locally.
 The code is only merged between environments remotely.
@@ -181,7 +181,7 @@ For instance, to locally sync every mount point for your app named `app`, you co
 export PLATFORM_PROJECT=my-project;
 export PLATFORM_BRANCH=main;
 export {{% vendor/prefix_cli %}}_CLI_NO_INTERACTION=1;
-{{% vendor/cli %}} mount:download --all --app app --target local-backup
+platform mount:download --all --app app --target local-backup
 ```
 
 ### Autocomplete commands
@@ -200,21 +200,21 @@ or a [hook](../../create-apps/app-reference.md#hooks).
 The syntax looks like the following:
 
 ```bash
-{{% vendor/cli %}} ssh -- {{< variable "COMMAND" >}} {{< variable "ARGUMENTS" >}}
+platform ssh -- {{< variable "COMMAND" >}} {{< variable "ARGUMENTS" >}}
 ```
 
 For example, to run a specific Python script named `my-script.py` on your current environment,
 run the following command:
 
 ```bash
-{{% vendor/cli %}} ssh -- python my-script.py
+platform ssh -- python my-script.py
 ```
 
 Or to use [Drush](https://www.drush.org/latest/install/) to rebuild the cache on the `feature` environment,
 run this command:
 
 ```bash
-{{% vendor/cli %}} ssh -e feature -- drush -y cache-rebuild
+platform ssh -e feature -- drush -y cache-rebuild
 ```
 
 ### Update the CLI

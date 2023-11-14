@@ -4,7 +4,7 @@ slug: extensions
 section: Php
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -33,21 +33,7 @@ runtime:
     disabled_extensions:
         - sqlite3
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        runtime:
-            extensions:
-                - raphf
-                - http
-                - igbinary
-                - redis
-            disabled_extensions:
-                - sqlite3
-```
-{{% /version/specific %}}
+
 
 You can also [include configuration options](../../create-apps/app-reference.md#extensions) for specific extensions.
 
@@ -92,7 +78,7 @@ Some built-in modules are always on:
 To see a complete list of the compiled PHP extensions, run the following [CLI command](../../administration/administration-cli):
 
 ```bash
-{{% vendor/cli %}} ssh "php -m"
+platform ssh "php -m"
 ```
 
 ## Custom PHP extensions
@@ -116,13 +102,4 @@ variables:
     php:
         extension: /app/spiffy.so
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        variables:
-            php:
-                extension: /app/spiffy.so
-```
-{{% /version/specific %}}
+

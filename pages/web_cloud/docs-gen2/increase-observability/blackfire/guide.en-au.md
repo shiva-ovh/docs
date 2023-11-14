@@ -4,7 +4,7 @@ slug: blackfire
 section: Integrate-Observability
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -139,7 +139,7 @@ You can override the default behavior and deactivate Blackfire Monitoring by set
 To do so, create the following :
 
 ```bash
-{{% vendor/cli %}} variable:create --level environment --prefix env: --name BLACKFIRE_APM_ENABLED --value 0
+platform variable:create --level environment --prefix env: --name BLACKFIRE_APM_ENABLED --value 0
 ```
 
 ### 2. Enable Blackfire Monitoring on your environments
@@ -230,7 +230,7 @@ follow these steps:
 To retrieve startup errors, run the following command:
 
 ```bash
-{{% vendor/cli %}} ssh -- php -d display_startup_errors=on --ri blackfire
+platform ssh -- php -d display_startup_errors=on --ri blackfire
 ```
 
 ### 2. Retrieve your Blackfire logs
@@ -241,14 +241,14 @@ To retrieve your Blackfire logs, follow these steps:
 
 
 ```bash
-{{% vendor/cli %}} variable:create php:blackfire.log_file --value /tmp/blackfire.log
+platform variable:create php:blackfire.log_file --value /tmp/blackfire.log
 ```
 
 2\.  To set the verbosity of the logs to level 4 (debug level), create the following variable:
 
 
 ```bash
-{{% vendor/cli %}} variable:create php:blackfire.log_level --value 4
+platform variable:create php:blackfire.log_level --value 4
 ```
 
 3\.  Start a profile or build.
@@ -258,13 +258,13 @@ To retrieve your Blackfire logs, follow these steps:
 
 
 ```bash
-{{% vendor/cli %}} ssh -- cat /tmp/blackfire.log > blackfire.log
+platform ssh -- cat /tmp/blackfire.log > blackfire.log
 ```
 
 After you've retrieved the logs, you can disable them.
 To do so, run the following commands:
 
 ```bash
-{{% vendor/cli %}} variable:delete php:blackfire.log_file
-{{% vendor/cli %}} variable:delete php:blackfire.log_level
+platform variable:delete php:blackfire.log_file
+platform variable:delete php:blackfire.log_level
 ```

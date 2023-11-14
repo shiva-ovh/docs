@@ -5,7 +5,7 @@ section: Glossary
 hidden: true
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 ## Active environment
@@ -90,7 +90,7 @@ Drush is a command-line shell and scripting interface for Drupal.
 Drush site aliases allow you to define short names
 that let you run Drush commands on specific local or remote Drupal installations.
 The Web PaaS CLI configures Drush aliases for you on your local environment
-(via `{{% vendor/cli %}} get` or `{{% vendor/cli %}} drush-aliases`).
+(via `platform get` or `platform drush-aliases`).
 You can also configure them manually.
 
 ## Environment
@@ -124,9 +124,7 @@ Grid environments are standard for Professional plans.
 They run on shared infrastructure.
 This architecture makes them different from [{{% names/dedicated-gen-2 %}} environments](#dedicated-gen-2).
 
-<--->
 
-{{% /version/specific %}}
 
 ## Inactive environment
 

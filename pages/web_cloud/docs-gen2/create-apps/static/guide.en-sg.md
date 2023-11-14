@@ -4,7 +4,7 @@ slug: static
 section: Web
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -44,27 +44,7 @@ app:
         index:
           - index.html
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        # The type of the application to build.
-        type: "nodejs:{{% latest "nodejs" %}}"
-        source:
-            root: "/"
-        # The web key configures the web server running in front of your app.
-        web:
-            locations:
-                /: 
-                    # Static site generators usually output built static files to a specific directory.
-                    # Define this directory (must be an actual directory inside the root directory of your app)
-                    # as the root for your static site.
-                    root: "public"
-                    # Files to consider when serving a request for a directory.
-                    index:
-                    - index.html
-```
-{{% /version/specific %}}
+
 
 See more information on the required minimal settings:
 - [Top-level properties](../app-reference.md#top-level-properties).
@@ -93,22 +73,7 @@ web:
             scripts: false
             allow: true
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        # The type of the application to build.
-        type: "nodejs:{{% latest "nodejs" %}}"
-        source:
-            root: "/"
-        web:
-            locations:
-                '/':
-                    ...
-                    scripts: false
-                    allow: true
-```
-{{% /version/specific %}}
+
 
 See more information on [`locations` properties](../app-reference.md#locations).
 
@@ -131,24 +96,7 @@ web:
                 \.(css|js|gif|jpe?g|png|svg)$:
                     expires: 4w
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        # The type of the application to build.
-        type: "nodejs:{{% latest "nodejs" %}}"
-        source:
-            root: "/"
-        web:
-            locations:
-                '/':
-                    ...
-                    expires: 24h
-                    rules:
-                        \.(css|js|gif|jpe?g|png|svg)$:
-                            expires: 4w
-```
-{{% /version/specific %}}
+
 
 ### Conserve the server
 
@@ -162,19 +110,7 @@ web:
     commands:
         start: sleep infinity
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        # The type of the application to build.
-        type: "nodejs:{{% latest "nodejs" %}}"
-        source:
-            root: "/"
-        web:
-            commands:
-                start: sleep infinity
-```
-{{% /version/specific %}}
+
 
 You can also use this place to start small programs,
 such as a [script to handle 404 errors](https://community.platform.sh/t/custom-404-page-for-a-static-website/637).
@@ -208,33 +144,4 @@ web:
         # Run a no-op process that uses no CPU resources since this is a static site
         start: sleep infinity
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        # The type of the application to build.
-        type: "python:{{% latest "python" %}}"
-        source:
-            root: "/"
-        web:
-            locations:
-                '/':
-                    # The public directory of the application relative to its root
-                    root: 'public'
-                    # The files to look for when serving a directory
-                    index: 
-                    - 'index.html'
-                    # Disable server-side scripts
-                    scripts: false
-                    allow: true
-                    # Set caching policy
-                    expires: 24h
-                    rules:
-                        \.(css|js|gif|jpe?g|png|svg)$:
-                            expires: 4w
 
-            commands:
-                # Run a no-op process that uses no CPU resources since this is a static site
-                start: sleep infinity
-```
-{{% /version/specific %}}

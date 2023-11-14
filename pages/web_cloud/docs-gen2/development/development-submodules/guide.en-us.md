@@ -5,7 +5,7 @@ section: Development
 order: 5
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 ## Clone submodules during deployment
@@ -28,20 +28,7 @@ The following example is based on [a Bigfoot multi-app project](https://github.c
 
 
 ![Diagram of a project containing multiple apps](images/multiple-app.png "0.5")
-<--->
-<!-- Upsun -->
-Say you have a multi-app project that includes the following submodules:
 
-- A BigFoot app
-
-- An API WebPaas v3, Admin component
-
-- A Gatsby frontend
-
-- A Mercure Rocks server
-
-
-{{% /version/specific %}}
 
 To import all the submodules, run the following commands from your multiple application project's root folder:
 

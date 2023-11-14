@@ -4,7 +4,7 @@ slug: merge
 section: Add-Data
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -61,7 +61,7 @@ relationships:
 ```bash
 git add .
 git commit -m "Add database and connect to app"
-{{% vendor/cli %}} push
+platform push
 ```
 
 Now you have a database you can connect to your app.
@@ -78,7 +78,7 @@ You added the database to the `dev` environment.
 To have a database in your production environment, merge your changes.
 
 ```bash
-{{% vendor/cli %}} merge dev
+platform merge dev
 ```
 
 Now your production branch has its own database.
@@ -100,14 +100,14 @@ To see how the data in child environments is separate, follow these steps:
 
 
 ```bash
-{{% vendor/cli %}} sql --environment dev 'CREATE TABLE child_data (a int); INSERT INTO child_data(a) VALUES (1), (2), (3);'
+platform sql --environment dev 'CREATE TABLE child_data (a int); INSERT INTO child_data(a) VALUES (1), (2), (3);'
 ```
 
 2\. See the data in the `dev` database:
 
 
 ```bash
-{{% vendor/cli %}} sql --environment dev 'SELECT * FROM child_data'
+platform sql --environment dev 'SELECT * FROM child_data'
 ```
 
    You get a table with a single column and 3 numbers.
@@ -116,14 +116,14 @@ To see how the data in child environments is separate, follow these steps:
 
 
 ```bash
-{{% vendor/cli %}} merge
+platform merge
 ```
 
 4\. Check the data in the production environment:
 
 
 ```bash
-{{% vendor/cli %}} sql --environment main 'SELECT * FROM child_data'
+platform sql --environment main 'SELECT * FROM child_data'
 ```
 
 You get an error message that the table doesn't exist.
@@ -136,14 +136,14 @@ To see how the data in parent environments can be inherited, follow these steps:
 
 
 ```bash
-{{% vendor/cli %}} sql --environment main 'CREATE TABLE parent_data (a int); INSERT INTO parent_data(a) VALUES (1), (2), (3);'
+platform sql --environment main 'CREATE TABLE parent_data (a int); INSERT INTO parent_data(a) VALUES (1), (2), (3);'
 ```
 
 2\. See the data in the production database:
 
 
 ```bash
-{{% vendor/cli %}} sql --environment main 'SELECT * FROM parent_data'
+platform sql --environment main 'SELECT * FROM parent_data'
 ```
 
    You get a table with a single column and 3 numbers.
@@ -152,14 +152,14 @@ To see how the data in parent environments can be inherited, follow these steps:
 
 
 ```bash
-{{% vendor/cli %}} sync data --environment dev
+platform sync data --environment dev
 ```
 
 4\. Check the data in the preview environment
 
 
 ```bash
-{{% vendor/cli %}} sql --environment dev 'SELECT * FROM parent_data'
+platform sql --environment dev 'SELECT * FROM parent_data'
 ```
 
    You see the same table as in step 2.

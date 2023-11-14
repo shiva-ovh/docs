@@ -4,7 +4,7 @@ slug: ssh-keys
 section: Ssh
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -71,7 +71,7 @@ If you don't find an existing key, [generate new keys](#1b-generate-new-keys).
 If you're logged in using the [Web PaaS CLI](./_index.md#1-authenticate-with-the-cli),
 generate a key and have it added to your Web PaaS account automatically.
 
-1\. In a terminal, run `{{% vendor/cli %}} ssh-key:add`.
+1\. In a terminal, run `platform ssh-key:add`.
 
 1\. If necessary, log in to a browser.
 
@@ -99,17 +99,14 @@ If you're logged in using the [Web PaaS CLI](./_index.md#1-authenticate-with-the
 in a terminal run the following command (replacing `{{< variable "PATH_TO_YOUR_KEY" >}}` with the location of your public key):
 
 ```bash
-{{% vendor/cli %}} ssh-key:add '{{< variable "PATH_TO_YOUR_KEY" >}}'
+platform ssh-key:add '{{< variable "PATH_TO_YOUR_KEY" >}}'
 ```
 
 
 <!-- Web PaaS -->
 You can also add it in the Console,
 similar to this [video](https://docs.platform.sh/videos/management-console/add-ssh-mc.mp4).
-<--->
-<!-- Upsun -->
-You can also add it in the Console.
-{{% /version/specific %}}
+
 
 Now you are ready to use the key to [connect to an environment](./_index.md#2-connect-to-an-app-with-ssh).
 

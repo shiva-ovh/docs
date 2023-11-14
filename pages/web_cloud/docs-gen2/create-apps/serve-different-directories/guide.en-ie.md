@@ -4,7 +4,7 @@ slug: serve-different-directories
 section: Web
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -27,16 +27,7 @@ application/
 docs-src/
     [docs-code-files]
 ```
-<--->
-```text
-{{% vendor/configdir %}}
-    {{< vendor/configfile "routes" "strip" >}}
-application/
-    [app-code-files]
-docs-src/
-    [docs-code-files]
-```
-{{% /version/specific %}}
+
 
 And your build process might build the documentation with an output folder such as `docs-public`.
 
@@ -58,25 +49,7 @@ web:
             scripts: false
             allow: true
 ```
-<--->
-```yaml {configfile="apps"}
-applications:
-    docs:
-        source:
-            root: "/"
-            web:
-                locations:
-                    '/':
-                        passthru: true
-                    '/docs':
-                        root: 'docs-public'
-                        index:
-                            - "index.html"
-                        expires: 24h
-                        scripts: false
-                        allow: true
-```
-{{% /version/specific %}}
+
 
 This way, your app can safely coexist with static files as if it were a single site hierarchy.
 And you can keep the static pages separate from your app code.

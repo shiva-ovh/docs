@@ -4,7 +4,7 @@ slug: server
 section: Python
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -45,19 +45,7 @@ web:
     commands:
         start: "gunicorn -w 4 -k uvicorn.workers.UvicornWorker -b unix:$SOCKET myapp.wsgi:application"
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    myapp:
-        type: 'python:{{% latest "python" %}}'
-        web:
-            upstream:
-                socket_family: unix
-            commands:
-                start: "gunicorn -w 4 -k uvicorn.workers.UvicornWorker -b unix:$SOCKET myapp.wsgi:application"
-```
-{{% /version/specific %}}
+
 
 ## Daphne
 
@@ -111,16 +99,4 @@ web:
     commands:
         start: "hypercorn myapp.asgi:application -b unix:$SOCKET -w 4 -k asyncio"
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    myapp:
-        type: 'python:{{% latest "python" %}}'
-        web:
-            upstream:
-                socket_family: unix
-            commands:
-                start: "hypercorn myapp.asgi:application -b unix:$SOCKET -w 4 -k asyncio"
-```
-{{% /version/specific %}}
+

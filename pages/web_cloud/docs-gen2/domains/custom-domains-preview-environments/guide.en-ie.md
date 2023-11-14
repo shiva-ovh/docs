@@ -4,7 +4,7 @@ slug: custom-domains-preview-environments
 section: Steps
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -12,8 +12,7 @@ section: Steps
 
 
 {{< partial "progressive-rollout/body.md" >}}
-<--->
-{{% /version/specific %}}
+
 
 [Preview environments](/glossary.md#preview-environment) in your project can't use the custom domain [set up on your production environment](../domains-steps).<br/>
 By default and for each preview environment,

@@ -4,7 +4,7 @@ slug: project-structure
 section: Multi-App
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -52,20 +52,7 @@ you can organize your repository like this:
 └── mercure
     └── ...                 <- Mercure Rocks app code
 ```
-<--->
-```txt
-├── {{% vendor/configdir %}}
-│   ├── {{% vendor/configfile "apps" "strip" %}}   <- Unified configuration
-├── admin
-│   └── ...                 <- API WebPaas Admin app code
-├── api-app
-│   └── ...                 <- Bigfoot app code
-├── gatsby
-│   └── ...                 <- Gatsby app code
-└── mercure
-    └── ...                 <- Mercure Rocks app code
-```
-{{% /version/specific %}}
+
 
 The `api` app is built from the `api-app` directory.</br>
 The `admin` app is built from the `admin` directory.</br>
@@ -219,136 +206,7 @@ mercure:
     root: mercure/.config
 ```
 
-<--->
 
-```yaml {configFile="apps"}
-applications:
-  api:
-    type: php:8.2
-
-    relationships:
-      database: "database:postgresql"
-
-    mounts:
-      "/var/cache": "shared:files/cache"
-      "/var/log": "shared:files/log"
-      "/var/sessions": "shared:files/sessions"
-
-    web:
-      locations:
-        "/":
-          root: "public"
-          passthru: '/index.php'
-          index:
-            - index.php
-          headers:
-            Access-Control-Allow-Origin: "*"
-
-    hooks:
-      build: |
-        set -x -e
-        curl -s https://get.symfony.com/cloud/configurator | bash
-        symfony-build
-
-      deploy: |
-        set -x -e
-        symfony-deploy
-
-    source:
-      root: api-app
-
-  admin:
-    type: nodejs:16
-
-    mounts:
-      '/.tmp_platformsh': 'shared:files/tmp_platformsh'
-      '/build': 'shared:files/build'
-      '/.cache': 'shared:files/.cache'
-      '/node_modules/.cache': 'shared:files/node_modules/.cache'
-
-    web:
-      locations:
-        "/admin":
-          root: "build"
-          passthru: "/admin/index.html"
-          index:
-            - "index.html"
-          headers:
-            Access-Control-Allow-Origin: "*"
-
-    hooks:
-      build: |
-        set -eu
-        corepack yarn install --immutable --force
-      post_deploy: |
-        corepack yarn run build
-    source:
-      root: admin
-
-  gatsby:
-    type: 'nodejs:18'
-
-    mounts:
-      '/.cache': { source: local, source_path: cache }
-      '/.config': { source: local, source_path: config }
-      '/public': { source: local, source_path: public }
-
-    web:
-      locations:
-        '/site':
-          root: 'public'
-          index: [ 'index.html' ]
-          scripts: false
-          allow: true
-
-    hooks:
-      build: |
-        set -e
-        yarn --frozen-lockfile
-      post_deploy: |
-        yarn build --prefix-paths
-    source:
-      root: gatsby
-
-  mercure:
-    type: golang:1.18
-
-    mounts:
-      'database': { source: local, source_path: 'database' }
-      '/.local': { source: local, source_path: '.local' }
-      '/.config': { source: local, source_path: '.config' }
-
-    web:
-      commands:
-        start: ./mercure run --config Caddyfile.platform_sh
-
-      locations:
-        /:
-          passthru: true
-          scripts: false
-          request_buffering:
-            enabled: false
-          headers:
-            Access-Control-Allow-Origin: "*"
-
-    hooks:
-      build: |
-        # Install Mercure using cache
-        FILE="mercure_${MERCUREVERSION}_Linux_x86_64.tar.gz"
-        if [ ! -f "$PLATFORM_CACHE_DIR/$FILE" ]; then
-          URL="https://github.com/dunglas/mercure/releases/download/v${MERCUREVERSION}/$FILE"
-          wget -O "$PLATFORM_CACHE_DIR/$FILE" $URL
-        else
-          echo "Found $FILE in cache, using cache"
-        fi
-        file $PLATFORM_CACHE_DIR/$FILE
-        tar xvzf $PLATFORM_CACHE_DIR/$FILE
-
-    source:
-      root: mercure/.config
-```
-
-{{% /version/specific %}}
 
 ## Nested directories
 
@@ -373,17 +231,7 @@ In that case, you can nest the Java app within the Python app:
 └── main.py                 <- Python app code
 ```
 
-<--->
 
-```txt
-├── {{% vendor/configdir %}}
-│   ├── {{% vendor/configfile "apps" %}}
-├── languagetool
-│   └── main.java           <- Java app code
-└── main.py                 <- Python app code
-```
-
-{{% /version/specific %}}
 
 The Python app's code base includes all of the files at the top level (excluding the `{{% vendor/configdir %}}` directory)
 *and* all of the files within the `languagetool` directory.
@@ -417,24 +265,7 @@ languagetool:
   ...
 ```
 
-<--->
 
-```yaml {configFile="apps"}
-applications:
-    main:
-      type: 'python:3.11'
-      source:
-          root: '/'
-      ...
-    
-    languagetool:
-        type: 'java:17'
-        source:
-            root: 'languagetool'
-        ...
-```
-
-{{% /version/specific %}}
 
 ## Split your code source into multiple Git submodule repositories
 
@@ -459,17 +290,7 @@ So you could organize your [project repository](https://github.com/platformsh-te
 ├── @mercure    <-- Mercure rocks submodule
 └── .gitmodules
 ```
-<--->
-```text
-├── {{% vendor/configdir %}}
-│   ├── {{% vendor/configfile "apps" "strip" %}}
-├── @admin      <-- API WebPaas Admin submodule
-├── @api        <-- Bigfoot submodule
-├── @gatsby     <-- Gatsby submodule
-├── @mercure    <-- Mercure rocks submodule
-└── .gitmodules
-```
-{{% /version/specific %}}
+
 
 [Add the submodules using the Git CLI](/development/submodules.html#clone-submodules-during-deployment).
 
@@ -518,6 +339,4 @@ In this example, the `admin` app now treats the `admin` directory as its root wh
 
 
 If `source.root` isn't specified, it defaults to the same directory as the `{{< vendor/configfile "apps" >}}` (or `{{< vendor/configfile "app" >}}`) file itself.
-<--->
-If `source.root` isn't specified, it defaults to the project root directory, that is `"/"`.
-{{% /version/specific %}}
+

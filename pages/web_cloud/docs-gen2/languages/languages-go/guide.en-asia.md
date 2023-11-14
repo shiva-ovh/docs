@@ -5,7 +5,7 @@ section: Languages
 order: 4
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -40,13 +40,7 @@ order: 4
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-1.21 |  
-|  1.20
-
-{{% /version/specific %}}
 
 {{% language-specification type="golang" display_name="Go" %}}
 
@@ -62,25 +56,7 @@ For example:
 type: 'golang:{{% latest "golang" %}}'
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    <APP_NAME>:
-        type: 'golang:<VERSION_NUMBER>'
-```
-
-For example:
-
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'golang:{{% latest "golang" %}}'
-```
-
-{{% /version/specific %}}
 
 {{% deprecated-versions %}}
 
@@ -137,37 +113,7 @@ web:
 disk: 1024
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'golang:{{% latest "golang" %}}'
-
-        hooks:
-            build: |
-                # Modify this line if you want to build differently or 
-                # use an alternate name for your executable.
-                go build -o bin/app
-
-        web:
-            upstream:
-                socket_family: tcp
-                protocol: http
-
-            commands:
-                # If you change the build output in the build hook above, update this line as well.
-                start: ./bin/app
-
-            locations:
-                /:
-                    # Route all requests to the Go app, unconditionally.
-                    allow: false
-                    passthru: true
-```
-
-{{% /version/specific %}}
 
 Note that there is still an Nginx proxy server sitting in front of your application.
 If desired, certain paths may be served directly by Nginx without hitting your application (for static files, primarily)

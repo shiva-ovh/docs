@@ -5,7 +5,7 @@ section: Development
 order: 5
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -28,10 +28,7 @@ The integration with DDEV is maintained by Web PaaS to ensure it works smoothly.
 Other Docker-based tools are also supported, such as [Docksal](../.././.-docksal) and [Lando](../.././.-lando).
 If you choose to use a Docker-based tool, follow the steps on its page.
 
-<--->
-<!-- Upsun -->
-If you choose to use DDEV, follow the steps [on its page](../.././.-ddev).
-{{% /version/specific %}}
+
 Otherwise, follow these steps to run your app on your computer.
 
 ## Before you begin
@@ -43,12 +40,7 @@ You need to have:
 
   new users can sign up for a [free trial account](https://auth.api.platform.sh/register)
 
-<--->
-<!-- Upsun -->
-- A {{< vendor/name >}} account:
 
-  new users can [register here](https://upsun.com/register/)
-{{% /version/specific %}}
 - A working project
 
 - [Git](https://git-scm.com/downloads)
@@ -60,14 +52,14 @@ You need to have:
 
 If you don't have your app code on your computer, download a copy.
 
-1\.  Get your project ID by running `{{% vendor/cli %}} projects`.
+1\.  Get your project ID by running `platform projects`.
 
 
 2\.  Get the code by running the following command:
 
 
 ```bash
-{{% vendor/cli %}} get {{< variable "PROJECT_ID" >}} {{< variable "TARGET_DIRECTORY_NAME" >}}
+platform get {{< variable "PROJECT_ID" >}} {{< variable "TARGET_DIRECTORY_NAME" >}}
 ```
 
     Or pull from your [integrated Git repository](../../integrations/integrations-source).
@@ -110,7 +102,7 @@ To build your site locally:
 
 
 ```bash
-{{% vendor/cli %}} build
+platform build
 ```
 
     Your app is built in the `{{< vendor/configfile "apps" >}}/local/builds` directory.

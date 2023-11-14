@@ -5,7 +5,7 @@ section: Domains
 order: 7
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -167,7 +167,7 @@ or remove `www.example.com` (and any other `www` route) from your `{{< vendor/co
 ## Verify your application
 
 Check your app's logs and look for anomalies.
-On the command line type `{{% vendor/cli %}} logs app` and `{{% vendor/cli %}} logs error`.
+On the command line type `platform logs app` and `platform logs error`.
 
 ## Use ASCII for the domain
 

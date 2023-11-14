@@ -4,7 +4,7 @@ slug: tethered
 section: Local
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -41,7 +41,7 @@ With open tunnels to all your services, you can also connect to the running serv
 To get information on all running services, run the following command:
 
 ```bash
-{{% vendor/cli %}} tunnels
+webpaas tunnels
 ```
 
 You get a response similar to the following:
@@ -59,7 +59,7 @@ You can use the port information to connect directly to a service.
 If you need more detailed information, such as a path or password, run the following command:
 
 ```bash
-{{% vendor/cli %}} tunnel:info
+webpaas tunnel:info
 ```
 
 You can use the information returned to connect to the remote database as if it were local.

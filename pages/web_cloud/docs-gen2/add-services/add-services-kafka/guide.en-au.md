@@ -4,7 +4,7 @@ slug: add-services-kafka
 section: Add-Services
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -41,13 +41,7 @@ It is a framework for storing, reading and analyzing streaming data. See the [Ka
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-3.2 |  
-|  3.4
-
-{{% /version/specific %}}
 
 {{% relationship-ref-intro %}}
 
@@ -79,35 +73,4 @@ file=static/files/fetch/examples/java/kafka
 highlight=java
 +++
 
-<--->
 
-+++
-title=Python
-file=static/files/fetch/examples/python/kafka
-highlight=python
-+++
-
-<--->
-
-+++
-title=Ruby
-highlight=ruby
-+++
-
-## With the ruby-kafka gem
-
-# Producer
-require "kafka"
-kafka = Kafka.new(["kafka.internal:9092"], client_id: "my-application")
-kafka.deliver_message("Hello, World!", topic: "greetings")
-
-# Consumer
-kafka.each_message(topic: "greetings") do |message|
-  puts message.offset, message.key, message.value
-end
-
-{{< /codetabs >}}
-
-
-
-(The specific way to inject configuration into your application varies. Consult your application or framework's documentation.)

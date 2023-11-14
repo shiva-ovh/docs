@@ -4,7 +4,7 @@ slug: java
 section: New-Relic
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 ## Get your license key
@@ -16,7 +16,7 @@ Subscribe to New Relic to [get your license key](https://docs.newrelic.com/docs/
 Add your New Relic license key as an environment level variable:
 
 ```bash
-{{% vendor/cli %}} variable:create --level environment --environment {{< variable "ENVIRONMENT_NAME" >}} --visible-build false --inheritable false env:NEW_RELIC_LICENSE_KEY --value {{< variable "NEW_RELIC_LICENSE_KEY" >}}
+platform variable:create --level environment --environment {{< variable "ENVIRONMENT_NAME" >}} --visible-build false --inheritable false env:NEW_RELIC_LICENSE_KEY --value {{< variable "NEW_RELIC_LICENSE_KEY" >}}
 ```
 
 ## Give your application a name
@@ -24,7 +24,7 @@ Add your New Relic license key as an environment level variable:
 Add a new environment level variable to give your application a recognizable name:
 
 ```bash
-{{% vendor/cli %}} variable:create --level environment --environment {{< variable "ENVIRONMENT_NAME" >}} --visible-build false --inheritable false env:NEW_RELIC_APP_NAME --value {{< variable "APP_NAME" >}}
+platform variable:create --level environment --environment {{< variable "ENVIRONMENT_NAME" >}} --visible-build false --inheritable false env:NEW_RELIC_APP_NAME --value {{< variable "APP_NAME" >}}
 ```
 
 > [!primary]  

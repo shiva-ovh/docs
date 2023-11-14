@@ -4,7 +4,7 @@ slug: api-tokens
 section: Cli
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -61,7 +61,7 @@ To create a machine user, follow these steps:
 To check that your API token is valid, run the following command:
 
 ```bash
-{{% vendor/cli %}} auth:api-token-login
+platform auth:api-token-login
 ```
 
 When prompted, enter your API token.
@@ -126,7 +126,7 @@ hooks:
         curl -fsSL https://raw.githubusercontent.com/platformsh/cli/main/installer.sh | bash
 
         echo "Testing Web PaaS CLI"
-        {{% vendor/cli %}}
+        platform
 ```
 
 You can now call the CLI from within the shell on the app container or in a cron job.
@@ -145,8 +145,8 @@ crons:
         commands:
             start: |
                 if [ "$PLATFORM_ENVIRONMENT_TYPE" = production ]; then
-                   {{% vendor/cli %}} backup:create --yes --no-wait
-                   {{% vendor/cli %}} source-operation:run update --no-wait --yes
+                   platform backup:create --yes --no-wait
+                   platform source-operation:run update --no-wait --yes
                 fi
 ```
 
@@ -163,5 +163,5 @@ In this case, to ensure all your commands work, load the CLI SSH certificate fir
 To do so, run the following command:
 
 ```bash
-{{% vendor/cli %}} ssh-cert:load --no-interaction
+platform ssh-cert:load --no-interaction
 ```

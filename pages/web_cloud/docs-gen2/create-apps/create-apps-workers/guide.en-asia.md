@@ -4,7 +4,7 @@ slug: create-apps-workers
 section: Create-Apps
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -26,7 +26,7 @@ Web PaaS allows you to connect to the worker instance through SSH to inspect log
 Use the `--worker` switch in the Web PaaS CLI, like so:
 
 ```bash
-{{% vendor/cli %}} ssh --worker=queue
+platform ssh --worker=queue
 ```
 
 ## Stopping a worker
@@ -90,13 +90,7 @@ run only on the [`web`](./app-reference.md#web) container, not on workers.
 Any top-level definitions for [`size`](./app-reference.md#sizes), [`relationships`](./app-reference.md#relationships),
 [`access`](../.././.-app-reference#access), [`disk`](../.././.-app-reference), [`mount`](../.././.-app-reference#mounts), and [`variables`](../.././.-app-reference#variables)
 are inherited by every worker, unless overridden explicitly.
-<--->
-Any top-level definitions for [`relationships`](./app-reference.md#relationships),
-[`access`](./app-reference.md#access), [`mount`](./app-reference.md#mounts), and [`variables`](./app-reference.md#variables)
-are inherited by every worker, unless overridden explicitly.
 
-Likewise [resources defined for the application container](../../manage-resources) are inherited by every worker, unless overridden explicitly.
-{{% /version/specific %}}
 
 That means, for example, that the following two `{{< vendor/configfile "app" >}}` definitions produce identical workers.
 
@@ -156,73 +150,7 @@ workers:
         relationships:
             database: 'mysqldb:mysql'
 ```
-<--->
 
-```yaml {configFile="app"}
-applications:
-    name: app
-
-    type: python:{{% latest "python" %}}
-
-    mounts:
-        test:
-            source: local
-            source_path: test
-
-    relationships:
-        database: 'mysqldb:mysql'
-
-    workers:
-        queue:
-            commands:
-                start: |
-                    python queue-worker.py
-        mail:
-            commands:
-                start: |
-                    python mail-worker.py
-
-services:
-    mysqldb:
-        type: mariadb:{{% latest "mariadb" %}}
-        disk: 256
-```
-
-```yaml {configFile="app"}
-applications:
-    name: app
-
-    type: python:{{% latest "python" %}}
-
-    workers:
-        queue:
-            commands:
-                start: |
-                    python queue-worker.py
-            mounts:
-                test:
-                    source: local
-                    source_path: test
-            relationships:
-                database: 'mysqldb:mysql'
-        mail:
-            commands:
-                start: |
-                    python mail-worker.py
-            mounts:
-                test:
-                    source: local
-                    source_path: test
-            relationships:
-                database: 'mysqldb:mysql'
-
-services:
-    mysqldb:
-        type: mariadb:{{% latest "mariadb" %}}
-        disk: 256
-```
-
-{{% /version/specific %}}
 
 In both cases, there are two worker instances named `queue` and `mail`.
 Both have access to a MySQL/MariaDB service defined in `{{< vendor/configfile "services" >}}` named `mysqldb` through the `database` relationship.
@@ -235,12 +163,7 @@ The most common properties to set in a worker to override the top-level settings
 `size` lets you allocate fewer resources to a container that is running only a single background process
 (unlike the web site which is handling many requests at once),
 while `variables` lets you instruct the application to run differently as a worker than as a web site.
-<--->
-The most common properties to set in a worker to override the top-level settings are `variables` and its resources.
-`variables` lets you instruct the application to run differently as a worker than as a web site,
-whereas you can allocate [fewer worker-specific resources](../../manage-resources) for a container that is running only a single background process
-(unlike the web site which is handling many requests at once).
-{{% /version/specific %}}
+
 
 For example, consider the following configuration:
 
@@ -324,81 +247,7 @@ workers:
             emails: 'rabbitqueue:rabbitmq'
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    name: app
-
-    type: "python:{{% latest "python" %}}"
-
-    hooks:
-        build: |
-        pip install -r requirements.txt
-        pip install -e .
-        pip install gunicorn
-
-    relationships:
-        database: 'mysqldb:mysql'
-        messages: 'rabbitqueue:rabbitmq'
-
-    variables:
-        env:
-            type: 'none'
-
-    web:
-        commands:
-            start: "gunicorn -b $PORT project.wsgi:application"
-        variables:
-            env:
-                type: 'web'
-        mounts:
-            uploads:
-                source: local
-                source_path: uploads
-        locations:
-            "/":
-                root: ""
-                passthru: true
-                allow: false
-            "/static":
-                root: "static/"
-                allow: true
-
-    workers:
-        queue:
-            commands:
-                start: |
-                    python queue-worker.py
-            variables:
-                env:
-                    type: 'worker'
-            mounts:
-                scratch:
-                    source: local
-                    source_path: scratch
-        mail:
-            commands:
-                start: |
-                    python mail-worker.py
-            variables:
-                env:
-                    type: 'worker'
-            mounts: {}
-            relationships:
-                emails: 'rabbitqueue:rabbitmq'
-
-services:
-    mysqldb:
-        type: "mariadb:{{% latest "mariadb" %}}"
-        disk: 2048
-
-    rabbitqueue:
-        type: rabbitmq:{{% latest "rabbitmq" %}}
-        disk: 512
-```
-
-{{% /version/specific %}}
 
 There's a lot going on here, but it's all reasonably straightforward.
 The configuration in `{{< vendor/configfile "app" >}}` takes a single Python {{% latest "python" %}} code base from your repository,

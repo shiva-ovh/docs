@@ -4,7 +4,7 @@ slug: projects-region-migration
 section: Projects
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -54,24 +54,20 @@ Otherwise, use the desired plan size from the start.
 If you have files in a mount, first download them:
 
 ```bash
-{{% vendor/cli %}} mount:download
+platform mount:download
 ```
 
 Then upload them to your new project:
 
 ```bash
-{{% vendor/cli %}} mount:upload
+platform mount:upload
 ```
 
 
 <!-- Web PaaS -->
 See more options on [how to export files](../../learn/learn-tutorials/exporting)
 and [how to import files](/learn/tutorials/migrating.md#5-import-data).
-<--->
-<!-- Version 2 -->
-See more options on [how to export files](../../learn/learn-tutorials/exporting)
-and [how to import files](/learn/tutorials/migrating/from-psh.md#5-import-data).
-{{% /version/specific %}}
+
 
 ## 5. Copy data from services
 
@@ -96,7 +92,7 @@ Make sure anything else connected to your old project is moved to your new proje
 
 - If you have project or environment variables defined on your old project, add them to your new project.
 
-  Get a list of all variables set outside of code by running `{{% vendor/cli %}} variables`.
+  Get a list of all variables set outside of code by running `platform variables`.
 - Add any users to your new project that you want to continue to have access.
 
 - Add any existing [integrations](../projects-integrations).

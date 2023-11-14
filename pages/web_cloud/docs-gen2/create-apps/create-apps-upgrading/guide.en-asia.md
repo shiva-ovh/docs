@@ -4,7 +4,7 @@ slug: create-apps-upgrading
 section: Create-Apps
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 ## Changes in version 2022.02

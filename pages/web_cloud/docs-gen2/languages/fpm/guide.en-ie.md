@@ -4,7 +4,7 @@ slug: fpm
 section: Php
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -25,15 +25,7 @@ This number is calculated based on three parameters:
 
 - The reserved memory: the amount of memory you need to reserve for tasks that aren't related to requests.
 
-<--->
-- The container memory: the amount of memory you can allot for PHP processing 
 
-  depending on [your defined application resources](../../manage-resources).
-- The request memory: the amount of memory an average PHP request is expected to require.
-
-- The reserved memory: the amount of memory you need to reserve for tasks that aren't related to requests.
-
-{{% /version/specific %}}
 
 The number is calculated as follows: ![The sum of container memory minus reserved memory divided by request memory](images/PHP-FPM-Workers-Calculation.png "0.2")
 
@@ -74,7 +66,7 @@ you can refer to your PHP access logs.
 Run a command similar to:
 
 ```bash
-{{% vendor/cli %}} log --lines 5000 php.access | awk '{print $6}' | sort -n | uniq -c
+platform log --lines 5000 php.access | awk '{print $6}' | sort -n | uniq -c
 ```
 
 This command takes into account the last 5,000 requests that reached PHP-FPM.
@@ -145,17 +137,7 @@ runtime:
         request_memory: 110
         reserved_memory: 80
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        runtime:
-            sizing_hints:
-                request_memory: 110
-                reserved_memory: 80
-```
-{{% /version/specific %}}
+
 
 Note that the minimum value for the `request_memory` key is 10 MB
 and the minimum value for the `reserved_memory` key is 70 MB.
@@ -166,7 +148,7 @@ To check the maximum number of PHP-FPM workers available to your app,
 run the following command, where `children` refers to PHP-FPM workers:
 
 ```bash
-{{% vendor/cli %}} ssh "grep -e '^pm.max_children' /etc/php/*/fpm/php-fpm.conf"      
+platform ssh "grep -e '^pm.max_children' /etc/php/*/fpm/php-fpm.conf"      
 ```
 
 You get output similar to the following:

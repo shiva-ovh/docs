@@ -4,7 +4,7 @@ slug: composer-auth
 section: Php
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -49,7 +49,7 @@ set an [`env:COMPOSER_AUTH` variable](../../development/development-variables) f
 To do so, run the following command:
 
 ```bash
-{{% vendor/cli %}} variable:create --level project --name env:COMPOSER_AUTH \
+platform variable:create --level project --name env:COMPOSER_AUTH \
   --json true --visible-runtime false --sensitive true --visible-build true \
   --value '{"http-basic": {"{{< variable "PRIVATE_REPOSITORY_URL" >}}": {"username": "{{< variable "USERNAME" >}}", "password": "{{< variable "PASSWORD" >}}"}}}'
 ```
@@ -64,7 +64,7 @@ For security reasons, make sure that the authentication credentials aren't cache
 To do so, run the following command:
 
 ```bash
-{{% vendor/cli %}} project:clear-build-cache
+platform project:clear-build-cache
 ```
 
 ## Access dependencies downloaded from a private repository

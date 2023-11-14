@@ -4,7 +4,7 @@ slug: vary-hooks-by-environment
 section: Hooks
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -30,17 +30,4 @@ hooks:
         fi
         # Commands to run regardless of the environment
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    myapp:
-        hooks:
-            deploy: |
-                if [ "$PLATFORM_ENVIRONMENT_TYPE" = production ]; then
-                    # Run commands only when deploying to production
-                else
-                    # Run commands only when deploying to development or staging environments
-                fi
-                # Commands to run regardless of the environment
-```
-{{% /version/specific %}}
+

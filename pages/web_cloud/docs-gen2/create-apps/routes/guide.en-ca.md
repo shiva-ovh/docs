@@ -4,7 +4,7 @@ slug: routes
 section: Multi-App
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -51,27 +51,7 @@ and a Mercure Rocks server app, defined as follows:
     root: mercure/.config
   ...
 ```
-<--->
-```yaml {configFile="apps"}
-applications:
-    admin:
-        source:
-            root: admin
-        type: nodejs:{{% latest "nodejs" %}}
-    api:
-        source:
-            root: api
-        type: php:{{% latest "php" %}}
-    gatsby:
-        source:
-            root: gatsby
-        type: nodejs:{{% latest "nodejs" %}}
-    mercure:
-        source:
-            root: mercure/.config
-        type: golang:{{% latest "golang" %}}
-```
-{{% /version/specific %}}
+
 
 > [!primary]  
 > 
@@ -99,17 +79,7 @@ You could define routes for your apps as follows:
     type: upstream
     upstream: "api:http"
 ```
-<--->
-```yaml {configFile="routes"}
-routes:
-    "https://mercure.{default}/":
-        type: upstream
-        upstream: "mercure:http"
-    "https://{default}/":
-        type: upstream
-        upstream: "api:http"
-```
-{{% /version/specific %}}
+
 
 So if your default domain is `example.com`, that means:
 
@@ -138,17 +108,7 @@ Alternatively, you could define your routes as follows:
     type: upstream
     upstream: "admin:http"
 ```
-<--->
-```yaml {configFile="routes"}
-routes:
-    "https://{default}/":
-        type: upstream
-        upstream: "api:http"
-    "https://{default}/admin":
-        type: upstream
-        upstream: "admin:http"
-```
-{{% /version/specific %}}
+
 
 
 Then you would need to configure each app's `web.locations` property to match these paths:
@@ -182,43 +142,7 @@ Then you would need to configure each app's `web.locations` property to match th
         index:
           - 'index.html'
 ```
-<--->
-```yaml {configFile="apps"}
-applications:
-    admin:
-        source:
-            root: admin
-        type: nodejs:{{% latest "nodejs" %}}
-        ...
-        web:
-            locations:
-              '/admin':
-                  passthru: '/admin/index.html'
-                  root: 'build'
-                  index:
-                    - 'index.html'
-    api:
-        source:
-            root: api
-        type: php:{{% latest "php" %}}
-        ...
-        web:
-            locations:
-                "/":
-                    passthru: "/index.php"
-                    root: "public"
-                    index:
-                        - index.php
 
-routes:
-    "https://{default}/":
-        type: upstream
-        upstream: "api:http"
-    "https://{default}/admin":
-        type: upstream
-        upstream: "admin:http"
-```
-{{% /version/specific %}}
 
 So if your default domain is `example.com`, that means:
 

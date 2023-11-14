@@ -4,7 +4,7 @@ slug: hooks-and-dependencies
 section: Hooks
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -39,18 +39,4 @@ hooks:
     build: |
         npm run build-css
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    myapp:
-        # Ensure sass is available globally
-        dependencies:
-            nodejs:
-                sass: "^1.47.0"
 
-        hooks:
-            # Run the script defined in package.json
-            build: |
-                npm run build-css
-```
-{{% /version/specific %}}

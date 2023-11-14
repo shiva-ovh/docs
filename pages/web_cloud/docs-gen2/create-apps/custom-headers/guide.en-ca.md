@@ -4,7 +4,7 @@ slug: custom-headers
 section: Web
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -32,23 +32,7 @@ web:
             headers:
                 X-Frame-Options: SAMEORIGIN
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        # The type of the application to build.
-        type: "nodejs:{{% latest "nodejs" %}}"
-        source:
-            root: "/"
-        web:
-            locations:
-                "/":
-                    ...
-                    # Apply rules to all static files (dynamic files get rules from your app)
-                    headers:
-                        X-Frame-Options: SAMEORIGIN
-```
-{{% /version/specific %}}
+
 
 This sets the `X-Frame-Options` header to `SAMEORIGIN` for all static files.
 Now your files can only be embedded within your site.
@@ -66,24 +50,7 @@ web:
                     headers:
                       Content-Type: audio/mpeg
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        # The type of the application to build.
-        type: "nodejs:{{% latest "nodejs" %}}"
-        source:
-            root: "/"
-        web:
-            locations:
-                "/":
-                    ...
-                    rules:
-                        \.mp3$:
-                            headers:
-                            Content-Type: audio/mpeg
-```
-{{% /version/specific %}}
+
 
 This rule sets an explicit content type for files that end in `.mp3`.
 Because specific rules override the general heading configuration,
@@ -103,25 +70,7 @@ web:
                         X-Frame-Options: SAMEORIGIN
                         Content-Type: video/mp4
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        # The type of the application to build.
-        type: "nodejs:{{% latest "nodejs" %}}"
-        source:
-            root: "/"
-        web:
-            locations:
-                "/":
-                    ...
-                    rules:
-                        \.mp4$:
-                            headers:
-                                X-Frame-Options: SAMEORIGIN
-                                Content-Type: video/mp4
-```
-{{% /version/specific %}}
+
 
 This rule sets an explicit content type for files that end in `.mp4`.
 It repeats the rule for `X-Frame-Options`
@@ -148,23 +97,7 @@ web:
             headers:
                 Access-Control-Allow-Origin: "*"
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        # The type of the application to build.
-        type: "nodejs:{{% latest "nodejs" %}}"
-        source:
-            root: "/"
-        web:
-            locations:
-                "/":
-                    ...
-                    # Apply rules to all static files (dynamic files get rules from your app)
-                    headers:
-                        Access-Control-Allow-Origin: "*"
-```
-{{% /version/specific %}}
+
 
 If you use the wildcard value, the headers are modified for each request in the following ways:
 

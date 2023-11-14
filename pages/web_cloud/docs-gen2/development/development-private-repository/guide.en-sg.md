@@ -5,7 +5,7 @@ section: Development
 order: 5
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -53,17 +53,7 @@ hooks:
         set -e
         git clone git@bitbucket.org:username/module.git
 ```
-<--->
-<!-- Upsun -->
-```yaml {configFile="app"}
-applications:
-    {{< variable "APP_NAME" >}}:
-        hooks:
-            build: |
-                set -e
-                git clone git@bitbucket.org:username/module.git
-```
-{{% /version/specific %}}
+
 
 You can also use [private repositories as submodules](./submodules.md#use-private-git-repositories).
 

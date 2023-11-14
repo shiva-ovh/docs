@@ -4,7 +4,7 @@ slug: troubleshoot
 section: Source
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -17,7 +17,7 @@ they can't clone the project locally.
 That user might try to clone the repository using the CLI with the following command:
 
 ```bash
-{{% vendor/cli %}} get {{< variable "PROJECT_ID" >}}
+platform get {{< variable "PROJECT_ID" >}}
 ```
 
 In this case, the user gets an error similar to the following:

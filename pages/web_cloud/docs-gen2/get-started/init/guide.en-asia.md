@@ -4,7 +4,7 @@ slug: init
 section: Deploy
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -20,7 +20,7 @@ To deploy your app, you need to connect its repository to a project in Web PaaS.
 First, create a Web PaaS project by running the following command:
 
 ```bash
-{{% vendor/cli %}} project:create
+platform project:create
 ```
 
 Then go through each of the steps to create the project:

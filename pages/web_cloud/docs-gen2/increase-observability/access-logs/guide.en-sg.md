@@ -4,7 +4,7 @@ slug: access-logs
 section: Logs
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 ## Activity logs
@@ -55,7 +55,7 @@ See an example of [uploading logs to Amazon S3](https://gitlab.com/contextualcod
 | `deploy`      | No             | The output of the [`deploy` hook](../../create-apps/hooks/hooks-comparison.md#deploy-hook). Only exists after a `deploy` hook has run. |
 | `dns`         | Yes            | All DNS queries made by processes in the container (such as the app and cron jobs). |
 | `error`       | Yes            | nginx-level errors that occur once nginx has fully started such as HTTP errors for missing directories and excluded file types. |
-| `nginx/error` | No             | All nginx startup log messages. Only useful when debugging possible nginx configuration errors. Not currently available using the `{{% vendor/cli %}} log` command. |
+| `nginx/error` | No             | All nginx startup log messages. Only useful when debugging possible nginx configuration errors. Not currently available using the `platform log` command. |
 | `php.access`  | No             | A record of all requests to the PHP service. See [PHP access record format](#php-access-record-format). |
 | `post_deploy` | No             | The output of the [`post_deploy` hook](../../create-apps/hooks/hooks-comparison.md#post-deploy-hook). Only exists after a `post_deploy` hook has run. |
 
@@ -65,7 +65,7 @@ The formatting of `php.access.log` is determined by the PHP settings.
 To determine the format, run the following:
 
 ```bash
-{{% vendor/cli %}} ssh cat -n /etc/php/{{< variable "PHP_VERSION" >}}-zts/fpm/php-fpm.conf | grep "access.format"
+platform ssh cat -n /etc/php/{{< variable "PHP_VERSION" >}}-zts/fpm/php-fpm.conf | grep "access.format"
 ```
 
 You get a response such as the following:

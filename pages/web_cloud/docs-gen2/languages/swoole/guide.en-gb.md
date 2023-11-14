@@ -4,7 +4,7 @@ slug: swoole
 section: Php
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -24,9 +24,7 @@ Unlike PHP-FPM’s stateless operating, Swoole relies on establishing persistent
 
 
 Check the documentation related to [Laravel Octane on Web PaaS](../../guides/guides-laravel/deploy/octane).
-<--->
-<!-- @todo: To be added once Laravel guide for Upsun is live -->
-{{% /version/specific %}}
+
 
 {{% swoole %}}
 
@@ -49,21 +47,4 @@ web:
             scripts: false
             allow: false
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        web:
-            upstream:
-                socket_family: tcp
-                protocol: http
-            commands:
-                start: php {{<variable "PATH_TO_SWOOLE_START_COMMAND" >}} --port=$PORT
-            locations:
-                "/":
-                    passthru: true
-                    scripts: false
-                    allow: false
-```
-{{% /version/specific %}}
+

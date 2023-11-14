@@ -5,7 +5,7 @@ section: Security
 order: 8
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -102,17 +102,7 @@ Backups for {{% names/dedicated-gen-2 %}} environments are retained based on whe
 
 See more about [backups of {{% names/dedicated-gen-2 %}} environments](../security-dedicated-gen-2/overview/backups).
 
-<--->
-<!-- Upsun -->
-## Backups
 
-[Automated backups](../environments/backup.md#use-automated-backups) are retained for 2 days
-(meaning, 2 days worth of backups are retained at any given point).
-
-[Manual backups](../environments/backup.md#create-a-manual-backup) are retained until you delete them or replace them with another backup.</br>
-As {{< vendor/name >}} provides a maximum of [2 manual backups per environment type](../security-backups),
-the third manual backup automatically replaces the oldest backup.
-{{% /version/specific %}}
 
 ## Tombstone backups
 

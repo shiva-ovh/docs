@@ -4,7 +4,7 @@ slug: webhooks
 section: Activity
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -15,7 +15,7 @@ section: Activity
 ## Setup
 
 ```bash
-{{% vendor/cli %}} integration:add --type=webhook --url={{<variable "URL_TO_RECEIVE_JSON" >}}
+platform integration:add --type=webhook --url={{<variable "URL_TO_RECEIVE_JSON" >}}
 ```
 
 The webhook URL receives a POST message for every activity that's triggered.
@@ -37,5 +37,5 @@ See the [activity script](../integrations-activity/reference) reference for a de
 To verify your integration is functioning properly, run the following [CLI command](/integrations/overview.md#validate-integrations):
 
 ```bash
-{{% vendor/cli %}} integration:validate
+platform integration:validate
 ```

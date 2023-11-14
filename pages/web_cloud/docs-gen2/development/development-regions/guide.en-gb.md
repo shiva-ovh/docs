@@ -5,7 +5,7 @@ section: Development
 order: 5
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -28,7 +28,7 @@ Information on carbon intensity is also available in the Web PaaS API.
 For example, to get a list of the regions and their carbon intensities, run the following command:
 
 ```bash
-{{% vendor/cli %}} api:curl regions | jq -r '.regions[] | select(.available != false) | .label + ": " + .environmental_impact.carbon_intensity'
+platform api:curl regions | jq -r '.regions[] | select(.available != false) | .label + ": " + .environmental_impact.carbon_intensity'
 ```
 
 See all available information in the [API documentation](https://api.platform.sh/docs/#tag/Regions).
@@ -46,7 +46,7 @@ The list of regions includes legacy regions as reference.
 To find out where a given region is hosted, use the following command:
 
 ``` bash
-{{% vendor/cli %}} api:curl regions | jq '.regions[] | select(.available != false)  | .id + ": " + .provider.name + " - " + .zone + " - " + .timezone' | sort
+platform api:curl regions | jq '.regions[] | select(.available != false)  | .id + ": " + .provider.name + " - " + .zone + " - " + .timezone' | sort
 ```
 
 The returned list contains, for each available region, its name, provider, geographic zone and its timezone.

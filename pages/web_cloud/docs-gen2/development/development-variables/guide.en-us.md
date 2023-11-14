@@ -5,7 +5,7 @@ section: Development
 order: 5
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -79,7 +79,7 @@ For an example of how the different levels work,
 suppose you have the following inheritable variables defined for the `main` environment:
 
 ```sh
-{{% vendor/cli %}} var -e main
+platform var -e main
 Variables on the project Example (abcdef123456), environment main:
 +----------------+-------------+--------+---------+
 | Name           | Level       | Value  | Enabled |
@@ -94,7 +94,7 @@ Variables on the project Example (abcdef123456), environment main:
 And the following variables defined for the `feature-x` environment, a child environment of `main`:
 
 ```sh
-{{% vendor/cli %}} var -e feature-x
+platform var -e feature-x
 Variables on the project Example (abcdef123456), environment feature-x:
 +----------------+-------------+--------+---------+
 | Name           | Level       | Value  | Enabled |
@@ -162,7 +162,7 @@ For example, the variable `env:foo` creates an environment variable called `FOO`
 (Note the automatic upper-casing.)
 
 ```bash
-{{% vendor/cli %}} variable:create --name env:foo --value bar
+platform variable:create --name env:foo --value bar
 ```
 
 You can then access that variable directly in your app container:
@@ -183,7 +183,7 @@ Using variables, you can use the same files for all your environments and overri
 You can set the PHP memory limit to 256 MB on a specific environment by running the following [CLI command](../../administration/administration-cli):
 
 ```bash
-{{% vendor/cli %}} variable:create --level environment --prefix php --name memory_limit --value 256M --environment {{< variable "ENVIRONMENT_NAME" >}}
+platform variable:create --level environment --prefix php --name memory_limit --value 256M --environment {{< variable "ENVIRONMENT_NAME" >}}
 ```
 
 To use variables across environments, set them in your [app configuration](../../create-apps).
@@ -224,7 +224,7 @@ Setting the `drupalsettings:system.site:name` variable overrides the `name` prop
 You can do this by running the following [CLI command](../../administration/administration-cli):
 
 ``` bash
-{{% vendor/cli %}} variable:create --name "drupalsettings:system.site:name" --value "{{< variable "SITE_NAME" >}}"
+platform variable:create --name "drupalsettings:system.site:name" --value "{{< variable "SITE_NAME" >}}"
 ```
 
 The same logic applies for other configuration options,

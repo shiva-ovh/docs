@@ -5,7 +5,7 @@ section: Overview
 order: 2
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 > [!primary]  
@@ -34,20 +34,7 @@ Each environment has 2 to 4 types of containers:
 - Zero or more [*worker* containers](#workers) (configured in the files for apps)
 
 
-<--->
-<!-- Upsun -->
-Each environment has 2 to 4 types of containers, all usually configured from your `{{< vendor/configfile "app" >}}` file.
 
-- One [*router*](#router)
-
-- One or more [*app* containers](#apps)
-
-- Zero or more [*service* containers](#services)
-
-- Zero or more [*worker* containers](#workers)
-
-
-{{% /version/specific %}}
 
 If you have two app containers, two services (a database and a search engine), and a worker,
 requests to your environment might look something like this:
@@ -68,16 +55,7 @@ project
 └── <YOUR_APP_FILES>
 ```
 
-<--->
-<!-- Upsun -->
-```text
-project
-├── .git
-├── {{< vendor/configdir >}}
-│   └── {{< vendor/configfile "app" "strip" >}}
-└── <YOUR_APP_FILES>
-```
-{{% /version/specific %}}
+
 
 ## Router
 
@@ -104,11 +82,7 @@ Each app container is built from a specific language image with a given version 
 To configure your apps, you usually create one `{{< vendor/configfile "app" >}}` file for each app container.
 A basic app generally has only one such file placed in the repository root.
 
-<--->
-<!-- Upsun -->
-To configure your apps, you usually create a single `{{< vendor/configfile "app" >}}` file
-and place it in the repository root.
-{{% /version/specific %}}
+
 
 Read more about how to [configure apps](../../create-apps).
 

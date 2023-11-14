@@ -4,7 +4,7 @@ slug: xdebug
 section: Php
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -26,10 +26,7 @@ Xdebug is automatically disabled.
 
 <!-- Web PaaS -->
 The following table shows the PHP versions where Xdebug is available on Grid environments:
-<--->
-<!-- Upsun -->
-The following table shows the PHP versions where Xdebug is available:
-{{% /version/specific %}}
+
 
 
 {{< php-extensions/single extension="xdebug" >}}
@@ -54,16 +51,7 @@ runtime:
     xdebug:
         idekey: {{< variable "YOUR_KEY" >}}
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        runtime:
-            xdebug:
-                idekey: {{< variable "YOUR_KEY" >}}
-```
-{{% /version/specific %}}
+
 
 {{< variable "YOUR_KEY" >}} can be any arbitrary alphanumeric string.
 
@@ -83,23 +71,7 @@ Depending on the cookies already listed, the result should look similar to the f
         enabled: true
         cookies: ['/^SS?ESS/', 'XDEBUG_SESSION']
 ```
-<--->
-```yaml {configFile="routes"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        runtime:
-            xdebug:
-                idekey: {{< variable "YOUR_KEY" >}}
 
-routes:
-    "https://{default}/":
-        # ...
-        cache:
-            enabled: true
-            cookies: ['/^SS?ESS/', 'XDEBUG_SESSION']
-```
-{{% /version/specific %}}
 
 Xdebug has several configuration options available.
 They can be set the same way as any other [PHP setting](./_index.md#php-settings).
@@ -112,7 +84,7 @@ For a full list of available options, consult the [Xdebug documentation](https:/
 To open an SSH tunnel to the server from a local checkout of your app, run the following [CLI command](../../administration/administration-cli) :
 
 ```bash
-{{% vendor/cli %}} environment:xdebug
+platform environment:xdebug
 ```
 
 That SSH tunnel allows your IDE and the server to communicate debug information securely.
@@ -158,7 +130,7 @@ The common steps for setup usually include:
     to map to `app`.
 5\. Listening for connections.
 
-6\. Starting debugging. While in listen mode, start the `{{% vendor/cli %}} xdebug` tunnel.
+6\. Starting debugging. While in listen mode, start the `platform xdebug` tunnel.
 
     Use the Xdebug helper plugin for your browser to enable debugging.
     Set a break point in your app, then load a page in your browser.

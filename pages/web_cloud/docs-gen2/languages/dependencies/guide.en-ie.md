@@ -4,7 +4,7 @@ slug: dependencies
 section: Python
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -88,18 +88,7 @@ variables:
         POETRY_VIRTUALENVS_IN_PROJECT: true
         POETRY_VIRTUALENVS_CREATE: true
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'python:{{% latest "python" %}}'
-        variables:
-            env:
-                POETRY_VIRTUALENVS_IN_PROJECT: true
-                POETRY_VIRTUALENVS_CREATE: true
-```
-{{% /version/specific %}}
+
 
 2\.  Install Poetry.
 

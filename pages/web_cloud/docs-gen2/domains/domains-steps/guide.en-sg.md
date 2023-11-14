@@ -5,7 +5,7 @@ section: Domains
 order: 7
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -17,9 +17,7 @@ Note that adding a domain disables the automatically generated URL for your Prod
 
 If you are an Enterprise or Elite customer and have a Grid or {{% names/dedicated-gen-3 %}} project, you can [customize the URLs for your non-production environments](/domains/steps/custom-domains-preview-environments).
 {{% names/dedicated-gen-2 %}} customers can also customize the domain for their Staging environment.
-<--->
-You can also [customize the URLs for your preview environments](/domains/steps/custom-domains-preview-environments).
-{{% /version/specific %}}
+
 
 ## Before you begin
 

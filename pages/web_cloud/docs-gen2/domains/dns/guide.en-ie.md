@@ -4,7 +4,7 @@ slug: dns
 section: Steps
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -115,7 +115,7 @@ To use `A` records, follow these steps:
 
 
 ```bash
-dig +short $({{% vendor/cli %}} environment:info edge_hostname)
+dig +short $(platform environment:info edge_hostname)
 ```
      
 2\.  Follow the instructions on [how to set up a custom domain](../../.).

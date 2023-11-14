@@ -4,7 +4,7 @@ slug: tuning
 section: Php
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -63,16 +63,7 @@ variables:
     php:
         opcache.preload: '{{< variable "PRELOAD_SCRIPT" >}}'
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    app:
-         type: 'php:{{% latest "php" %}}'
-         variables:
-               php:
-                     opcache.preload: '{{< variable "PRELOAD_SCRIPT" >}}'
-```
-{{% /version/specific %}}
+
 
 `{{< variable "PRELOAD_SCRIPT" >}}` is a file path relative to the [app root](../../create-apps/app-reference.md#root-directory).
 It may be any PHP script that calls `opcache_compile_file()`.
@@ -109,7 +100,7 @@ To determine the maximum number of files to cache, follow these steps:
 
 1\. Connect to the container via SSH using the [CLI](../../development/development-ssh)
 
-   by running `{{% vendor/cli %}} ssh`.
+   by running `platform ssh`.
 2\. Determine roughly how many `.php` files your app has by running this command from [your app root](../../create-apps/app-reference.md#root-directory):
 
 
@@ -132,16 +123,7 @@ variables:
     php:
         'opcache.max_accelerated_files': 22000
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-   app:
-      type: 'php:{{% latest "php" %}}'
-      variables:
-         php:
-            'opcache.max_accelerated_files': 22000
-```
-{{% /version/specific %}}
+
 
 #### Set memory consumption
 
@@ -155,7 +137,7 @@ To determine the total amount of memory to use, follow these steps:
 
 1\. Connect to the container via SSH using the [CLI](../../development/development-ssh)
 
-   by running `{{% vendor/cli %}} ssh`.
+   by running `platform ssh`.
 2\. Change to the `/tmp` directory (or any other non-web-accessible writable directory) with `cd /tmp`.
 
 3\. Download CacheTool with `curl -sLO https://github.com/gordalina/cachetool/releases/latest/download/cachetool.phar`.
@@ -193,16 +175,7 @@ variables:
       php:
          'opcache.memory_consumption': 96
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-   app:
-      type: 'php:{{% latest "php" %}}'
-      variables:
-            php:
-               'opcache.memory_consumption': 96
-```
-{{% /version/specific %}}
+
 
 8\. [Restart PHP-FPM](#restart-php-fpm) and make sure that OPcache works as expected by rerunning CacheTool
 
@@ -233,16 +206,7 @@ variables:
       php:
          'opcache.validate_timestamps': 0
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-   app:
-      type: 'php:{{% latest "php" %}}'
-      variables:
-            php:
-               'opcache.validate_timestamps': 0
-```
-{{% /version/specific %}}
+
 
 When you have disabled OPcache timestamp validation,
 you need to explicitly clear OPcache on deployment by [restarting PHP-FPM](#restart-php-fpm).
@@ -254,7 +218,7 @@ Doing so would prevent updates to the generated code from being loaded.
 
 To force a restart of PHP-FPM:
 
-1\. Connect to your app container via SSH using the [CLI](../../development/development-ssh) by running `{{% vendor/cli %}} ssh`.
+1\. Connect to your app container via SSH using the [CLI](../../development/development-ssh) by running `platform ssh`.
 
 2\. Run `pkill -f -u "$(whoami)" php-fpm`.
 
@@ -263,9 +227,7 @@ To force a restart of PHP-FPM:
 
 
 To optimize your app, consider using a [profiler](../../increase-observability/increase-observability-integrate-observability).
-<--->
-To optimize your app, consider using a [profiler](../../increase-observability/increase-observability-application-metrics).
-{{% /version/specific %}}
+
 A profiler helps determine what slow spots can be found and addressed and helps improve performance.
 
 {{% version/only "1" %}}

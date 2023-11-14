@@ -4,7 +4,7 @@ slug: branch
 section: Add-Data
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -19,7 +19,7 @@ To develop without affecting production, you need a separate environment.
 Create one in a terminal:
 
 ```bash
-{{% vendor/cli %}} branch dev main
+platform branch dev main
 ```
 
 This creates a separate environment with its own data.
@@ -36,7 +36,7 @@ To make your `dev` environment different, change the environment by adding a var
 Add a variable available in the build:
 
 ```bash
-{{% vendor/cli %}} variable:create example --visible-build true --environment dev --value "This is a variable"
+platform variable:create example --visible-build true --environment dev --value "This is a variable"
 ```
 
 This `example` variable is visible in the build and so its creation triggers a new build of your app.
@@ -48,7 +48,7 @@ To see the difference in the environments, read the variable in each environment
 Read the variable from your `dev` environment:
 
 ```bash
-{{% vendor/cli %}} variable:get --environment dev example
+platform variable:get --environment dev example
 ```
 
 This returns a table with information on the variable including its creation date and value.
@@ -56,7 +56,7 @@ This returns a table with information on the variable including its creation dat
 Read the variable from your `main` environment:
 
 ```bash
-{{% vendor/cli %}} variable:get --environment main example
+platform variable:get --environment main example
 ```
 
 You get a message saying the variable wasn't found.

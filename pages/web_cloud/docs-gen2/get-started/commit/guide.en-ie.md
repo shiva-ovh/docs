@@ -4,7 +4,7 @@ slug: commit
 section: Deploy
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -39,7 +39,7 @@ git commit -m "Add Web PaaS files"
 Push your changes (to share your changes with everyone with access to your project/repository):
 
 ```bash
-{{% vendor/cli %}} push
+platform push
 ```
 
 {{% get-started/service-needed %}}

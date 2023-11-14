@@ -5,7 +5,7 @@ section: Development
 order: 5
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -33,7 +33,7 @@ you may want to view a list of all the mounts inside your app.
 To do so, run the following command:
 
 ```bash
-{{% vendor/cli %}} mounts
+platform mounts
 ```
 
 The output is similar to the following:
@@ -60,7 +60,7 @@ For example, to upload the files contained in the local `private` directory to t
 run the following command: 
 
 ```bash
-{{% vendor/cli %}} mount:upload --mount private --source ./private
+platform mount:upload --mount private --source ./private
 ```
 
 You get the following output:
@@ -85,7 +85,7 @@ For example, to download a file from the `private` mount to your local `private`
 run the following command:
 
 ```bash
-{{% vendor/cli %}} mount:download --mount private --target ./private
+platform mount:download --mount private --target ./private
 ```
 
 You get the following output:
@@ -115,7 +115,7 @@ For example, to download a `diagram.png` file from the `web/uploads` directory
 run the following command:
 
 ```bash
-scp "$({{% vendor/cli %}} ssh --pipe)":web/uploads/diagram.png .
+scp "$(platform ssh --pipe)":web/uploads/diagram.png .
 ```
 
 The `diagram.png` file is copied to the current local directory.
@@ -124,7 +124,7 @@ To copy files from your local directory to the Web PaaS environment,
 reverse the order of the parameters:
 
 ```bash
-scp diagram.png "$({{% vendor/cli %}} ssh --pipe)":web/uploads
+scp diagram.png "$(platform ssh --pipe)":web/uploads
 ```
 
 For other options, see the [`scp` documentation](../../https:/https:-/www.man7.org/linux/man-pages/man1/scp.1).
@@ -138,14 +138,14 @@ to the local `uploads` directory,
 run the following command:
 
 ```bash
-rsync -azP "$({{% vendor/cli %}} ssh --pipe)":web/uploads/ ./uploads/
+rsync -azP "$(platform ssh --pipe)":web/uploads/ ./uploads/
 ```
 
 To copy files from your local directory to the Web PaaS environment, 
 reverse the order of the parameters:
 
 ```bash
-rsync -azP uploads/ "$({{% vendor/cli %}} ssh --pipe)":web/uploads/
+rsync -azP uploads/ "$(platform ssh --pipe)":web/uploads/
 ```
 
 Note that `rsync` is very sensitive about trailing `/` characters.

@@ -5,7 +5,7 @@ section: Languages
 order: 4
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -47,17 +47,7 @@ order: 4
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-21 |  
-|  19 |  
-|  18 |  
-|  17 |  
-|  11 |  
-|  8
-
-{{% /version/specific %}}
 
 These versions refer to the headless packages of OpenJDK.
 To save space and reduce potential vulnerabilities, they don't contain GUI classes, which can't be used on the server.
@@ -76,25 +66,7 @@ For example:
 type: 'java:{{% latest "java" %}}'
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    <APP_NAME>:
-        type: 'java:<VERSION_NUMBER>'
-```
-
-For example:
-
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'java:{{% latest "java" %}}'
-```
-
-{{% /version/specific %}}
 
 ## Support build automation
 
@@ -126,26 +98,7 @@ hooks:
         mvn --version
         mvn clean package
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'java:{{% latest "java" %}}'
 
-        variables:
-            env:
-                MAVEN_VERSION: {{< variable "DESIRED_VERSION_NUMBER" "3.8.6" >}}
-
-        hooks:
-            build: |
-                curl -sfLO "https://dlcdn.apache.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz"
-                tar -zxf apache-maven-$MAVEN_VERSION-bin.tar.gz
-                export PATH="$PWD/apache-maven-$MAVEN_VERSION/bin:$PATH"
-                mvn --version
-                mvn clean package
-```
-{{% /version/specific %}}
 
 ## Other JVM languages
 

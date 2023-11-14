@@ -5,7 +5,7 @@ section: Languages
 order: 4
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 ## Supported versions
@@ -34,14 +34,7 @@ order: 4
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-8.2 |  
-|  8.1 |  
-|  8.0
-
-{{% /version/specific %}}
 
 Note that from PHP versions 7.1 to 8.1, the images support the Zend Thread Safe (ZTS) version of PHP.
 
@@ -59,25 +52,7 @@ For example:
 type: 'php:{{% latest "php" %}}'
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    <APP_NAME>:
-        type: 'php:<VERSION_NUMBER>'
-```
-
-For example:
-
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-```
-
-{{% /version/specific %}}
 
 {{% deprecated-versions %}}
 
@@ -113,19 +88,7 @@ applications:
     </tbody>
 </table>
 
-<--->
-<!-- API Version 2 -->
 
-7.4 |  
-|  7.3 |  
-|  7.2 |  
-|  7.1 |  
-|  7.0 |  
-|  5.6 |  
-|  5.5 |  
-|  5.4
-
-{{% /version/specific %}}
 
 ## Usage example
 
@@ -140,14 +103,7 @@ and add it to your [app configuration](../../create-apps):
 ```yaml {configFile="app"}
 type: 'php:{{% latest "php" %}}'
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-```
-{{% /version/specific %}}
+
 
 ### 2. Serve your app
 
@@ -188,19 +144,7 @@ web:
             root: 'public'
             passthru: '/app.php'
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-        web:
-            locations:
-                '/':
-                    root: 'public'
-                    passthru: '/app.php'
-```
-{{% /version/specific %}}
+
 
 See how to [create a basic PHP app with a front controller](../../create-apps/create-apps-web/php-basic).
 To have more control, you can define rules to specify which files you want to allow [from which location](../../create-apps/web/php-basic.md#set-different-rules-for-specific-locations).
@@ -223,19 +167,7 @@ web:
             root: 'public'
             passthru: '/app.php'
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-        web:
-            locations:
-                '/':
-                    root: 'public'
-                    passthru: '/app.php'
-```
-{{% /version/specific %}}
+
 
 ## Dependencies
 
@@ -254,18 +186,7 @@ dependencies:
     php:
         composer/composer: '^2'
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-        ...
-        dependencies:
-            php:
-                composer/composer: '^2'
-```
-{{% /version/specific %}}
+
 
 Adding a dependency to the [dependencies block](../../create-apps/app-reference.md#dependencies) makes it available globally.
 So you can then use included dependencies as commands within your app container.
@@ -293,22 +214,7 @@ hooks:
         set -e
         composer install --no-interaction --no-dev
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-        ...
-        build:
-            flavor: none
 
-        hooks:
-            build: |
-                set -e
-                composer install --no-interaction --no-dev
-```
-{{% /version/specific %}}
 
 That installs production dependencies with Composer but not development dependencies.
 The same can be achieved by using the default build flavor and [adding the `COMPOSER_NO_DEV` variable](../../development/development-variables/set-variables).
@@ -333,19 +239,7 @@ dependencies:
         require:
             "platformsh/client": "2.x-dev"
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-        ...
-        dependencies:
-            php:
-                require:
-                    "platformsh/client": "2.x-dev"
-```
-{{% /version/specific %}}
+
 
    This is equivalent to `composer require platform/client 2.x-dev`.
 
@@ -358,22 +252,7 @@ repositories:
     - type: vcs
       url: "git@github.com:platformsh/platformsh-client-php.git"
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-        ...
-        dependencies:
-            php:
-                require:
-                    "platformsh/client": "2.x-dev"
-                repositories:
-                    - type: vcs
-                      url: "git@github.com:platformsh/platformsh-client-php.git"
-```
-{{% /version/specific %}}
+
 
 That installs `platformsh/client` from the specified repository URL as a global dependency.
 
@@ -391,23 +270,7 @@ dependencies:
             - type: vcs
                 url: "git@github.com:platformsh/platformsh-client-php.git"
 ```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-        ...
-        dependencies:
-            php:
-                composer/composer: '^2'
-                require:
-                    "platformsh/client": "2.x-dev"
-                repositories:
-                    - type: vcs
-                      url: "git@github.com:platformsh/platformsh-client-php.git"
-```
-{{% /version/specific %}}
+
 
 ## Connect to services
 
@@ -425,185 +288,7 @@ highlight=php
 markdownify=false
 +++
 
-<--->
 
-+++
-title=Memcached
-file=static/files/fetch/examples/php/memcached
-highlight=php
-markdownify=false
-+++
-
-<--->
-
-+++
-title=MongoDB
-file=static/files/fetch/examples/php/mongodb
-highlight=php
-markdownify=false
-+++
-
-<--->
-
-+++
-title=MySQL
-file=static/files/fetch/examples/php/mysql
-highlight=php
-markdownify=false
-+++
-
-<--->
-
-+++
-title=PostgreSQL
-file=static/files/fetch/examples/php/postgresql
-highlight=php
-markdownify=false
-+++
-
-<--->
-
-+++
-title=RabbitMQ
-file=static/files/fetch/examples/php/rabbitmq
-highlight=php
-markdownify=false
-+++
-
-<--->
-
-+++
-title=Redis
-file=static/files/fetch/examples/php/redis
-highlight=php
-markdownify=false
-+++
-
-<--->
-
-+++
-title=Solr
-file=static/files/fetch/examples/php/solr
-highlight=php
-markdownify=false
-+++
-
-{{< /codetabs >}}
-
-{{% version/only "1" %}}
-{{% config-reader %}}[PHP configuration reader library](https://github.com/platformsh/config-reader-php){{% /config-reader %}}
-{{% /version/only %}}
-
-{{% access-services version="2" %}}
-
-## PHP settings
-
-You can configure your PHP-FPM runtime configuration by specifying the [runtime in your app configuration](../../create-apps/app-reference.md#runtime).
-
-In addition to changes in runtime, you can also change the PHP settings.
-Some commonly used settings are:
-
-| Name | Default | Description |
-|------|---------|-------------|
-| `max_execution_time` | `300` | The maximum execution time, in seconds, for your PHP scripts and apps. A value of `0` means there are no time limits. |
-| `max_file_uploads` | `20` | The maximum number of files that can be uploaded in each request. |
-| `max_input_time` | `60` | The maximum time in seconds that your script is allowed to receive input (such as for file uploads). A value of `-1` means there are no time limits. |
-| `max_input_vars` | `1000` | The maximum number of input variables that are accepted in each request. |
-| `memory_limit` | `128M` | The memory limit, in megabytes, for PHP. Ensure that the PHP memory limit is set to a lower value than your environment's memory. |
-| `post_max_size` | `64M` | The maximum size, in megabytes, per uploaded file. To upload larger files, increase the value. |
-| `zend.assertions` | `-1` | Assertions are optimized and have no impact at runtime. Set assertions to `1` for your local development system. [See more on assertions](https://www.php.net/manual/en/regexp.reference.assertions). |
-| `opcache.memory_consumption` | `64` | The number of megabytes available for [the OPcache](./tuning.md#opcache-preloading). For large apps with many files, increase this value. |
-| `opcache.validate_timestamps` | `On` | If your app doesn't generate compiled PHP, you can [disable this setting](./tuning.md#disable-opcache-timestamp-validation). |
-
-### Retrieve the default values
-
-To retrieve the default PHP values, run the following [CLI command](../../administration/administration-cli):
-
-```bash
-{{% vendor/cli %}} ssh "php --info"
-```
-
-To get specific default values, use grep.
-For example, to get the value for `opcache.memory_consumption`, run the following command:
-
-```bash
-{{% vendor/cli %}} ssh "php --info" | grep opcache.memory_consumption
-```
-
-### Retrieve the settings
-
-To see the settings used on your environment:
-
-1\.  Find the PHP configuration files with the following [CLI command](../../administration/administration-cli):
-
-
-```bash
-{{% vendor/cli %}} ssh "php --ini"
-```
-
-    The output is something like the following:
-
-```bash
-Configuration File (php.ini) Path: /etc/php/8.0-zts/cli
-Loaded Configuration File:         /etc/php/8.0-zts/cli/php.ini
-Scan for additional .ini files in: /etc/php/8.0-zts/cli/conf.d
-Additional .ini files parsed:      (none)
-```
-
-2\.  Display the configuration file by adapting the following command with the output from step 1:
-
-
-```bash
-{{% vendor/cli %}} ssh "cat {{< variable "LOADED_CONFIGURATION_FILE_PATH" >}}"
-```
-
-### Customize PHP settings
-
-{{< version/only "1" >}}
-For {{% names/dedicated-gen-2 %}}, see the [configuration options](../../dedicated-gen-2/overview/grid.md#configuration-options).
-{{< /version/only >}}
-
-You can customize PHP values for your app in two ways.
-The recommended method is to use variables.
-
-> [!tabs]      
-
-If you're using [PHP-CLI](#execution-mode),
-you need to take into account the default settings of PHP-CLI when you customize your PHP settings.
-The default settings of PHP-CLI can't be overwritten and are the following:
-
-```text
-max_execution_time=0
-max_input_time=-1
-memory_limit=-1
-```
-
-### Disable functions for security
-
-A common recommendation for securing PHP installations is disabling built-in functions frequently used in remote attacks.
-By default, Web PaaS doesn't disable any functions.
-
-If you're sure a function isn't needed in your app, you can disable it.
-
-For example, to disable `pcntl_exec` and `pcntl_fork`, add the following to your [app configuration](../../create-apps):
-
-
-```yaml {configFile="app"}
-variables:
-    php:
-        disable_functions: "pcntl_exec,pcntl_fork"
-```
-<--->
-```yaml {configFile="app"}
-applications:
-    # The app's name, which must be unique within the project.
-    app:
-        type: 'php:{{% latest "php" %}}'
-        variables:
-            php:
-                disable_functions: "pcntl_exec,pcntl_fork"
-```
-{{% /version/specific %}}
 
 Common functions to disable include:
 
@@ -680,18 +365,7 @@ runtime:
         - ffi
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        runtime:
-            extensions:
-                - ffi
-```
-
-{{% /version/specific %}}
 
 3\.  Make sure that your [preload script](./tuning.md#opcache-preloading) calls the `FFI::load()` function.
 
@@ -709,18 +383,7 @@ variables:
         opcache.enable_cli: true
 ```
 
-<--->
 
-```yaml {configFile="app"}
-applications:
-    app:
-        type: 'php:{{% latest "php" %}}'
-        variables:
-            php:
-                opcache.enable_cli: true
-```
-
-{{% /version/specific %}}
 
 5\.  Run your script with the following command:
 

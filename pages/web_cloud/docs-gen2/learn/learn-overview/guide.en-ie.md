@@ -4,7 +4,7 @@ slug: learn-overview
 section: Learn
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -26,17 +26,7 @@ and [Define routes](../../define-routes) reference documentation.
 
 Web PaaS is built on Debian, supports many different programming [languages](../../languages) and environments,
 and features recommended optimizations for several [featured frameworks](../../guides).
-<--->
-<!-- Upsun -->
-The main requirement of Web PaaS is that you use Git to manage your application code.
-If you have a single-app project, you can configure it from a single `{{< vendor/configfile "app" >}}` file,
-usually located at the root of your app folder in your Git repository.
-[Multi-app projects](../../create-apps/create-apps-multi-app) can be set up in various ways.
 
-Web PaaS is built on Debian, supports many different programming [languages](../../languages) and environments,
-and features recommended optimizations for several [featured frameworks](../../get-started).
-
-{{% /version/specific %}}
 
 Finally, you can also get tips for setting up your own [development workflow](../../development)
 and [administering](../../administration) your Web PaaS account.
@@ -54,11 +44,7 @@ Web PaaS covers not only all of your hosting needs but also most of your DevOps 
 <!-- Web PaaS -->
 You only need to write your code, including a few YAML files that specify your desired infrastructure, commit it to Git, and push.
 You don't need to set up anything manually. The web server is already set up and configured, as is any database, search engine, or cache that you specify.
-<--->
-<!-- Upsun -->
-You only need to write your code, including a single or a few YAML files that specify your desired infrastructure, commit it to Git, and push.
-You don't need to set up anything manually. The web server is already set up and configured, as is any database, search engine, or cache that you specify.
-{{% /version/specific %}}
+
 
 Every branch you push can be made a fully independent environment&mdash;complete with your application code, a copy of your database, a copy of your search index, a copy of your user files, everything.
 Its automatically generated URL can be sent to stakeholders or automated CI systems.

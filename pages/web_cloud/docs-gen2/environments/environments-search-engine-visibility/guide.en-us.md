@@ -4,7 +4,7 @@ slug: environments-search-engine-visibility
 section: Environments
 ---
 
-**Last updated 9th November 2023**
+**Last updated 14th November 2023**
 
 
 
@@ -37,7 +37,7 @@ That tells search engine indexers to not index these sites and not traverse link
 This helps keep non-Production sites out of search engine indexes.
 
 You can choose whether to keep it on for production sites with custom domains.
-It's automatically on for all `{{% vendor/cli %}}.site` domains.
+It's automatically on for all `platform.site` domains.
 
 ## Alternative method
 
