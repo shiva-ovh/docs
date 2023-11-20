@@ -46,32 +46,6 @@ You can deploy Python apps on Web PaaS using a server or a project such as [uWSG
 
 
 
-{{% language-specification type="python" display_name="Python" %}}
-
-
-
-```yaml {configFile="app"}
-type: 'python:<VERSION_NUMBER>'
-```
-
-For example:
-
-```yaml {configFile="app"}
-type: 'python:{{% latest "python" %}}'
-```
-
-
-
-{{% deprecated-versions %}}
-
-- 3.7  
-- 3.6  
-- 3.5  
-- 2.7*
-
-\* This version doesn't receive any updates at all.
-You are strongly recommended to upgrade to a supported version.
-
 ## Usage example
 
 ### Run your own server
