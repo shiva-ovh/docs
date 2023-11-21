@@ -280,7 +280,7 @@ It decodes service credentials, the correct port, and other information for you.
 
 ### FastAPI
 
-![image](images/basicpython3.png)
+![image](images/fastapi.png)
 
 <p>This template demonstrates building the FastAPI framework for Platform.sh. It includes a minimalist application skeleton that demonstrates how to connect to a MariaDB server for data storage and Redis for caching. The application starts as a bare Python process with no separate runner. It is intended for you to use as a starting point and modify for your own needs.</p>
 <p>FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.</p>
